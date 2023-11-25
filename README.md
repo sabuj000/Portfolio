@@ -1,6 +1,6 @@
 # Sabuj Bandopadhyay
 
-![Banner Image](https://github.com/sabuj000/Portfolio/Cover Image.png)
+![Banner Image](https://github.com/sabuj000/Portfolio/blob/main/Cover%20Image.png)
 
 ## 👋 Introduction
 Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with over a decade of experience. Specializing in turning complex technical concepts into clear, user-friendly language.
