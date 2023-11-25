@@ -1,6 +1,6 @@
 # Sabuj Bandopadhyay
 
-![Banner Image Placeholder](URL-to-your-banner-image)
+![Banner Image](Cover Image.png)
 
 ## 👋 Introduction
 Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with over a decade of experience. Specializing in turning complex technical concepts into clear, user-friendly language.
