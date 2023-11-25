@@ -7,7 +7,6 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 
 ## 🛠️ Professional Experience
 ### **Documentation Manager at Chargebee**
-![Chargebee Logo Placeholder](URL-to-chargebee-logo)
 - Driving the documentation strategy and ensuring content clarity, accuracy, and adherence to standards.
 - Managing a range of documentation tools including Confluence, Markdown, GitHub, and YAML.
 
@@ -24,19 +23,15 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 
 ## 🌟 Projects and Contributions
 ### API Documentation
-![API Documentation Image Placeholder](URL-to-API-documentation-image)
 [Chargebee API Docs](https://apidocs.chargebee.com/docs/api/in_app_subscriptions?lang=curl)
 
 ### Tutorial
-![Tutorial Image Placeholder](URL-to-tutorial-image)
 [Subscription Enrollment Tutorial](https://www.chargebee.com/tutorials/subscription-enrollment/)
 
 ### User Guide
-![User Guide Image Placeholder](URL-to-user-guide-image)
 [Chargebee Implementation Guide](https://www.chargebee.com/docs/2.0/implementation_guide.html)
 
 ### SDK Documentation
-![SDK Documentation Image Placeholder](URL-to-SDK-documentation-image)
 - [Chargebee iOS SDK](https://github.com/chargebee/chargebee-ios#readme)
 - [Chargebee Android SDK](https://github.com/chargebee/chargebee-android#readme)
 
@@ -45,7 +40,7 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 
 ## 📫 Contact Information
 - [LinkedIn Profile](Your-LinkedIn-Profile-URL)
-- Email: your-email@example.com
+- Email: sbtechwriter@gmail.com
 
 ## 🌱 Personal Touch
 I believe in creating documentation that is not only informative but empowering to the user. Eager to explore new opportunities and contribute to dynamic organizations.
