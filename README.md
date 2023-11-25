@@ -6,7 +6,7 @@
 Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with over a decade of experience. Specializing in turning complex technical concepts into clear, user-friendly language.
 
 ## 🛠️ Professional Experience
-### **Documentation Manager at [Chargebee Technologies](https://www.chargebee.com/) **
+### Documentation Manager at [Chargebee Technologies](https://www.chargebee.com/)
 - **Leadership and Team Management**: You led a team, delegating tasks and reviewing performance to ensure efficiency and high-quality output.
 - **Editorial Review**: Conducted thorough editorial reviews to maintain the quality and accuracy of technical documentation.
 - **Information Architecture and Analysis**: Engaged in requirement analysis and developed an effective information architecture to enhance documentation accessibility and usability.
@@ -22,14 +22,14 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 - **Internal Process Documentation**: Documented internal processes, contributing to the standardization and efficiency of operations within the team.
 - **NPS Detractors Evaluation**: Evaluated NPS Detractors for both the product and documentation, identifying areas for improvement to enhance user satisfaction.
 
-### **Technical Writer at [Capillary Technologies](https://www.capillarytech.com/) **
+### Technical Writer at [Capillary Technologies](https://www.capillarytech.com/)
 - **User Documentation**: You were responsible for creating comprehensive user guides and release notes, along with reviewing UI content. This involved ensuring clarity and user-friendliness in the documentation.
 - **API Documentation**: Expertly crafted API documentation, focusing on detailed payload and parameter descriptions using Markdown, Postman, and OpenAPI. This role required a deep understanding of API structures and effective communication of technical details.
 - **Data-Driven Content Creation**: Utilized UML (Unified Modeling Language) for representing complex technical processes and systems. This included creating use case diagrams, sequence diagrams, and activity diagrams, effectively simplifying and visualizing technical workflows and architectures.
 - **Video Content Creation**: Developed online product training courses and managed a YouTube channel. This aspect of your role demonstrates your ability to adapt content to various formats, catering to diverse learning preferences.
 - **Content Management System**: Handled content management using Freshdesk, showcasing your skills in organizing and maintaining documentation in a systematic and user-friendly manner.
 
-### **Technical Writer at [Netradyne Technologies](https://www.netradyne.com/)**
+### Technical Writer at [Netradyne Technologies](https://www.netradyne.com/)
 - **Comprehensive Documentation**: Developed a range of technical documents, including product guides, how-to manuals, product installation instructions, online help resources, and FAQs. Showcased deep understanding and clear communication of the IDMS and Driveri Device.
 - **Release Notes Creation**: Authored both internal and customer-facing release notes covering device, analytics, and software updates. Demonstrated ability to communicate product changes and features effectively.
 - **UI Content Development**: Crafted and refined UI content to ensure user-friendly interface text, facilitating easy navigation and understanding of the product.
@@ -75,8 +75,9 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 - [Details about your education and certifications]
 
 ## 📫 Contact Information
-- [LinkedIn Profile](Your-LinkedIn-Profile-URL)
+- [LinkedIn Profile]([Your-LinkedIn-Profile-URL](https://in.linkedin.com/in/sabujbandopadhyay))
 - Email: sbtechwriter@gmail.com
+- Phone: +918282873349
 
 ## 🌱 Personal Touch
 I believe in creating documentation that is not only informative but empowering to the user. Eager to explore new opportunities and contribute to dynamic organizations.
