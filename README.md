@@ -75,7 +75,7 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 - [Details about your education and certifications]
 
 ## 📫 Contact Information
-- [LinkedIn Profile]([Your-LinkedIn-Profile-URL](https://in.linkedin.com/in/sabujbandopadhyay))
+- [LinkedIn Profile](https://in.linkedin.com/in/sabujbandopadhyay)
 - Email: sbtechwriter@gmail.com
 - Phone: +918282873349
 
@@ -86,4 +86,3 @@ I believe in creating documentation that is not only informative but empowering 
 
 *Let's connect and collaborate!*
 
-![Footer Image Placeholder](URL-to-footer-image)
