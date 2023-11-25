@@ -62,10 +62,10 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 [Chargebee API Docs](https://apidocs.chargebee.com/)
 
 ### Tutorial
-[Subscription Enrollment Tutorial](https://www.chargebee.com/tutorials/)
+[Chargebee Tutorial](https://www.chargebee.com/tutorials/)
 
 ### User Guide
-[Chargebee Implementation Guide](https://www.chargebee.com/docs/2.0/)
+[Chargebee User Guide](https://www.chargebee.com/docs/2.0/)
 
 ### SDK Documentation
 - [Chargebee iOS SDK](https://github.com/chargebee/chargebee-ios#readme)
