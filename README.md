@@ -72,7 +72,8 @@ Hello! I'm Sabuj, a seasoned Documentation Manager and Technical Writer with ove
 - [Chargebee Android SDK](https://github.com/chargebee/chargebee-android#readme)
 
 ## 🎓 Education and Certifications
-- [Details about your education and certifications]
+- Master of Computer Application (2009 to 2012)
+- Bachelor of Computer Application (2006 to 2009)
 
 ## 📫 Contact Information
 - [LinkedIn Profile](https://in.linkedin.com/in/sabujbandopadhyay)
@@ -85,4 +86,3 @@ I believe in creating documentation that is not only informative but empowering 
 ---
 
 *Let's connect and collaborate!*
-
