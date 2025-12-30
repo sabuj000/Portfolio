@@ -34,7 +34,7 @@ on naming, payloads, error handling, and overall usability.
 
 ---
 
-## 📊 Data-Informed Developer Experience  *(new section)*
+## 📊 Data-Informed Developer Experience
 
 I use data to validate DX assumptions and understand how developers actually interact with
 documentation, APIs, and tooling.
@@ -79,7 +79,7 @@ Selected posts:
 
 ---
 
-## 🧪 Developer Tooling & DX (Chargebee)
+## 🧪 Developer Tooling & DX
 
 At Chargebee, I contributed to developer-facing tools designed to reduce onboarding friction
 and improve API discoverability.
@@ -156,7 +156,7 @@ integration issues, and get contextual guidance.
 
 ---
 
-## 🎥 Visual & Interactive Developer Content  *(new section)*
+## 🎥 Visual & Interactive Developer Content
 
 I use visual and interactive formats to reduce cognitive load and help developers
 understand complex systems faster.
@@ -189,7 +189,7 @@ data-informed and visually guided developer experiences.
 
 ---
 
-## 🏢 Professional Background (Snapshot)
+## 🏢 Professional Background
 
 - **Chargebee** – Developer Experience, APIs, SDKs, Docs-as-Code, Developer Tooling
 - **Capillary Technologies** – API Documentation, UML, Video Tutorials
