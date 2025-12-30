@@ -34,6 +34,28 @@ on naming, payloads, error handling, and overall usability.
 
 ---
 
+## 📊 Data-Informed Developer Experience  *(new section)*
+
+I use data to validate DX assumptions and understand how developers actually interact with
+documentation, APIs, and tooling.
+
+Rather than relying on page views alone, I look for **experience signals** across the
+developer journey.
+
+**How I apply data to DX:**
+
+- Use tools like **GA4 and Pendo** to understand discovery paths, engagement patterns,
+  and drop-offs across API docs, SDK docs, and tutorials
+- Analyze **session-level behavior with FullStory** to identify confusion points,
+  navigation friction, and mismatches between documentation flow and developer intent
+- Use **Looker Studio** to visualize DX trends and patterns, helping teams reason about
+  onboarding effectiveness, content clarity, and workflow adoption
+
+The goal is not reporting for its own sake, but using data to continuously improve
+developer journeys and reduce integration friction.
+
+---
+
 ## ✍️ DX Writing & Thought Leadership
 
 I write about developer experience, docs-as-code, and building scalable documentation systems
@@ -134,6 +156,23 @@ integration issues, and get contextual guidance.
 
 ---
 
+## 🎥 Visual & Interactive Developer Content  *(new section)*
+
+I use visual and interactive formats to reduce cognitive load and help developers
+understand complex systems faster.
+
+- Create **workflow and system diagrams using Mermaid** to explain API flows,
+  integrations, and developer journeys
+- Use **Camtasia and Trainn** to create short, task-focused videos that complement
+  written documentation and support onboarding
+- Collaborate with Product and Design teams using **Figma** to align documentation
+  layouts and components with product UX
+
+My goal with visuals is always the same:  
+**make the next developer action obvious and low-friction.**
+
+---
+
 ## 💻 Code & Tooling
 
 I work hands-on with the tools developers actually use:
@@ -145,8 +184,8 @@ I work hands-on with the tools developers actually use:
 - GitHub workflows and CI/CD
 - API tooling (Postman, curl)
 
-I use these regularly to validate examples, test workflows, and ensure developer-facing
-content reflects real behavior.
+I also work with analytics, visualization, and media tools to support
+data-informed and visually guided developer experiences.
 
 ---
 
@@ -165,7 +204,7 @@ content reflects real behavior.
 - AI-assisted developer tooling and documentation
 - MDX-based docs-as-code workflows
 - Clearer patterns for API onboarding and SDK adoption
-- Understanding how tooling and docs influence developer adoption
+- Data-informed approaches to improving developer experience
 
 ---
 
@@ -176,4 +215,5 @@ content reflects real behavior.
 
 ---
 
-*I enjoy working on developer-first platforms where documentation, tooling, and APIs come together to create a cohesive experience.*
+*I enjoy working on developer-first platforms where documentation, tooling, data, and APIs
+come together to create a cohesive experience.*
