@@ -10,46 +10,48 @@ Developer Relations | Developer Experience | API & SDK Enablement
 Hi, I’m Sabuj — a Developer Relations and Developer Experience professional with 10+ years of
 experience working on APIs, SDKs, integrations, and developer platforms.
 
-I specialize in reducing developer friction by designing clear documentation, tutorials,
-interactive tools, and AI-assisted experiences that help developers succeed faster.
-My work sits at the intersection of Engineering, Product, Documentation, and Developer Communities.
+I focus on reducing developer friction by designing documentation, tutorials, workflows,
+and developer-facing tools that help teams move from exploration to successful integration
+faster. My work sits at the intersection of Engineering, Product, Documentation, and
+Developer Communities.
 
 ---
 
-## 🧠 How I Approach Developer Experience
+## 🧠 My DX Perspective
+
+I approach developer experience as a **journey problem**, not a documentation problem.
 
 When working on developer-facing products, I focus on:
 
-- Time-to-first-success for developers
-- API clarity, predictability, and usability
-- Real-world workflows over theoretical documentation
+- Time-to-first-success and safe experimentation
+- API clarity, predictability, and recoverability
+- End-to-end workflows over isolated endpoints
 - Practical examples, edge cases, and failure modes
-- Documentation and tools that scale across humans, SDKs, and AI systems
+- Systems that scale across humans, SDKs, and AI tools
 
-I regularly review APIs from a developer’s point of view and provide feedback on naming,
-payloads, error handling, and overall usability.
+I regularly review APIs, SDKs, and docs from a developer’s point of view and provide feedback
+on naming, payloads, error handling, and overall usability.
 
 ---
 
-## ✍️ Developer Experience Writing & Thought Leadership
+## ✍️ DX Writing & Thought Leadership
 
-I actively write about developer experience, docs-as-code, and building scalable
-developer documentation systems.
+I write about developer experience, docs-as-code, and building scalable documentation systems
+that support both humans and AI-driven tools.
 
 Selected posts:
 
 - **Building an MDX-enabled documentation platform**  
-  A hands-on deep dive into creating a modern docs-as-code setup using MDX, custom components,
+  A hands-on look at creating a docs-as-code setup using MDX, reusable components,
   and developer-friendly workflows.  
   https://www.linkedin.com/pulse/build-your-own-mdx-enabled-product-documentation-sabuj-bandopadhyay-p11nc/
 
 - **Docs-as-Code and Developer Experience**  
-  Why documentation should live alongside code and how this improves developer onboarding
-  and collaboration.  
+  Why documentation works best when it evolves alongside code and engineering workflows.  
   https://www.linkedin.com/feed/update/urn:li:activity:7289904367044816897/
 
 - **Documentation in the Age of AI**  
-  How documentation must evolve to support AI systems, chatbots, and LLM-driven
+  How documentation must adapt to support AI assistants, chatbots, and LLM-based
   developer experiences.  
   https://www.linkedin.com/feed/update/urn:li:activity:7342773027962527744/
 
@@ -57,24 +59,23 @@ Selected posts:
 
 ## 🧪 Developer Tooling & DX (Chargebee)
 
-At :contentReference[oaicite:0]{index=0}, I worked on multiple developer-facing tools
-designed to reduce onboarding friction and improve API discoverability.
+At Chargebee, I contributed to developer-facing tools designed to reduce onboarding friction
+and improve API discoverability.
 
 ### API Explorer
 
-The Chargebee API Explorer is a real-time, pre-authenticated environment that allows developers
-to explore and test APIs without writing code.
+The Chargebee API Explorer allows developers to explore and test APIs in a real-time,
+pre-authenticated environment without writing code.
 
-**What it enables:**
-- Interactive exploration of APIs
-- Real-time request/response visibility
-- Faster experimentation and learning
-- Reduced setup and boilerplate effort
+**DX value:**
+- Faster exploration and learning
+- Clear visibility into requests and responses
+- Reduced setup overhead during onboarding
 
-**My contribution:**
-- Designed and refined prompts that guide developers through common API workflows
-- Ensured prompt accuracy with valid parameters, edge cases, and real API behavior
-- Collaborated with Engineering and Product to improve API usability through guided interactions
+**My role:**
+- Shaped guided prompts around real integration workflows
+- Ensured prompts aligned with valid parameters, edge cases, and API behavior
+- Partnered with Engineering and Product to improve API usability through guided interactions
 
 🔗 https://api-explorer.chargebee.com/
 
@@ -82,92 +83,89 @@ to explore and test APIs without writing code.
 
 ### Chargebee Copilot (AI-Assisted Developer Tool)
 
-Chargebee Copilot is an AI-powered assistant that helps developers understand APIs, debug
-integration issues, and get contextual guidance without manual documentation lookups.
+Chargebee Copilot is an AI-powered assistant that helps developers understand APIs, troubleshoot
+integration issues, and get contextual guidance.
 
-**What it enables:**
-- Natural-language interaction with API knowledge
-- Contextual, real-time responses
-- Guided troubleshooting and onboarding
-- Improved self-service success
+**DX value:**
+- Natural-language access to API knowledge
+- Context-aware guidance during onboarding and debugging
+- Improved self-service success for developers
 
-**My contribution:**
-- Helped shape Copilot prompts and scenarios based on real developer questions
-- Ensured API responses were accurate, contextual, and aligned with actual behavior
-- Defined common onboarding, error-handling, and integration workflows for AI assistance
+**My role:**
+- Helped define prompts and scenarios based on real developer questions
+- Ensured responses were accurate, contextual, and consistent with API behavior
+- Contributed to common onboarding, error-handling, and integration workflows
 
 🔗 https://www.chargebee.com/docs/billing/2.0/ai-in-chargebee/chargebee-copilot
 
 ---
 
-## 🧩 Real-World Developer Enablement (APIs & SDKs)
+## 🧩 Real-World Developer Enablement
 
-### Native SDK Documentation
+### SDK Documentation
 
 - **iOS SDK**  
   Improved README structure, onboarding clarity, and usage examples.  
   https://github.com/chargebee/chargebee-ios/blob/master/README.md
 
 - **Android SDK**  
-  Ensured consistency between SDK abstractions and underlying API behavior, with
-  clear setup and integration guidance.  
+  Ensured consistency between SDK abstractions and underlying API behavior.  
   https://github.com/chargebee/chargebee-android/blob/master/README.md
 
 ---
 
-### Implementation Tutorials
+### Integration Tutorials & Workflows
 
 - **Subscription Enrollment via APIs and PDP Widgets**  
-  End-to-end tutorial covering real-world subscription workflows.  
+  End-to-end workflow covering real subscription and checkout scenarios.  
   https://www.chargebee.com/tutorials/subscription-enrollment/#pdp-widget-creation
 
 - **Razorpay JS Integration with Chargebee APIs**  
-  Demonstrates third-party payment gateway integration using JavaScript and APIs.  
+  Real-world payment gateway integration using JavaScript and APIs.  
   https://www.chargebee.com/tutorials/razorpay-js-integration-with-chargebee-api/
 
 ---
 
-### API Error Handling & Developer Guidance
+### API Error Handling & Guidance
 
 - **Chargebee API Error Handling**  
-  Structured error documentation to help developers understand failure modes,
-  retry strategies, and debugging workflows.  
+  Documentation focused on failure modes, recovery paths, and debugging clarity.  
   https://apidocs.chargebee.com/docs/api/errors?lang=curl
 
 ---
 
-## 💻 Code & Tooling I Work With
+## 💻 Code & Tooling
 
-While I’m not a full-time software engineer, I work hands-on with:
+I work hands-on with the tools developers actually use:
 
 - HTML, CSS, JavaScript (ES6+)
 - TypeScript (working knowledge)
-- JSON and XML payloads
+- JSON and XML
 - Markdown and MDX
 - GitHub workflows and CI/CD
-- API testing tools (Postman, curl)
+- API tooling (Postman, curl)
 
-I use these regularly to validate examples, test workflows, and build
-developer documentation and tooling experiences.
+I use these regularly to validate examples, test workflows, and ensure developer-facing
+content reflects real behavior.
 
 ---
 
-## 🏢 Professional Background (Summary)
+## 🏢 Professional Background (Snapshot)
 
 - **Chargebee** – Developer Experience, APIs, SDKs, Docs-as-Code, Developer Tooling
 - **Capillary Technologies** – API Documentation, UML, Video Tutorials
 - **Netradyne** – Hardware + Software Documentation, Release Notes
 - **Alternative Minds** – Enterprise Documentation
-- **FreeBalance** – QA + Developer Portal Documentation
+- **FreeBalance** – QA & Developer Portal Documentation
 
 ---
 
-## 🚀 What I’m Currently Exploring
+## 🚀 Current Focus Areas
 
 - AI-assisted developer tooling and documentation
-- Docs-as-code workflows using MDX
-- Better patterns for API onboarding and tutorials
-- How documentation and tooling influence developer adoption
+- MDX-based docs-as-code workflows
+- Clearer patterns for API onboarding and SDK adoption
+- Understanding how tooling and docs influence developer adoption
 
 ---
 
@@ -178,4 +176,4 @@ developer documentation and tooling experiences.
 
 ---
 
-*I enjoy working on developer-first platforms and tools that make complex systems easier to use.*
+*I enjoy working on developer-first platforms where documentation, tooling, and APIs come together to create a cohesive experience.*
