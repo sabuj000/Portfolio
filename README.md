@@ -307,13 +307,23 @@ support both humans and AI-driven tools.
   subscription and payments products.
 
 **Earlier experience**
-- **Capillary Technologies** — Technical Writer: user guides, release notes, UI content review,
-  SDK docs for retail CRM, ecommerce & loyalty platforms (2020–2021)
-- **Netradyne** — Technical Writer: documentation and SDK docs for an intelligent driving
-  monitoring system (2019–2020)
-- **Alternative Minds** — Technical Writer: instruction manuals, content management, online help,
-  release notes (2017–2019)
-- **FreeBalance** — QA Tester: government public-financial-management projects (2014–2017)
+- **Capillary Technologies** — Technical Writer (Aug 2020 – Aug 2021): user guides, release notes,
+  and UI content review; API documentation (payload/parameter descriptions using Markdown, Postman,
+  OpenAPI); data-driven content with UML (use-case, sequence, activity diagrams); and video content
+  (online product training courses and YouTube channel management) for retail CRM, ecommerce &
+  loyalty platforms.
+- **Netradyne** — Technical Writer (Apr 2019 – Jul 2020): product guides, how-tos, installation
+  manuals, online help, FAQs, and internal/customer-facing release notes for an intelligent driving
+  monitoring system and device; UI content and narrated video content.
+- **Alternative Minds** — Technical Writer (May 2017 – Apr 2019): instruction manuals, content
+  management, online help, and release notes; gathered and disseminated technical information across
+  customers, designers, and developers.
+- **FreeBalance** — QA Tester (Sep 2014 – Apr 2017): documentation and content management for
+  government public-financial-management portals (user guides, product descriptions, FAQs) and
+  system-specification testing against to-be documentation.
+
+*Earlier roles in marketing and market research (2012–2014) built a foundation in content writing,
+research, and client communication.*
 
 ---
 
