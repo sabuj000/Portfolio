@@ -7,16 +7,23 @@ Product Documentation Manager | Team Leadership · Docs-as-Code · AI-Powered Do
 
 ## 👋 Introduction
 
-Hi, I’m Sabuj — a **Product Documentation Manager** with 10+ years of experience building and
-leading documentation for APIs, SDKs, integrations, and developer platforms.
+Hi, I’m Sabuj — a **Product Documentation Manager** with 10+ years in technical writing, API
+documentation, and knowledge management, and **3+ years leading documentation** for APIs, SDKs,
+integrations, and developer platforms.
 
-I run product documentation as a product in its own right: setting content strategy, operating a
+I’ve grown from Technical Writer to Senior Technical Writer to Documentation Manager, and today I
+run product documentation as a product in its own right: setting content strategy, operating a
 docs-as-code platform, partnering with Product and Engineering on every release, and using AI and
 automation to scale output and reduce support cost — without scaling headcount.
 
-My work sits at the intersection of **Documentation, Product, Engineering, Data, and Developer
-Experience**, turning complex systems into clear, dependable content that helps both human
-developers and AI assistants succeed.
+I design accessible documentation systems for information retrieval, maintain compliance with ISO
+standards and document-control processes, and build AI-ready content. My work sits at the
+intersection of **Documentation, Product, Engineering, Data, and Developer Experience**, turning
+complex systems into clear, dependable content that helps both human developers and AI assistants
+succeed.
+
+**Core focus:** Content Strategy · Documentation Management · Technical Writing · Editing ·
+User Experience Writing
 
 ---
 
@@ -151,6 +158,8 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
   **45%** in two quarters.
 - **Editorial governance** — define review gates, ownership, and freshness/audit cycles so docs stay
   accurate as the product changes.
+- **Standards & document control** — maintain compliance with ISO standards and document-control
+  processes, and design accessible systems for information retrieval.
 - **Cross-functional alignment** — act as the connective tissue between Product, Engineering, Design,
   Support, and DevRel.
 
@@ -266,31 +275,51 @@ support both humans and AI-driven tools.
 - OpenAPI / API reference tooling, documentation CLIs and automation
 
 **AI & automation**
-- Custom GPTs and AI skills for the documentation lifecycle
+- Prompt engineering, custom GPTs, and AI skills for the documentation lifecycle
 - AI agents for ticket-driven content improvement
+- AI tools: Claude, GPT, Cursor
 - LLM-ready content structuring for in-product assistants
 
 **Code & API tooling**
 - HTML, CSS, JavaScript (ES6+), TypeScript (working knowledge)
 - JSON, XML
-- Postman, curl
+- OpenAPI, Postman, curl
 
 **Analytics & visualization**
 - GA4, Pendo, FullStory, Looker Studio
 
 **Visual & media**
-- Mermaid, Figma, Camtasia, Trainn
+- Mermaid, Figma, Camtasia, Trainn, SnagIt
+
+**Standards & process**
+- ISO standards, document control, knowledge management, accessibility
 
 ---
 
 ## 🏢 Professional Background
 
-- **Chargebee** — Product Documentation Manager: docs strategy, docs-as-code, API & SDK docs,
-  AI-assisted documentation and tooling
-- **Capillary Technologies** — API Documentation, UML, Video Tutorials
-- **Netradyne** — Hardware + Software Documentation, Release Notes
-- **Alternative Minds** — Enterprise Documentation
-- **FreeBalance** — QA & Developer Portal Documentation
+**Chargebee** — 2021–Present *(grew from individual contributor to people manager)*
+- **Documentation Manager** (Apr 2023 – Present) — own documentation strategy, docs-as-code,
+  API & SDK docs, and AI-assisted documentation and tooling; lead and grow the docs team.
+- **Senior Technical Writer** (Jan 2022 – Apr 2023) — led the team, delegated ownership, and
+  reviewed performance, with data-driven decision making.
+- **Technical Writer** (Aug 2021 – Dec 2021) — API documentation and OpenAPI implementation for
+  subscription and payments products.
+
+**Earlier experience**
+- **Capillary Technologies** — Technical Writer: user guides, release notes, UI content review,
+  SDK docs for retail CRM, ecommerce & loyalty platforms (2020–2021)
+- **Netradyne** — Technical Writer: documentation and SDK docs for an intelligent driving
+  monitoring system (2019–2020)
+- **Alternative Minds** — Technical Writer: instruction manuals, content management, online help,
+  release notes (2017–2019)
+- **FreeBalance** — QA Tester: government public-financial-management projects (2014–2017)
+
+---
+
+## 🎓 Education
+
+- **West Bengal University of Technology**
 
 ---
 
