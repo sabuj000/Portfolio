@@ -1,7 +1,15 @@
 # Sabuj Bandopadhyay
-Product Documentation Manager | Team Leadership · Docs-as-Code · AI-Powered Documentation · Developer Experience
+### Product Documentation Manager — Team Leadership · Docs-as-Code · AI-Powered Documentation · Developer Experience
+
+[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-View_Site-6c8cff?style=for-the-badge)](https://sabuj000.github.io/Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/sabujbandopadhyay)
+[![Email](https://img.shields.io/badge/Email-sbtechwriter-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sbtechwriter@gmail.com)
+[![Location](https://img.shields.io/badge/Bengaluru-India-42d6c3?style=for-the-badge)](#)
 
 ![Banner Image](https://github.com/sabuj000/Portfolio/blob/main/Cover%20Image.png)
+
+> 🌐 **Prefer an interactive view?** This portfolio is also a live, interactive site →
+> **[sabuj000.github.io/Portfolio](https://sabuj000.github.io/Portfolio/)**
 
 ---
 
@@ -31,7 +39,22 @@ User Experience Writing
 
 A snapshot of outcomes I’ve driven as a documentation leader:
 
-- **~2X growth in documentation footprint** — scaled the content library to ~4,800 files (up from
+| 📈 Metric | 📊 Result |
+|---|---|
+| Documentation footprint | **~2× growth** (to ~4,800 files) |
+| API doc PRs from non-docs engineers | **79%** (contributor base nearly doubled) |
+| Publishing time | **>50% faster** with AI in the workflow |
+| Documentation SLA | **~50% reduction** |
+| Support copy-fix requests | **−45%** in two quarters |
+| Release-notes effort | **~8 hrs → ~15 min** |
+| How-to videos shipped | **30+** on a repeatable pipeline |
+
+<details>
+<summary><b>📂 Expand the detail behind each number</b></summary>
+
+<br>
+
+- **~2× growth in documentation footprint** — scaled the content library to ~4,800 files (up from
   ~2,400), while raising quality and consistency.
 - **79% of API documentation contributions now come from non-docs engineers** — up over 110%
   quarter-over-quarter, with the contributor base nearly doubling — by building self-serve tooling
@@ -43,6 +66,39 @@ A snapshot of outcomes I’ve driven as a documentation leader:
 - **Release-notes effort cut from ~8 hours to ~15 minutes** through automation and single-source-of-truth
   changelogs.
 - **30+ how-to videos shipped** on a repeatable weekly pipeline, scaling self-serve learning.
+
+</details>
+
+---
+
+## 🔁 How AI-Driven Documentation Works
+
+A core part of my work: shifting documentation from reactive to proactive using support signals.
+
+```mermaid
+flowchart LR
+    A[Support tickets<br/>~6,300 analyzed] --> B[AI agent<br/>detects doc gaps]
+    B --> C[Auto-drafted<br/>content & fixes]
+    C --> D[Human review<br/>+ publish]
+    D --> E[Fewer tickets<br/>higher self-serve]
+    E -.feedback loop.-> A
+```
+
+---
+
+## 🛤️ Career Journey
+
+```mermaid
+timeline
+    title Technical Writer → Documentation Leader
+    2014–2017 : QA Tester · FreeBalance
+    2017–2019 : Technical Writer · Alternative Minds
+    2019–2020 : Technical Writer · Netradyne
+    2020–2021 : Technical Writer · Capillary
+    2021–2022 : Technical Writer · Chargebee
+    2022–2023 : Senior Technical Writer · Chargebee
+    2023–Now  : Documentation Manager · Chargebee
+```
 
 ---
 
