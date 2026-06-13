@@ -1,5 +1,5 @@
 # Sabuj Bandopadhyay
-Product Documentation Manager | Docs-as-Code · AI-Powered Documentation · API & SDK Docs · Developer Experience
+Product Documentation Manager | Team Leadership · Docs-as-Code · AI-Powered Documentation · Developer Experience
 
 ![Banner Image](https://github.com/sabuj000/Portfolio/blob/main/Cover%20Image.png)
 
@@ -54,6 +54,38 @@ A snapshot of outcomes I’ve driven as a documentation leader:
 - **Measure and improve** — track how developers actually use docs and feed insights back into the roadmap.
 - **Connect docs to business outcomes** — tie documentation to support deflection, adoption, and
   pipeline activation.
+
+---
+
+## 🧑‍🤝‍🧑 Leadership & Team Management
+
+I lead with visibility, data, and ownership — and build those same qualities into my team.
+
+- **Communicate up, consistently** — send structured weekly updates to leadership covering
+  initiative status, contributor-level data, blockers, and next steps, making the team's work
+  legible to leadership without being asked.
+- **Delegate ownership, not just tasks** — assign end-to-end ownership of major initiatives to
+  individual team members and credit them by name to leadership, building their visibility and growth.
+- **Coach before the moment, not after** — proactively prep team members with structured talking
+  points before key meetings, developing their presence and confidence.
+- **Make team performance visible with data** — tracked contribution trends over 17 months to prove
+  impact with numbers (e.g., engineer contributors growing 16 → 28 and PRs up 111% quarter-over-quarter),
+  rather than asserting it.
+- **Protect the team from bad bets and pivot fast** — when an approach isn't working, I diagnose the
+  root cause, document what *is* working, and propose a better workflow to leadership instead of
+  pushing harder on a failing path.
+- **Set direction and align cross-functionally** — proactively drive the documentation roadmap in
+  partnership with DevEx, Product, PMM, and Engineering rather than waiting to be directed.
+- **Define growth paths for the team** — established five professional-growth axes for my reports:
+  analytics & strategy, AI & automation, technical enablement, documentation architecture, and
+  mentorship — building a team, not just managing headcount.
+- **Advocate for the team's tools and conditions** — escalate real workflow friction to IT and tooling
+  leadership with a clear business case, advocating for my team's working conditions, not just output.
+- **Apply engineering-level rigor** — run formal root-cause analyses (e.g., on rejected contributions)
+  to fix upstream quality issues and reduce wasted effort, not just track the numbers.
+- **Keep a distributed team in sync** — share clear weekly updates separating business-as-usual from
+  major initiatives, with linked context for every workstream, creating a transparent, psychologically
+  safe team culture.
 
 ---
 
