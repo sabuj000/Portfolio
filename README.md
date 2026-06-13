@@ -319,7 +319,10 @@ support both humans and AI-driven tools.
 
 ## 🎓 Education
 
-- **West Bengal University of Technology**
+- **Master of Computer Applications (MCA), Information Technology** — West Bengal University of
+  Technology, Kolkata (2009–2012)
+- **Bachelor of Computer Application (BCA), Information Technology** — West Bengal University of
+  Technology, Kolkata (2006–2009)
 
 ---
 
