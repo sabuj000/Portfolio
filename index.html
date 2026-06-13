@@ -35,20 +35,39 @@
   .serif{font-family:'Fraunces',Georgia,serif; font-weight:600}
 
   /* NAV */
+  #progress{position:fixed; top:0; left:0; height:3px; width:0; z-index:60;
+    background:linear-gradient(90deg,var(--brand),var(--brand-2)); transition:width .1s linear}
   nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(12px);
-    background:color-mix(in srgb, var(--bg) 80%, transparent);
+    background:color-mix(in srgb, var(--bg) 82%, transparent);
     border-bottom:1px solid var(--line)}
   .nav-inner{display:flex; align-items:center; justify-content:space-between; height:62px}
-  .brand{font-weight:800; letter-spacing:.2px}
+  .brand{font-weight:800; letter-spacing:.2px; color:var(--text)}
+  .brand:hover{text-decoration:none}
   .brand span{color:var(--brand)}
+  .nav-right{display:flex; align-items:center; gap:12px}
   .nav-links{display:flex; gap:22px; align-items:center}
-  .nav-links a{color:var(--muted); font-size:14px; font-weight:500}
+  .nav-links a{color:var(--muted); font-size:14px; font-weight:500; position:relative}
   .nav-links a:hover{color:var(--text); text-decoration:none}
+  .nav-links a.active{color:var(--text)}
+  .nav-links a:not(.cta).active::after{content:""; position:absolute; left:0; right:0; bottom:-6px;
+    height:2px; border-radius:2px; background:var(--brand)}
   .toggle{cursor:pointer; border:1px solid var(--line); background:var(--card);
     color:var(--text); width:38px; height:38px; border-radius:10px; font-size:16px;
     display:grid; place-items:center; transition:.2s}
   .toggle:hover{border-color:var(--brand)}
-  @media(max-width:760px){ .nav-links a:not(.cta){display:none} }
+  .hamburger{display:none}
+  @media(max-width:820px){
+    .hamburger{display:grid}
+    .nav-links{position:fixed; top:62px; left:0; right:0; flex-direction:column; gap:0;
+      align-items:stretch; background:var(--bg); border-bottom:1px solid var(--line);
+      padding:8px 16px 16px; box-shadow:var(--shadow);
+      transform:translateY(-12px); opacity:0; pointer-events:none; transition:.22s}
+    .nav-links.open{transform:none; opacity:1; pointer-events:auto}
+    .nav-links a{padding:13px 6px; font-size:16px; border-bottom:1px solid var(--line)}
+    .nav-links a:not(.cta).active::after{display:none}
+    .nav-links a.active{color:var(--brand)}
+    .nav-links a.cta{margin-top:12px; text-align:center; border-bottom:none}
+  }
 
   /* HERO */
   header.hero{position:relative; overflow:hidden; padding:84px 0 64px}
@@ -146,22 +165,26 @@
 </head>
 <body>
 
+<div id="progress"></div>
 <nav>
   <div class="wrap nav-inner">
-    <div class="brand">Sabuj<span>.</span></div>
-    <div class="nav-links">
-      <a href="#impact">Impact</a>
-      <a href="#work-approach">What I Do</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#journey">Journey</a>
-      <a href="#skills">Skills</a>
-      <a class="cta btn primary" href="#contact" style="padding:8px 14px">Get in touch</a>
+    <a class="brand" href="#top">Sabuj<span>.</span></a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#impact">Impact</a>
+        <a href="#work-approach">What I Do</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#journey">Journey</a>
+        <a href="#skills">Skills</a>
+        <a class="cta btn primary" href="#contact" style="padding:8px 14px">Get in touch</a>
+      </div>
       <button class="toggle" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="toggle hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="hero-glow"></div>
   <div class="wrap hero-inner">
     <span class="eyebrow"><span class="dot"></span> Open to documentation leadership roles</span>
@@ -357,6 +380,32 @@
 
   // year
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // mobile menu
+  const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+  const closeMenu=()=>{ navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='☰'; };
+  menuBtn.addEventListener('click',()=>{
+    const open=navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open); menuBtn.textContent=open?'✕':'☰';
+  });
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+  // scroll progress bar
+  const bar=document.getElementById('progress');
+  const onScroll=()=>{ const h=document.documentElement;
+    const sc=(h.scrollTop)/(h.scrollHeight-h.clientHeight); bar.style.width=(sc*100)+'%'; };
+  document.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // active-section highlighting in nav
+  const linkMap={};
+  navLinks.querySelectorAll('a[href^="#"]').forEach(a=>linkMap[a.getAttribute('href').slice(1)]=a);
+  const secObs=new IntersectionObserver((es)=>es.forEach(e=>{
+    const a=linkMap[e.target.id]; if(!a) return;
+    if(e.isIntersecting){ Object.values(linkMap).forEach(x=>x.classList.remove('active')); a.classList.add('active'); }
+  }),{rootMargin:'-45% 0px -50% 0px'});
+  ['impact','work-approach','leadership','journey','skills','contact'].forEach(id=>{
+    const el=document.getElementById(id); if(el) secObs.observe(el);
+  });
 
   // reveal on scroll
   const io=new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
