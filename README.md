@@ -175,8 +175,9 @@ ownership. These qualities apply whether I'm leading people or leading the work 
   mentorship — building a team, not just managing headcount.
 - **Advocate for the team's tools and conditions** — escalate real workflow friction to IT and tooling
   leadership with a clear business case, advocating for my team's working conditions, not just output.
-- **Apply engineering-level rigor** — run formal root-cause analyses (e.g., on rejected contributions)
-  to fix upstream quality issues and reduce wasted effort, not just track the numbers.
+- **Fix problems at the root** — when contributions get rejected, I investigate why and find the real
+  cause (unclear guidelines, gaps in the process), then fix it at the source — so fewer contributions
+  get rejected and less effort is wasted on rework, rather than just tracking the numbers.
 - **Keep a distributed team in sync** — share clear weekly updates separating business-as-usual from
   major initiatives, with linked context for every workstream, creating a transparent, psychologically
   safe team culture.
