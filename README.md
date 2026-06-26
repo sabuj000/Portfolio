@@ -48,9 +48,9 @@ Each initiative below is framed as **problem → what I built → ROI**.
 
 | 🎯 Problem | 🔧 What I built | 📈 ROI |
 |---|---|---|
-| Reactive doc fixes let support tickets pile up (high L1 cost) | AI agents analyzing ~6,300 support tickets to detect & fix gaps | **Lower ticket volume & support cost** — reactive → proactive |
+| Reactive doc fixes let support tickets pile up (high L1 cost) | AI agents analyzing new & existing support tickets in bulk to detect & fix gaps | **Lower ticket volume & support cost** — reactive → proactive |
 | Docs team bottlenecked engineering velocity | A docs CLI (OpenAPI gen, scaffolding, sync, validation, preview) | **79% of API doc PRs now authored by engineers**; contributors ~2× — no added headcount |
-| Manual drafting capped team throughput | 5+ GPTs / AI skills across the documentation lifecycle | **Publishing time cut >50%** — more output per person |
+| Manual drafting capped team throughput | Multiple AI skills that draft & update feature docs from any source (Notion, Google Docs, PDF, Jira…) | **Publishing time cut >50%** — faster contribution & easier collaboration |
 | Text-only docs slow onboarding & evaluation | A sustained pipeline publishing 30+ videos/month | **Faster feature adoption & self-serve onboarding**; stronger prospect evaluation |
 | Fragmented KB hurt findability, drove support load | Migrated 1,800+ articles, standardized (95% style compliance) | **Engagement +12%, page views 2× (58K+), copy-fix requests −45%** |
 | Manual release notes (~8 hrs) + recurring broken links | Release-notes automation with API docs as single source of truth | **~8 hrs → ~15 min**; broken-link gap permanently closed |
@@ -97,7 +97,7 @@ A core part of my work: shifting documentation from reactive to proactive using 
 
 ```mermaid
 flowchart LR
-    A[Support tickets<br/>~6,300 analyzed] --> B[AI agent<br/>detects doc gaps]
+    A[Support tickets<br/>new & existing, in bulk] --> B[AI agent<br/>detects doc gaps]
     B --> C[Auto-drafted<br/>content & fixes]
     C --> D[Human review<br/>+ publish]
     D --> E[Fewer tickets<br/>higher self-serve]
@@ -187,13 +187,14 @@ ownership. These qualities apply whether I'm leading people or leading the work 
 A core part of my work is using AI to shift documentation from reactive to proactive and to multiply
 team output.
 
-- **Ticket-driven, autonomous doc improvement** — designed AI agents that analyze thousands of
-  support tickets (~6,300 in one program) to surface and proactively close documentation gaps,
-  shifting from manual reactive updates to automated, evidence-based content generation. Directly
-  reduces support volume and front-line support cost.
-- **AI assistants across the documentation lifecycle** — created 5+ custom GPTs / AI skills that
-  assist with drafting, editing, and publishing; **cut publishing time by more than half** in many
-  cases. Skills were adopted org-wide beyond the docs team.
+- **Ticket-driven, autonomous doc improvement** — designed AI agents that analyze new and existing
+  support tickets in bulk to surface and proactively close documentation gaps, shifting from manual
+  reactive updates to automated, evidence-based content generation. Directly reduces support volume
+  and front-line support cost.
+- **AI assistants across the documentation lifecycle** — built multiple AI skills that speed up
+  contribution and make collaboration easier — drafting new feature docs and updating existing ones
+  from any source (Notion, Google Docs, PDF, Jira, and more). **Cut publishing time by more than half**
+  in many cases, with skills adopted org-wide beyond the docs team.
 - **AI-ready content** — structure documentation so it powers accurate, contextual in-product AI
   assistants, search, and LLM-based developer experiences.
 
@@ -244,6 +245,9 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
   **45%** in two quarters.
 - **Editorial governance** — define review gates, ownership, and freshness/audit cycles so docs stay
   accurate as the product changes.
+- **Continuous content audits** — systematically review historical and legacy documentation for
+  correctness and freshness, so humans, LLMs, client agents, and MCP-based tools all onboard and
+  operate with precision on content they can trust.
 - **Standards & document control** — maintain compliance with ISO standards and document-control
   processes, and design accessible systems for information retrieval.
 - **Cross-functional alignment** — act as the connective tissue across Leadership, Product, GTM,
