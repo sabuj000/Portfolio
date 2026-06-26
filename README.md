@@ -254,7 +254,10 @@ into the roadmap.
   artifacts, with global and page-level filters for views, engagement, and region.
 - Use **GA4 and Pendo** to understand discovery paths, engagement, and drop-offs — including refining
   user classification to separate internal vs. customer traffic for cleaner analytics.
-- Analyze **session-level behavior with FullStory** to identify confusion points and navigation friction.
+- Analyze **session-level behavior with FullStory** and operational/log data with **Splunk** to identify
+  confusion points, navigation friction, and failure patterns.
+- Measure **how AI bots and LLMs crawl and consume documentation** — using AI/LLM-crawl analytics to keep
+  content discoverable and accurate for AI-driven developer experiences.
 - Connect documentation performance to **feature adoption**, so Product can reason about onboarding
   effectiveness and content clarity.
 
@@ -365,7 +368,8 @@ support both humans and AI-driven tools.
 - OpenAPI, Postman, curl
 
 **Analytics & visualization**
-- GA4, Pendo, FullStory, Looker Studio
+- GA4, Pendo, FullStory, Looker Studio, Splunk
+- AI/LLM-crawl analytics — measuring how AI bots and LLMs crawl and consume documentation
 
 **Visual & media**
 - Mermaid, Figma, Camtasia, Trainn, SnagIt
