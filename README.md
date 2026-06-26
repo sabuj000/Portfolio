@@ -1,5 +1,5 @@
 # Sabuj Bandopadhyay
-### Product Documentation Manager — Team Leadership · Docs-as-Code · AI-Powered Documentation · Developer Experience
+### Documentation Problem-Solver & Builder — Docs-as-Code · AI-Powered Documentation · Developer Experience
 
 [![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-View_Site-6c8cff?style=for-the-badge)](https://sabuj000.github.io/Portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/sabujbandopadhyay)
@@ -30,8 +30,12 @@ intersection of **Documentation, Product, Engineering, GTM, Support, Marketing, 
 Experience**, turning complex systems into clear, dependable content that helps both human developers
 and AI assistants succeed.
 
-**Core focus:** Content Strategy · Documentation Management · Technical Writing · Editing ·
-User Experience Writing
+At my core I’m a **problem-solver** — equally comfortable driving the work hands-on as a **lead
+individual contributor** or guiding a **team**. I care more about the challenge and the learning than
+the title, and I’m open to roles on either track that bring hard problems worth solving.
+
+**Core focus:** Problem-Solving · Content Strategy · Docs-as-Code · AI & Automation · Technical Writing ·
+Data-Informed Decisions
 
 ---
 
@@ -139,9 +143,10 @@ timeline
 
 ---
 
-## 🧑‍🤝‍🧑 Leadership & Team Management
+## 🧑‍🤝‍🧑 Leadership & Influence
 
-I lead with visibility, data, and ownership — and build those same qualities into my team.
+Whether steering a team or an initiative, I bring the same problem-solving rigor, visibility, and
+ownership. These qualities apply whether I'm leading people or leading the work itself.
 
 - **Walk the talk — a player-coach who writes** — I don't just manage; I personally own features and
   products end-to-end as the writer (user, API, and any content the feature demands), staying close to
