@@ -26,9 +26,9 @@ automation to scale output and reduce support cost — without scaling headcount
 
 I design accessible documentation systems for information retrieval, maintain compliance with ISO
 standards and document-control processes, and build AI-ready content. My work sits at the
-intersection of **Documentation, Product, Engineering, Data, and Developer Experience**, turning
-complex systems into clear, dependable content that helps both human developers and AI assistants
-succeed.
+intersection of **Documentation, Product, Engineering, GTM, Support, Marketing, Data, and Developer
+Experience**, turning complex systems into clear, dependable content that helps both human developers
+and AI assistants succeed.
 
 **Core focus:** Content Strategy · Documentation Management · Technical Writing · Editing ·
 User Experience Writing
@@ -161,8 +161,9 @@ I lead with visibility, data, and ownership — and build those same qualities i
 - **Protect the team from bad bets and pivot fast** — when an approach isn't working, I diagnose the
   root cause, document what *is* working, and propose a better workflow to leadership instead of
   pushing harder on a failing path.
-- **Set direction and align cross-functionally** — proactively drive the documentation roadmap in
-  partnership with DevEx, Product, PMM, and Engineering rather than waiting to be directed.
+- **Set direction and collaborate cross-functionally** — proactively drive the documentation roadmap in
+  partnership with Leadership, Product, GTM, Marketing, Support, Engineering, Design, and DevEx — aligning
+  docs with launches, campaigns, support deflection, and the go-to-market motion, rather than waiting to be directed.
 - **Define growth paths for the team** — established five professional-growth axes for my reports:
   analytics & strategy, AI & automation, technical enablement, documentation architecture, and
   mentorship — building a team, not just managing headcount.
@@ -240,8 +241,9 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
   accurate as the product changes.
 - **Standards & document control** — maintain compliance with ISO standards and document-control
   processes, and design accessible systems for information retrieval.
-- **Cross-functional alignment** — act as the connective tissue between Product, Engineering, Design,
-  Support, and DevRel.
+- **Cross-functional alignment** — act as the connective tissue across Leadership, Product, GTM,
+  Marketing, Support, Engineering, Design, and DevEx/DevRel, keeping documentation in sync with the
+  product and the go-to-market motion.
 
 ---
 
@@ -254,7 +256,10 @@ into the roadmap.
   artifacts, with global and page-level filters for views, engagement, and region.
 - Use **GA4 and Pendo** to understand discovery paths, engagement, and drop-offs — including refining
   user classification to separate internal vs. customer traffic for cleaner analytics.
-- Analyze **session-level behavior with FullStory** to identify confusion points and navigation friction.
+- Analyze **session-level behavior with FullStory** and operational/log data with **Splunk** to identify
+  confusion points, navigation friction, and failure patterns.
+- Measure **how AI bots and LLMs crawl and consume documentation** — using AI/LLM-crawl analytics to keep
+  content discoverable and accurate for AI-driven developer experiences.
 - Connect documentation performance to **feature adoption**, so Product can reason about onboarding
   effectiveness and content clarity.
 
@@ -365,7 +370,8 @@ support both humans and AI-driven tools.
 - OpenAPI, Postman, curl
 
 **Analytics & visualization**
-- GA4, Pendo, FullStory, Looker Studio
+- GA4, Pendo, FullStory, Looker Studio, Splunk
+- AI/LLM-crawl analytics — measuring how AI bots and LLMs crawl and consume documentation
 
 **Visual & media**
 - Mermaid, Figma, Camtasia, Trainn, SnagIt
