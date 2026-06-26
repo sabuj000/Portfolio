@@ -245,6 +245,9 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
   **45%** in two quarters.
 - **Editorial governance** — define review gates, ownership, and freshness/audit cycles so docs stay
   accurate as the product changes.
+- **Continuous content audits** — systematically review historical and legacy documentation for
+  correctness and freshness, so humans, LLMs, client agents, and MCP-based tools all onboard and
+  operate with precision on content they can trust.
 - **Standards & document control** — maintain compliance with ISO standards and document-control
   processes, and design accessible systems for information retrieval.
 - **Cross-functional alignment** — act as the connective tissue across Leadership, Product, GTM,
