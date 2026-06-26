@@ -24,9 +24,9 @@ run product documentation as a product in its own right: setting content strateg
 docs-as-code platform, partnering with Product and Engineering on every release, and using AI and
 automation to scale output and reduce support cost — without scaling headcount.
 
-I design accessible documentation systems for information retrieval, maintain compliance with ISO
-standards and document-control processes, and build AI-ready content. My work sits at the
-intersection of **Documentation, Product, Engineering, GTM, Support, Marketing, Data, and Developer
+I design documentation that's easy to find and accessible, maintain compliance with ISO standards and
+document-control processes, and build AI-ready content. My work sits at the intersection of
+**Documentation, Product, Engineering, Go-to-Market, Support, Marketing, Data, and Developer
 Experience**, turning complex systems into clear, dependable content that helps both human developers
 and AI assistants succeed.
 
@@ -83,11 +83,11 @@ Each initiative below is framed as **problem → what I built → ROI**.
 A builder’s view of the problems coming for every docs org, and the bets I’m making to get ahead of them:
 
 - **🧩 Docs as the backbone of AI** — AI assistants are becoming how developers consume docs. I structure
-  content to be LLM-ready and retrieval-grade, so one source powers humans, search, and in-product copilots.
+  content to be AI-ready and LLM-friendly, so one source serves people, search, and in-product AI assistants.
 - **📡 Signal-driven, proactive docs** — documentation that fixes itself: tickets, search queries, and usage
   signals feeding autonomous agents that close gaps before they generate support cost.
-- **💹 Docs that prove their ROI** — connecting content to support deflection, feature adoption, and pipeline,
-  so documentation is a measurable growth lever, not a cost center.
+- **💹 Docs that prove their ROI** — connecting content to fewer support tickets, feature adoption, and sales
+  pipeline, so documentation is a measurable growth driver, not a cost center.
 
 ---
 
@@ -138,8 +138,8 @@ timeline
 - **Enable contributors** — make it easy for PMs, engineers, and support to contribute through
   tooling, templates, and review.
 - **Measure and improve** — track how developers actually use docs and feed insights back into the roadmap.
-- **Connect docs to business outcomes** — tie documentation to support deflection, adoption, and
-  pipeline activation.
+- **Connect docs to business outcomes** — tie documentation to fewer support tickets, adoption, and
+  sales pipeline.
 
 ---
 
@@ -168,8 +168,9 @@ ownership. These qualities apply whether I'm leading people or leading the work 
   root cause, document what *is* working, and propose a better workflow to leadership instead of
   pushing harder on a failing path.
 - **Set direction and collaborate cross-functionally** — proactively drive the documentation roadmap in
-  partnership with Leadership, Product, GTM, Marketing, Support, Engineering, Design, and DevEx — aligning
-  docs with launches, campaigns, support deflection, and the go-to-market motion, rather than waiting to be directed.
+  partnership with Leadership, Product, Go-to-Market, Marketing, Support, Engineering, Design, and Developer
+  Experience — aligning docs with launches, campaigns, fewer support tickets, and the go-to-market plan,
+  rather than waiting to be directed.
 - **Define growth paths for the team** — established five professional-growth axes for my reports:
   analytics & strategy, AI & automation, technical enablement, documentation architecture, and
   mentorship — building a team, not just managing headcount.
@@ -197,8 +198,8 @@ team output.
   contribution and make collaboration easier — drafting new feature docs and updating existing ones
   from any source (Notion, Google Docs, PDF, Jira, and more). **Cut publishing time by more than half**
   in many cases, with skills adopted org-wide beyond the docs team.
-- **AI-ready content** — structure documentation so it powers accurate, contextual in-product AI
-  assistants, search, and LLM-based developer experiences.
+- **AI-ready content** — structure documentation so it powers accurate in-product AI assistants,
+  search, and AI-driven developer experiences.
 
 ---
 
@@ -229,8 +230,8 @@ I scale documentation output by building contributor pipelines instead of growin
   the docs team reviews and publishes. Result: 128 PRs raised, 68 published, and a **~50% reduction in
   documentation SLA**.
 - **Contributor / buddy program** — enabled a broader internal and external contributor network
-  (60+ articles created, 40+ PRs), with root-cause analysis on rejected PRs to improve upstream quality
-  and reduce review overhead.
+  (60+ articles created, 40+ PRs); when contributions get rejected, I look into why and fix the cause —
+  improving quality and cutting review time.
 
 ---
 
@@ -238,8 +239,8 @@ I scale documentation output by building contributor pipelines instead of growin
 
 I treat documentation as a product with its own strategy, standards, and lifecycle.
 
-- **Information architecture** — design navigation, taxonomy, and content models so developers find
-  the right answer in the fewest steps.
+- **Site structure & navigation** — organize content so developers find the right answer in the
+  fewest steps.
 - **Content standards & style** — drove **95% compliance** with a defined English style standard across
   a large content library, improving readability and tone consistency.
 - **Large-scale content migration & audit** — migrated **1,800+ knowledge-base articles** into docs;
@@ -247,14 +248,14 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
   **45%** in two quarters.
 - **Editorial governance** — define review gates, ownership, and freshness/audit cycles so docs stay
   accurate as the product changes.
-- **Continuous content audits** — systematically review historical and legacy documentation for
-  correctness and freshness, so humans, LLMs, client agents, and MCP-based tools all onboard and
-  operate with precision on content they can trust.
+- **Continuous content audits** — systematically review older documentation for accuracy and freshness,
+  so people, LLMs, and MCP-based AI tools (search, in-product assistants, and agents) all get accurate
+  answers during onboarding.
 - **Standards & document control** — maintain compliance with ISO standards and document-control
-  processes, and design accessible systems for information retrieval.
-- **Cross-functional alignment** — act as the connective tissue across Leadership, Product, GTM,
-  Marketing, Support, Engineering, Design, and DevEx/DevRel, keeping documentation in sync with the
-  product and the go-to-market motion.
+  processes, and keep content easy to find and accessible.
+- **Cross-functional collaboration** — act as the connective tissue across Leadership, Product,
+  Go-to-Market, Marketing, Support, Engineering, Design, and Developer Experience, keeping documentation
+  in sync with the product and the go-to-market plan.
 
 ---
 
@@ -263,14 +264,14 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
 I use data to validate assumptions, understand how developers actually use docs, and feed that back
 into the roadmap.
 
-- Built a **single-view documentation analytics dashboard** (Looker Studio) monitoring 15+ content
-  artifacts, with global and page-level filters for views, engagement, and region.
+- Built a **single documentation analytics dashboard** (Looker Studio) monitoring 15+ content areas,
+  with site-wide and page-level filters for views, engagement, and region.
 - Use **GA4 and Pendo** to understand discovery paths, engagement, and drop-offs — including refining
   user classification to separate internal vs. customer traffic for cleaner analytics.
 - Analyze **session-level behavior with FullStory** and operational/log data with **Splunk** to identify
   confusion points, navigation friction, and failure patterns.
-- Measure **how AI bots and LLMs crawl and consume documentation** — using AI/LLM-crawl analytics to keep
-  content discoverable and accurate for AI-driven developer experiences.
+- Measure **how AI bots and LLMs read and use documentation** — to keep content easy to find and
+  accurate for AI-driven developer experiences.
 - Connect documentation performance to **feature adoption**, so Product can reason about onboarding
   effectiveness and content clarity.
 
@@ -278,19 +279,19 @@ into the roadmap.
 
 ## 💰 Connecting Documentation to Adoption & Revenue
 
-I tie documentation and in-product guidance directly to adoption and pipeline.
+I tie documentation and in-app guidance directly to adoption and sales pipeline.
 
-- Built **in-product banners and guidance** that funnel users from documentation into demos and
-  activation flows, connecting docs work to PLG/SLG conversion.
-- Drove **data fusion between product analytics and CRM/outreach** so in-product responses feed
-  automated follow-up — turning documentation touchpoints into measurable pipeline activation.
+- Built **in-app banners and guidance** that move users from docs into demos and sign-ups, connecting
+  docs work to both self-serve and sales-led growth.
+- Connected **product analytics with the CRM and outreach tools** so in-app responses trigger automated
+  follow-up — turning documentation into measurable sales pipeline.
 
 ---
 
 ## 🎥 Video & Visual Documentation
 
-I use visual and interactive formats to reduce cognitive load and help developers understand complex
-systems faster.
+I use visual and interactive formats to make complex systems easier to grasp and help developers
+understand them faster.
 
 - Run a sustained pipeline publishing **30+ how-to and conceptual videos every month**, including an
   AI-assisted workflow for concept and value-prop videos — scaling video docs without proportional headcount.
@@ -302,20 +303,20 @@ My goal with visuals is always the same: **make the next developer action obviou
 
 ---
 
-## 🧠 My DX Perspective
+## 🧠 My Developer-Experience Perspective
 
 I approach developer experience as a **journey problem**, not a documentation problem.
 
 When working on developer-facing products, I focus on:
 
-- Time-to-first-success and safe experimentation
-- API clarity, predictability, and recoverability
-- End-to-end workflows over isolated endpoints
-- Practical examples, edge cases, and failure modes
-- Systems that scale across humans, SDKs, and AI tools
+- Helping developers reach their first success quickly and experiment safely
+- APIs that are clear, predictable, and easy to recover from when something goes wrong
+- Complete, end-to-end workflows rather than isolated features
+- Practical examples, edge cases, and what to do when things fail
+- Content that works for people, SDKs, and AI tools alike
 
 I regularly review APIs, SDKs, and docs from a developer’s point of view and give feedback on naming,
-payloads, error handling, and overall usability.
+inputs/outputs, error handling, and overall usability.
 
 ---
 
@@ -373,7 +374,7 @@ support both humans and AI-driven tools.
 - Prompt engineering, custom GPTs, and AI skills for the documentation lifecycle
 - AI agents for ticket-driven content improvement
 - AI tools: Claude, GPT, Cursor
-- LLM-ready content structuring for in-product assistants
+- AI-ready content structuring for in-product assistants
 
 **Code & API tooling**
 - HTML, CSS, JavaScript (ES6+), TypeScript (working knowledge)
@@ -382,7 +383,7 @@ support both humans and AI-driven tools.
 
 **Analytics & visualization**
 - GA4, Pendo, FullStory, Looker Studio, Splunk
-- AI/LLM-crawl analytics — measuring how AI bots and LLMs crawl and consume documentation
+- AI/LLM-crawl analytics — measuring how AI bots and LLMs read documentation
 
 **Visual & media**
 - Mermaid, Figma, Camtasia, Trainn, SnagIt
