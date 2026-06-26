@@ -83,7 +83,7 @@ Each initiative below is framed as **problem → what I built → ROI**.
 A builder’s view of the problems coming for every docs org, and the bets I’m making to get ahead of them:
 
 - **🧩 Docs as the backbone of AI** — AI assistants are becoming how developers consume docs. I structure
-  content to be AI-ready and well-organized, so one source serves people, search, and in-product AI assistants.
+  content to be AI-ready and LLM-friendly, so one source serves people, search, and in-product AI assistants.
 - **📡 Signal-driven, proactive docs** — documentation that fixes itself: tickets, search queries, and usage
   signals feeding autonomous agents that close gaps before they generate support cost.
 - **💹 Docs that prove their ROI** — connecting content to fewer support tickets, feature adoption, and sales
@@ -249,8 +249,8 @@ I treat documentation as a product with its own strategy, standards, and lifecyc
 - **Editorial governance** — define review gates, ownership, and freshness/audit cycles so docs stay
   accurate as the product changes.
 - **Continuous content audits** — systematically review older documentation for accuracy and freshness,
-  so both people and AI tools (search, in-product assistants, and agents) get accurate answers during
-  onboarding.
+  so people, LLMs, and MCP-based AI tools (search, in-product assistants, and agents) all get accurate
+  answers during onboarding.
 - **Standards & document control** — maintain compliance with ISO standards and document-control
   processes, and keep content easy to find and accessible.
 - **Cross-functional collaboration** — act as the connective tissue across Leadership, Product,
@@ -270,7 +270,7 @@ into the roadmap.
   user classification to separate internal vs. customer traffic for cleaner analytics.
 - Analyze **session-level behavior with FullStory** and operational/log data with **Splunk** to identify
   confusion points, navigation friction, and failure patterns.
-- Measure **how AI bots and assistants read and use documentation** — to keep content easy to find and
+- Measure **how AI bots and LLMs read and use documentation** — to keep content easy to find and
   accurate for AI-driven developer experiences.
 - Connect documentation performance to **feature adoption**, so Product can reason about onboarding
   effectiveness and content clarity.
@@ -383,7 +383,7 @@ support both humans and AI-driven tools.
 
 **Analytics & visualization**
 - GA4, Pendo, FullStory, Looker Studio, Splunk
-- AI-crawl analytics — measuring how AI bots and assistants read documentation
+- AI/LLM-crawl analytics — measuring how AI bots and LLMs read documentation
 
 **Visual & media**
 - Mermaid, Figma, Camtasia, Trainn, SnagIt
