@@ -120,9 +120,17 @@
     padding:22px; box-shadow:var(--shadow); transition:.25s}
   .card:hover{transform:translateY(-4px); border-color:color-mix(in srgb,var(--brand) 50%,var(--line))}
   .card .ico{font-size:22px; margin-bottom:10px}
-  .card h3{font-size:17px; margin:0 0 8px}
+  .card h3{font-size:17px; margin:0 0 10px}
   .card p{color:var(--muted); margin:0; font-size:14.5px}
   .card .stat{color:var(--brand-2); font-weight:700; font-family:'Fraunces',serif}
+  .card .line{font-size:13.6px; margin:7px 0 0; line-height:1.5}
+  .card .line b{font-weight:700; letter-spacing:.3px; font-size:11px; text-transform:uppercase;
+    display:inline-block; min-width:54px; color:var(--muted)}
+  .card .prob{color:var(--muted)}
+  .card .built{color:var(--text)}
+  .card .roi{color:var(--text)}
+  .card .roi b{color:var(--brand-2)}
+  .card .roi span{color:var(--brand-2); font-weight:600}
 
   /* TIMELINE */
   .timeline{position:relative; margin-top:10px; padding-left:28px}
@@ -173,6 +181,7 @@
       <div class="nav-links" id="navLinks">
         <a href="#impact">Impact</a>
         <a href="#work-approach">What I Do</a>
+        <a href="#vision">Vision</a>
         <a href="#leadership">Leadership</a>
         <a href="#journey">Journey</a>
         <a href="#skills">Skills</a>
@@ -187,11 +196,12 @@
 <header class="hero" id="top">
   <div class="hero-glow"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow"><span class="dot"></span> Open to documentation leadership roles</span>
+    <span class="eyebrow"><span class="dot"></span> Documentation leader · Builder · Open to leadership roles</span>
     <h1 class="name serif">Sabuj Bandopadhyay</h1>
     <div class="role">Product Documentation Manager — Docs-as-Code · AI-Powered Documentation · Developer Experience</div>
-    <p class="tagline">I run product documentation as a product — setting strategy, operating a docs-as-code
-      platform, and using AI &amp; automation to scale output and cut support cost, without scaling headcount.
+    <p class="tagline">I build documentation systems that solve today’s problems — and anticipate tomorrow’s.
+      Pairing docs-as-code, AI, and automation, I turn documentation into a lever for lower support cost,
+      faster engineering, and higher product adoption — measured by business impact, not page counts.
       10+ years in technical writing; 3+ years leading documentation teams.</p>
     <div class="pills">
       <span class="pill">Content Strategy</span>
@@ -221,22 +231,40 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="kicker">Impact Highlights</div>
-      <h2 class="serif">Outcomes I’ve driven as a documentation leader</h2>
-      <p>Quantified, transferable results — ranked by the value they create for the business.</p>
+      <h2 class="serif">I build systems that solve real business problems</h2>
+      <p>Every initiative starts from a problem and is measured by the value it creates — support cost,
+      engineering velocity, adoption, and revenue. Here’s the problem → build → ROI for each.</p>
     </div>
     <div class="grid g-3">
-      <div class="card reveal"><div class="ico">🤖</div><h3>AI that closes doc gaps</h3>
-        <p>Designed AI agents that analyze <span class="stat">~6,300</span> support tickets to proactively fix documentation gaps — shifting from reactive updates to evidence-driven content and cutting support load.</p></div>
-      <div class="card reveal"><div class="ico">📦</div><h3>Self-serve docs tooling</h3>
-        <p>Built a docs CLI (OpenAPI generation, scaffolding, sync, validation, preview). Now <span class="stat">79%</span> of API doc PRs come from non-docs engineers — contributor base nearly doubled, no added headcount.</p></div>
-      <div class="card reveal"><div class="ico">🧠</div><h3>AI-accelerated publishing</h3>
-        <p>Created 5+ GPTs / AI skills across the documentation lifecycle, cutting publishing time by <span class="stat">&gt;50%</span> — adopted org-wide beyond the docs team.</p></div>
-      <div class="card reveal"><div class="ico">🗃️</div><h3>Knowledge-base migration</h3>
-        <p>Migrated <span class="stat">1,800+</span> articles into docs: engagement up 12%, page views more than doubled (58K+), and copy-fix requests down 45% in two quarters.</p></div>
-      <div class="card reveal"><div class="ico">⚙️</div><h3>Release-notes automation</h3>
-        <p>Cut release-notes effort from <span class="stat">~8 hrs → ~15 min</span> and made API docs the single source of truth, permanently closing a recurring broken-link gap.</p></div>
-      <div class="card reveal"><div class="ico">📝</div><h3>Faster, accurate publishing</h3>
-        <p>Established a PM-as-first-drafter model — 128 PRs raised, 68 published, and documentation SLA reduced by <span class="stat">~50%</span>.</p></div>
+      <div class="card reveal"><div class="ico">🤖</div><h3>AI that closes doc gaps before they cost support</h3>
+        <p class="line prob"><b>Problem</b> Reactive, manual doc fixes let support tickets pile up — high L1 cost.</p>
+        <p class="line built"><b>Built</b> Autonomous AI agents that analyze ~6,300 support tickets to detect and proactively fix gaps.</p>
+        <p class="line roi"><b>ROI</b> <span>Lower ticket volume &amp; support cost</span> — shifts the org from reactive to proactive content.</p></div>
+
+      <div class="card reveal"><div class="ico">📦</div><h3>Self-serve tooling that removes the docs bottleneck</h3>
+        <p class="line prob"><b>Problem</b> Docs team couldn’t keep pace with engineering velocity — a release bottleneck.</p>
+        <p class="line built"><b>Built</b> A docs CLI: OpenAPI generation, scaffolding, sync, validation, and local preview.</p>
+        <p class="line roi"><b>ROI</b> <span>79% of API doc PRs now authored by engineers</span>; contributor base nearly doubled — docs scale with zero added headcount.</p></div>
+
+      <div class="card reveal"><div class="ico">🧠</div><h3>AI that multiplies the team’s output</h3>
+        <p class="line prob"><b>Problem</b> Manual drafting/editing capped how much the team could ship.</p>
+        <p class="line built"><b>Built</b> 5+ GPTs &amp; AI skills across the documentation lifecycle, adopted org-wide.</p>
+        <p class="line roi"><b>ROI</b> <span>Publishing time cut &gt;50%</span> — more output per person, no proportional cost increase.</p></div>
+
+      <div class="card reveal"><div class="ico">🎬</div><h3>Video that speeds feature onboarding &amp; evaluation</h3>
+        <p class="line prob"><b>Problem</b> Text-only docs slow how fast merchants onboard and prospects evaluate features.</p>
+        <p class="line built"><b>Built</b> 30+ how-to &amp; concept videos on a repeatable weekly pipeline (AI-assisted production).</p>
+        <p class="line roi"><b>ROI</b> <span>Faster feature adoption &amp; self-serve onboarding</span> and stronger prospect evaluation — scaled without added headcount.</p></div>
+
+      <div class="card reveal"><div class="ico">🗃️</div><h3>Knowledge base that lifts self-serve</h3>
+        <p class="line prob"><b>Problem</b> A fragmented KB hurt findability and pushed users to support.</p>
+        <p class="line built"><b>Built</b> Migrated 1,800+ articles into docs and standardized them (95% style compliance).</p>
+        <p class="line roi"><b>ROI</b> <span>Engagement +12%, page views 2× (58K+), copy-fix requests −45%</span> — higher self-serve, lower support load.</p></div>
+
+      <div class="card reveal"><div class="ico">⚙️</div><h3>Automation that protects accuracy &amp; eng time</h3>
+        <p class="line prob"><b>Problem</b> Manual release notes took ~8 hrs and broken changelog links kept recurring.</p>
+        <p class="line built"><b>Built</b> Release-notes automation with API docs as the single source of truth.</p>
+        <p class="line roi"><b>ROI</b> <span>~8 hrs → ~15 min</span> and a recurring broken-link gap permanently closed.</p></div>
     </div>
   </div>
 </section>
@@ -262,6 +290,28 @@
         <p>30+ how-to videos on a repeatable pipeline, plus Mermaid diagrams and Figma collaboration to make the next action obvious.</p></div>
       <div class="card reveal"><div class="ico">👥</div><h3>Scaled by contribution</h3>
         <p>Contributor and buddy programs (60+ articles) plus RCA on rejected PRs to lift upstream quality and reduce review overhead.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Vision</div>
+      <h2 class="serif">Where I’m taking documentation next</h2>
+      <p>A builder’s view of the problems coming for every docs org — and the bets I’m making to get ahead of them.</p>
+    </div>
+    <div class="grid g-3">
+      <div class="card reveal"><div class="ico">🧩</div><h3>Docs as the backbone of AI</h3>
+        <p>AI assistants are becoming the primary way developers consume docs. I’m structuring content to be
+        LLM-ready and retrieval-grade, so the same source powers humans, search, and in-product copilots accurately.</p></div>
+      <div class="card reveal"><div class="ico">📡</div><h3>Signal-driven, proactive docs</h3>
+        <p>The next frontier is documentation that fixes itself — tickets, search queries, and usage signals
+        feeding autonomous agents that close gaps before they generate support cost.</p></div>
+      <div class="card reveal"><div class="ico">💹</div><h3>Docs that prove their ROI</h3>
+        <p>Documentation should defend its budget with numbers. I’m connecting content to support deflection,
+        feature adoption, and pipeline — so docs is a measurable growth lever, not a cost center.</p></div>
     </div>
   </div>
 </section>
@@ -403,7 +453,7 @@
     const a=linkMap[e.target.id]; if(!a) return;
     if(e.isIntersecting){ Object.values(linkMap).forEach(x=>x.classList.remove('active')); a.classList.add('active'); }
   }),{rootMargin:'-45% 0px -50% 0px'});
-  ['impact','work-approach','leadership','journey','skills','contact'].forEach(id=>{
+  ['impact','work-approach','vision','leadership','journey','skills','contact'].forEach(id=>{
     const el=document.getElementById(id); if(el) secObs.observe(el);
   });
 
