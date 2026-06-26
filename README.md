@@ -47,7 +47,7 @@ Each initiative below is framed as **problem → what I built → ROI**.
 | Reactive doc fixes let support tickets pile up (high L1 cost) | AI agents analyzing ~6,300 support tickets to detect & fix gaps | **Lower ticket volume & support cost** — reactive → proactive |
 | Docs team bottlenecked engineering velocity | A docs CLI (OpenAPI gen, scaffolding, sync, validation, preview) | **79% of API doc PRs now authored by engineers**; contributors ~2× — no added headcount |
 | Manual drafting capped team throughput | 5+ GPTs / AI skills across the documentation lifecycle | **Publishing time cut >50%** — more output per person |
-| Text-only docs slow onboarding & evaluation | 30+ how-to & concept videos on a repeatable pipeline | **Faster feature adoption & self-serve onboarding**; stronger prospect evaluation |
+| Text-only docs slow onboarding & evaluation | A sustained pipeline publishing 30+ videos/month | **Faster feature adoption & self-serve onboarding**; stronger prospect evaluation |
 | Fragmented KB hurt findability, drove support load | Migrated 1,800+ articles, standardized (95% style compliance) | **Engagement +12%, page views 2× (58K+), copy-fix requests −45%** |
 | Manual release notes (~8 hrs) + recurring broken links | Release-notes automation with API docs as single source of truth | **~8 hrs → ~15 min**; broken-link gap permanently closed |
 | Review bottleneck slowed launches | PM-as-first-drafter publishing model | **Documentation SLA ~50% lower** |
@@ -68,7 +68,7 @@ Each initiative below is framed as **problem → what I built → ROI**.
   with engagement up 12% and page views more than doubled after a large knowledge-base migration.
 - **Release-notes effort cut from ~8 hours to ~15 minutes** through automation and single-source-of-truth
   changelogs.
-- **30+ how-to videos shipped** on a repeatable weekly pipeline, scaling self-serve learning.
+- **30+ how-to videos published every month** on a sustained pipeline, continuously scaling self-serve learning.
 
 </details>
 
@@ -268,9 +268,8 @@ I tie documentation and in-product guidance directly to adoption and pipeline.
 I use visual and interactive formats to reduce cognitive load and help developers understand complex
 systems faster.
 
-- Shipped **30+ how-to and conceptual videos** on a repeatable 1–2/week pipeline (50+ mapped),
-  including an AI-assisted workflow for concept and value-prop videos — scaling video docs without
-  proportional headcount.
+- Run a sustained pipeline publishing **30+ how-to and conceptual videos every month**, including an
+  AI-assisted workflow for concept and value-prop videos — scaling video docs without proportional headcount.
 - Create **workflow and system diagrams with Mermaid** to explain API flows and developer journeys.
 - Use **Camtasia and Trainn** for short, task-focused videos that complement written docs.
 - Collaborate with Product and Design in **Figma** to align documentation with product UX.
