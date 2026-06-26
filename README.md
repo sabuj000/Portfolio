@@ -120,6 +120,9 @@ timeline
 
 ## 🗓️ What I Do Day-to-Day
 
+- **Walk the talk — I write what I lead** — beyond managing, I personally own features and products
+  end-to-end as the writer (user docs, API references, and whatever content the feature demands),
+  staying close to the craft and the product.
 - **Own the documentation roadmap** — plan and prioritize alongside product releases, balancing
   new-feature coverage, debt reduction, and quality.
 - **Partner on every release** — review specs early and ship docs, changelogs, and migration guides
@@ -140,6 +143,11 @@ timeline
 
 I lead with visibility, data, and ownership — and build those same qualities into my team.
 
+- **Walk the talk — a player-coach who writes** — I don't just manage; I personally own features and
+  products end-to-end as the writer (user, API, and any content the feature demands), staying close to
+  the craft and credible with my team.
+- **Decisions grounded in data** — I base direction on data, not opinion — using it to define and
+  conclude my and my team's action items, prioritize effort, and prove whether the work moved the needle.
 - **Communicate up, consistently** — send structured weekly updates to leadership covering
   initiative status, contributor-level data, blockers, and next steps, making the team's work
   legible to leadership without being asked.
