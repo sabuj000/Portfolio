@@ -160,9 +160,10 @@ ownership. These qualities apply whether I'm leading people or leading the work 
   individual team members and credit them by name to leadership, building their visibility and growth.
 - **Coach before the moment, not after** — proactively prep team members with structured talking
   points before key meetings, developing their presence and confidence.
-- **Make team performance visible with data** — tracked contribution trends over 17 months to prove
-  impact with numbers (e.g., engineer contributors growing 16 → 28 and PRs up 111% quarter-over-quarter),
-  rather than asserting it.
+- **Make team performance visible with data** — track contribution and documentation performance
+  every month, comparing month-over-month and quarter-over-quarter trends to decide concrete action
+  items for the next cycle (e.g., spotting engineer contributors grow and PR volume climb QoQ) —
+  proving impact with numbers, not assertions.
 - **Protect the team from bad bets and pivot fast** — when an approach isn't working, I diagnose the
   root cause, document what *is* working, and propose a better workflow to leadership instead of
   pushing harder on a failing path.
