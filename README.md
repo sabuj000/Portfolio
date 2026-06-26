@@ -39,15 +39,18 @@ User Experience Writing
 
 A snapshot of outcomes I’ve driven as a documentation leader:
 
-| 📈 Metric | 📊 Result |
-|---|---|
-| Documentation footprint | **~2× growth** (to ~4,800 files) |
-| API doc PRs from non-docs engineers | **79%** (contributor base nearly doubled) |
-| Publishing time | **>50% faster** with AI in the workflow |
-| Documentation SLA | **~50% reduction** |
-| Support copy-fix requests | **−45%** in two quarters |
-| Release-notes effort | **~8 hrs → ~15 min** |
-| How-to videos shipped | **30+** on a repeatable pipeline |
+I don’t measure documentation by page counts — I measure it by the business problems it solves.
+Each initiative below is framed as **problem → what I built → ROI**.
+
+| 🎯 Problem | 🔧 What I built | 📈 ROI |
+|---|---|---|
+| Reactive doc fixes let support tickets pile up (high L1 cost) | AI agents analyzing ~6,300 support tickets to detect & fix gaps | **Lower ticket volume & support cost** — reactive → proactive |
+| Docs team bottlenecked engineering velocity | A docs CLI (OpenAPI gen, scaffolding, sync, validation, preview) | **79% of API doc PRs now authored by engineers**; contributors ~2× — no added headcount |
+| Manual drafting capped team throughput | 5+ GPTs / AI skills across the documentation lifecycle | **Publishing time cut >50%** — more output per person |
+| Text-only docs slow onboarding & evaluation | 30+ how-to & concept videos on a repeatable pipeline | **Faster feature adoption & self-serve onboarding**; stronger prospect evaluation |
+| Fragmented KB hurt findability, drove support load | Migrated 1,800+ articles, standardized (95% style compliance) | **Engagement +12%, page views 2× (58K+), copy-fix requests −45%** |
+| Manual release notes (~8 hrs) + recurring broken links | Release-notes automation with API docs as single source of truth | **~8 hrs → ~15 min**; broken-link gap permanently closed |
+| Review bottleneck slowed launches | PM-as-first-drafter publishing model | **Documentation SLA ~50% lower** |
 
 <details>
 <summary><b>📂 Expand the detail behind each number</b></summary>
@@ -68,6 +71,19 @@ A snapshot of outcomes I’ve driven as a documentation leader:
 - **30+ how-to videos shipped** on a repeatable weekly pipeline, scaling self-serve learning.
 
 </details>
+
+---
+
+## 🔭 Vision — Where I’m Taking Documentation Next
+
+A builder’s view of the problems coming for every docs org, and the bets I’m making to get ahead of them:
+
+- **🧩 Docs as the backbone of AI** — AI assistants are becoming how developers consume docs. I structure
+  content to be LLM-ready and retrieval-grade, so one source powers humans, search, and in-product copilots.
+- **📡 Signal-driven, proactive docs** — documentation that fixes itself: tickets, search queries, and usage
+  signals feeding autonomous agents that close gaps before they generate support cost.
+- **💹 Docs that prove their ROI** — connecting content to support deflection, feature adoption, and pipeline,
+  so documentation is a measurable growth lever, not a cost center.
 
 ---
 
