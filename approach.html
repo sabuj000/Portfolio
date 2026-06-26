@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How I Work — Sabuj Bandopadhyay</title>
+<meta name="description" content="How I run documentation like a product: docs-as-code, strategy & governance, data, revenue, video, contribution, and continuous audits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progress"></div>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">Sabuj<span>.</span></a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="impact.html">Impact</a>
+        <a href="approach.html" class="active">What I Do</a>
+        <a href="vision.html">Vision</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="experience.html">Journey</a>
+        <a href="skills.html">Skills</a>
+        <a class="cta btn primary" href="index.html#contact" style="padding:8px 14px">Get in touch</a>
+      </div>
+      <button class="toggle" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="toggle hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <a class="back-link" href="index.html">← Back to overview</a>
+    <div class="kicker">How I Work</div>
+    <h1 class="serif">Documentation, run like a product</h1>
+    <p class="lead">I treat documentation as a product with its own strategy, standards, and lifecycle —
+      and I run it the way engineering runs software: versioned, reviewed, automated, measured, and tied
+      to business outcomes.</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap prose">
+
+    <h3>🛠️ Docs-as-code platform &amp; tooling</h3>
+    <p>I run documentation as code — versioned, reviewed, automated, and self-serve.</p>
+    <ul>
+      <li><strong>Built a documentation CLI</strong> bringing OpenAPI spec generation, content scaffolding, content sync, validation, and local preview into a single tool — enabling <strong>79% of API doc PRs to come from non-docs engineers</strong> and nearly doubling the contributor base, without adding headcount.</li>
+      <li><strong>Automated release notes and changelogs</strong> — cut release-notes effort from <strong>~8 hours to ~15 minutes</strong> and made API docs the single source of truth, permanently closing a recurring broken-link gap. Extended the same auto-draft standard to more repositories.</li>
+      <li><strong>Docs-as-code workflow</strong> — Git branches, pull requests, CI/CD validation, and content previews for every change, with reusable Markdown/MDX components.</li>
+    </ul>
+
+    <h3>🧭 Strategy &amp; governance</h3>
+    <ul>
+      <li><strong>Site structure &amp; navigation</strong> — organize content so developers find the right answer in the fewest steps.</li>
+      <li><strong>Content standards &amp; style</strong> — drove <strong>95% compliance</strong> with a defined English style standard across a large library, improving readability and consistency.</li>
+      <li><strong>Editorial governance</strong> — define review gates, ownership, and freshness/audit cycles so docs stay accurate as the product changes.</li>
+      <li><strong>Standards &amp; document control</strong> — maintain compliance with ISO standards and document-control processes, and keep content easy to find and accessible.</li>
+    </ul>
+
+    <h3>🔍 Continuous content audits</h3>
+    <p>I systematically review older and legacy documentation for accuracy and freshness — so
+      <strong>people, LLMs, and MCP-based AI tools</strong> (search, in-product assistants, and agents) all
+      get accurate answers during onboarding and act with precision on content they can trust.</p>
+
+    <h3>📊 Data-informed documentation</h3>
+    <p>I use data to validate assumptions, understand how docs are actually used, and feed insights back into the roadmap.</p>
+    <ul>
+      <li>Built a <strong>single analytics dashboard</strong> (Looker Studio) monitoring 15+ content areas, with site-wide and page-level filters for views, engagement, and region.</li>
+      <li>Use <strong>GA4 and Pendo</strong> to understand discovery paths, engagement, and drop-offs — including separating internal vs. customer traffic for cleaner analytics.</li>
+      <li>Analyze <strong>session behavior with FullStory</strong> and log data with <strong>Splunk</strong> to spot confusion points and failure patterns.</li>
+      <li>Measure <strong>how AI bots and LLMs read and use documentation</strong>, keeping content accurate for AI-driven developer experiences.</li>
+    </ul>
+
+    <h3>💰 Tied to adoption &amp; revenue</h3>
+    <ul>
+      <li>Built <strong>in-app banners and guidance</strong> that move users from docs into demos and sign-ups, connecting docs work to both self-serve and sales-led growth.</li>
+      <li>Connected <strong>product analytics with the CRM and outreach tools</strong> so in-app responses trigger automated follow-up — turning documentation into measurable sales pipeline.</li>
+    </ul>
+
+    <h3>🎥 Visual &amp; video documentation</h3>
+    <ul>
+      <li>Run a sustained pipeline publishing <strong>30+ how-to and conceptual videos every month</strong>, including an AI-assisted workflow for concept and value-prop videos.</li>
+      <li>Create <strong>workflow and system diagrams with Mermaid</strong> to explain API flows and developer journeys.</li>
+      <li>Use <strong>Camtasia and Trainn</strong> for short, task-focused videos, and collaborate with Product and Design in <strong>Figma</strong>.</li>
+    </ul>
+
+    <h3>👥 Scaled through contribution</h3>
+    <ul>
+      <li><strong>PM-as-first-drafter model</strong> — PMs draft, the docs team reviews and publishes (128 PRs raised, 68 published), cutting documentation SLA by ~50%.</li>
+      <li><strong>Contributor / buddy program</strong> — a broader internal and external network (60+ articles, 40+ PRs); when contributions get rejected, I look into why and fix the cause to improve quality and cut review time.</li>
+    </ul>
+
+    <h3>🤝 Cross-functional by default</h3>
+    <p>I partner far beyond the docs team — <strong>Leadership, Product, Go-to-Market, Marketing, Support,
+      Engineering, Design, and Developer Experience</strong> — aligning documentation with launches,
+      campaigns, fewer support tickets, and the go-to-market plan.</p>
+
+    <h3>🧠 My developer-experience perspective</h3>
+    <p>I approach developer experience as a journey problem, not a documentation problem. I focus on:</p>
+    <ul>
+      <li>Helping developers reach their first success quickly and experiment safely</li>
+      <li>APIs that are clear, predictable, and easy to recover from when something goes wrong</li>
+      <li>Complete, end-to-end workflows rather than isolated features</li>
+      <li>Practical examples, edge cases, and what to do when things fail</li>
+      <li>Content that works for people, SDKs, and AI tools alike</li>
+    </ul>
+
+    <div class="page-nav">
+      <a class="back-link" href="index.html">← Back to overview</a>
+      <a class="more" href="vision.html" style="margin:0">Next: Vision</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Sabuj Bandopadhyay · Documentation Problem-Solver</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
