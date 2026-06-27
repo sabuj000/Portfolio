@@ -28,6 +28,7 @@
 
 ## Detailed pages
 - [Impact](https://sabuj000.github.io/Portfolio/impact.html): outcomes as problem → build → ROI, and the AI documentation loop.
+- [Work &amp; Artifacts](https://sabuj000.github.io/Portfolio/work.html): real published documentation he and his team ship at Chargebee, plus video walkthroughs.
 - [How I work](https://sabuj000.github.io/Portfolio/approach.html): docs-as-code, strategy & governance, continuous audits, data, revenue, video, contribution, cross-functional collaboration, developer-experience perspective.
 - [Vision](https://sabuj000.github.io/Portfolio/vision.html): docs as the backbone of AI; signal-driven proactive docs; docs that prove their ROI.
 - [Leadership](https://sabuj000.github.io/Portfolio/leadership.html): hands-on leadership, data-driven decisions, coaching, growth paths, advocacy, fixing problems at the root.

@@ -320,6 +320,26 @@ inputs/outputs, error handling, and overall usability.
 
 ---
 
+## 📚 Documentation Artifacts (live at Chargebee)
+
+The full spectrum of documentation my team and I ship — each linked to the live, published version:
+
+| Artifact | Link |
+|---|---|
+| 📘 User Docs | https://www.chargebee.com/docs |
+| 💬 KB Articles & FAQ | https://www.chargebee.com/docs/billing/2.0/subscriptions/articles-and-faq |
+| 🧩 Use-case Docs | https://www.chargebee.com/docs/billing/2.0/usage-based-billing/usage-based-billing-usecases |
+| 🔌 API Docs | https://apidocs.chargebee.com/docs/api |
+| 🛠️ Implementation Tutorials | https://www.chargebee.com/tutorials/ |
+| 🗂️ Data Catalog | https://datacatalog.chargebee.com/ |
+| 🤝 Partner SPI Docs | https://spidocs.chargebee.com/api-reference/partner-spi/overview |
+| 🎛️ Frontend Capabilities (Chargebee.js) | https://www.chargebee.com/checkout-portal-docs/ |
+| 🆕 Release Notes | https://release-notes.chargebee.com/ |
+| 📝 API Changelog | https://www.chargebee.com/help/api-updates/ |
+| 🎬 Video walkthroughs (Trainn) | A sustained pipeline of 30+ how-to & concept videos a month |
+
+---
+
 ## 🧩 Real-World Documentation & Enablement
 
 ### SDK Documentation
