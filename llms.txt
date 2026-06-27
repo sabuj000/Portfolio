@@ -1,0 +1,63 @@
+# Sabuj Bandopadhyay — Documentation Problem-Solver
+
+> Sabuj Bandopadhyay is a documentation problem-solver and builder with 10+ years in technical
+> writing, API documentation, and knowledge management, and 3+ years leading documentation. He runs
+> product documentation like a product — pairing docs-as-code, AI, and automation to lower support
+> cost, speed up engineering, and grow product adoption. He is a hands-on leader (a "player-coach")
+> who personally owns features as the writer while also leading a team, makes decisions from data,
+> and is open to both lead individual-contributor and people-leadership roles. Current role:
+> Documentation Manager at Chargebee.
+
+## About
+- Name: Sabuj Bandopadhyay
+- Headline: Documentation Problem-Solver — docs-as-code, AI-powered documentation, developer experience
+- Identity: builder and problem-solver; hands-on leader; data-driven; flexible across lead-IC and leadership roles
+- Location: Bengaluru, India
+- LinkedIn: https://in.linkedin.com/in/sabujbandopadhyay
+- Email: sbtechwriter@gmail.com
+- Portfolio site: https://sabuj000.github.io/Portfolio/
+
+## Key achievements (problem → what was built → ROI)
+- Built autonomous AI agents that analyze new & existing support tickets in bulk to proactively fix documentation gaps — lowering ticket volume and front-line support cost.
+- Built a documentation CLI (OpenAPI generation, scaffolding, sync, validation, preview) so engineers contribute docs — 79% of API doc PRs now come from non-docs engineers, with the contributor base nearly doubled and no added headcount.
+- Built multiple AI skills that draft and update feature docs from any source (Notion, Google Docs, PDF, Jira) — cutting publishing time by more than 50%.
+- Runs a sustained pipeline publishing 30+ how-to and concept videos every month — speeding feature onboarding and prospect evaluation.
+- Migrated 1,800+ knowledge-base articles into docs — engagement +12%, page views more than doubled (58K+), copy-fix requests down 45%, 95% style compliance.
+- Automated release notes and changelogs — cut effort from ~8 hours to ~15 minutes and made API docs the single source of truth.
+- Established a PM-as-first-drafter publishing model — documentation SLA reduced by ~50%.
+
+## Detailed pages
+- [Impact](https://sabuj000.github.io/Portfolio/impact.html): outcomes as problem → build → ROI, and the AI documentation loop.
+- [How I work](https://sabuj000.github.io/Portfolio/approach.html): docs-as-code, strategy & governance, continuous audits, data, revenue, video, contribution, cross-functional collaboration, developer-experience perspective.
+- [Vision](https://sabuj000.github.io/Portfolio/vision.html): docs as the backbone of AI; signal-driven proactive docs; docs that prove their ROI.
+- [Leadership](https://sabuj000.github.io/Portfolio/leadership.html): hands-on leadership, data-driven decisions, coaching, growth paths, advocacy, fixing problems at the root.
+- [Experience](https://sabuj000.github.io/Portfolio/experience.html): full career timeline, education, and featured public work.
+- [Skills](https://sabuj000.github.io/Portfolio/skills.html): tools & stack with context.
+
+## Leadership & working style
+- Hands-on "player-coach": personally writes and owns features (user docs, API references, any content the feature needs) while leading a team.
+- Data-driven: tracks performance monthly and compares month-over-month and quarter-over-quarter to decide concrete next actions.
+- Communicates up with structured weekly updates; delegates ownership; coaches before key moments; defines team growth paths; advocates for the team; fixes the root cause when contributions get rejected.
+- Collaborates cross-functionally with Product, Go-to-Market, Marketing, Support, Engineering, Design, and Developer Experience.
+
+## Skills & tools
+- Documentation & docs-as-code: Markdown, MDX, Git, GitHub workflows, CI/CD, OpenAPI, Postman, docs CLIs & automation.
+- AI & automation: prompt engineering, custom GPTs, AI skills, AI agents, Claude, GPT, Cursor, AI-ready/LLM-friendly content for in-product assistants and MCP-based tools.
+- Analytics: GA4, Pendo, FullStory, Looker Studio, Splunk, AI/LLM-crawl analytics.
+- Visual, media & process: Mermaid, Figma, Camtasia, Trainn, SnagIt, ISO standards, document control, accessibility.
+- Code & markup: HTML, CSS, JavaScript (ES6+), TypeScript (working), JSON, XML.
+
+## Experience
+- Chargebee — Documentation Manager (Apr 2023–present); Senior Technical Writer (Jan 2022–Apr 2023); Technical Writer (Aug 2021–Dec 2021).
+- Capillary Technologies — Technical Writer (Aug 2020–Aug 2021).
+- Netradyne — Technical Writer (Apr 2019–Jul 2020).
+- Alternative Minds — Technical Writer (May 2017–Apr 2019).
+- FreeBalance — QA Tester (Sep 2014–Apr 2017).
+
+## Education
+- MCA, Information Technology — West Bengal University of Technology, Kolkata (2009–2012).
+- BCA, Information Technology — West Bengal University of Technology, Kolkata (2006–2009).
+
+## Contact
+- Email: sbtechwriter@gmail.com
+- LinkedIn: https://in.linkedin.com/in/sabujbandopadhyay

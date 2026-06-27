@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Structured profile for LLMs and AI agents:
+#   llms.txt:  https://sabuj000.github.io/Portfolio/llms.txt
+#   AGENTS.md: https://sabuj000.github.io/Portfolio/AGENTS.md
+
+Sitemap: https://sabuj000.github.io/Portfolio/sitemap.xml
