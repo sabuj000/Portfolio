@@ -180,7 +180,7 @@ if(navLinks){
       const a=linkMap[e.target.id]; if(!a) return;
       if(e.isIntersecting){ Object.values(linkMap).forEach(x=>x.classList.remove('active')); a.classList.add('active'); }
     }),{rootMargin:'-45% 0px -50% 0px'});
-    ['impact','work-approach','vision','leadership','journey','skills','contact'].forEach(id=>{
+    ['impact','work-approach','work-samples','vision','leadership','journey','skills','contact'].forEach(id=>{
       const el=document.getElementById(id); if(el) secObs.observe(el);
     });
   }
