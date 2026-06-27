@@ -190,6 +190,17 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:13.
 .page-nav{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
   border-top:1px solid var(--line); margin-top:40px; padding-top:24px}
 
+/* VIDEO GALLERY */
+.video-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+@media(max-width:760px){ .video-grid{grid-template-columns:1fr} }
+.video-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; box-shadow:var(--shadow)}
+.video-embed{position:relative; width:100%; aspect-ratio:16/9; background:var(--bg-soft)}
+.video-embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.video-meta{padding:14px 16px}
+.video-meta h3{font-size:15px; margin:0 0 5px; color:var(--text)}
+.video-meta a{font-size:13px; font-weight:600}
+
 /* SEARCH */
 .search-overlay{position:fixed; inset:0; z-index:80; display:none; padding:0 16px;
   background:color-mix(in srgb, #05070f 60%, transparent); backdrop-filter:blur(6px)}
