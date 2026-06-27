@@ -328,7 +328,7 @@ The full spectrum of documentation my team and I ship — each linked to the liv
 |---|---|
 | 📘 User Docs | https://www.chargebee.com/docs |
 | 💬 KB Articles & FAQ | https://www.chargebee.com/docs/billing/2.0/subscriptions/articles-and-faq |
-| 🧩 Use-case Docs | https://www.chargebee.com/docs/billing/2.0/subscriptions/subscriptions |
+| 🧩 Use-case Docs | https://www.chargebee.com/docs/billing/2.0/usage-based-billing/usage-based-billing-usecases |
 | 🔌 API Docs | https://apidocs.chargebee.com/docs/api |
 | 🛠️ Implementation Tutorials | https://www.chargebee.com/tutorials/ |
 | 🗂️ Data Catalog | https://datacatalog.chargebee.com/ |
