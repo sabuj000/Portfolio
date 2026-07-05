@@ -1,5 +1,5 @@
 # Sabuj Bandopadhyay  
-Developer Relations | Developer Experience | API & SDK Enablement
+Product Documentation Manager @ Chargebee | Developer Experience | API & SDK Enablement
 
 ![Banner Image](https://github.com/sabuj000/Portfolio/blob/main/Cover%20Image.png)
 
@@ -7,13 +7,53 @@ Developer Relations | Developer Experience | API & SDK Enablement
 
 ## 👋 Introduction
 
-Hi, I’m Sabuj — a Developer Relations and Developer Experience professional with 10+ years of
-experience working on APIs, SDKs, integrations, and developer platforms.
+Hi, I’m Sabuj — a Product Documentation Manager at Chargebee with 10+ years of experience
+working on product documentation, APIs, SDKs, integrations, and developer platforms.
 
-I focus on reducing developer friction by designing documentation, tutorials, workflows,
-and developer-facing tools that help teams move from exploration to successful integration
-faster. My work sits at the intersection of Engineering, Product, Documentation, and
-Developer Communities.
+I lead documentation as a product: owning strategy, information architecture, docs-as-code
+tooling, and quality standards, while staying hands-on with the content itself. My focus is
+reducing friction for both product users and developers — helping teams move from exploration
+to successful adoption and integration faster. My work sits at the intersection of Product,
+Engineering, Design, Support, and Developer Communities.
+
+---
+
+## 📋 What I Do Day-to-Day at Chargebee
+
+As Product Documentation Manager, my week typically spans strategy, operations, and
+hands-on craft:
+
+**Documentation strategy & planning**
+- Own the documentation lifecycle for product releases — partnering with Product Managers
+  and Engineering to scope doc coverage, review specs, and ship docs alongside features
+- Maintain the information architecture across product docs, API references, tutorials,
+  and SDK documentation so content stays discoverable and consistent
+
+**Docs-as-code operations**
+- Run documentation through engineering-style workflows: Markdown/MDX source, Git-based
+  reviews, reusable components, and CI/CD publishing pipelines
+- Evolve the documentation platform itself — templates, components, style tooling —
+  so writers ship faster and content stays structurally consistent
+
+**Quality & governance**
+- Maintain style, terminology, and content standards across teams and contributors
+- Review documentation from the reader’s point of view: task completeness, edge cases,
+  error and recovery paths, and alignment with actual product behavior
+
+**Cross-functional collaboration**
+- Work with Support to turn recurring tickets and customer confusion into documentation fixes
+- Partner with Design (via Figma) to keep documentation layouts and in-product guidance
+  aligned with product UX
+- Collaborate with Engineering on API changes, SDK releases, and developer tooling
+
+**Measurement & continuous improvement**
+- Use GA4, Pendo, FullStory, and Looker Studio to understand how users and developers
+  actually move through documentation — and prioritize improvements based on evidence,
+  not assumptions
+
+**AI-readiness**
+- Structure documentation so it works for both humans and AI systems — powering tools
+  like Chargebee Copilot and keeping content chunkable, unambiguous, and machine-consumable
 
 ---
 
@@ -191,7 +231,7 @@ data-informed and visually guided developer experiences.
 
 ## 🏢 Professional Background
 
-- **Chargebee** – Developer Experience, APIs, SDKs, Docs-as-Code, Developer Tooling
+- **Chargebee** – Product Documentation Manager: docs strategy, DX, APIs, SDKs, Docs-as-Code, Developer Tooling
 - **Capillary Technologies** – API Documentation, UML, Video Tutorials
 - **Netradyne** – Hardware + Software Documentation, Release Notes
 - **Alternative Minds** – Enterprise Documentation
@@ -201,10 +241,11 @@ data-informed and visually guided developer experiences.
 
 ## 🚀 Current Focus Areas
 
-- AI-assisted developer tooling and documentation
-- MDX-based docs-as-code workflows
+- Scaling documentation as a product — strategy, IA, and governance across a growing platform
+- AI-assisted developer tooling and AI-ready documentation
+- MDX-based docs-as-code workflows and documentation platform engineering
 - Clearer patterns for API onboarding and SDK adoption
-- Data-informed approaches to improving developer experience
+- Data-informed approaches to improving developer and user experience
 
 ---
 
