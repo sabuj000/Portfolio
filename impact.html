@@ -106,6 +106,14 @@
       <p class="kv roi"><b>ROI</b> <span>Documentation SLA reduced by ~50%</span>, with accuracy captured at the source.</p>
     </div>
 
+    <div class="detail-block reveal">
+      <span class="tag">Accuracy &amp; discoverability</span>
+      <h3>✅ Source-grounded docs + Slack fact-check automation</h3>
+      <p class="kv prob"><b>Problem</b> Documentation drifted from the product and depended on SME memory — risking factual errors and weak discoverability when customers and prospects search.</p>
+      <p class="kv built"><b>Built</b> Connected source code across all GitHub repos so user docs, KB articles, and use-case documentation are validated against the actual code — reducing blind dependence on SME input. Upgraded the doc-authoring skills to use this grounding, and ran parallel KB audits that also stress-test the skills. Powered a Slack automation: anyone posts a screenshot and note in a channel; a bot running on the docs and feature repos fact-checks the claim against code and docs, opens a PR, and the team + SME review before merging to production.</p>
+      <p class="kv roi"><b>ROI</b> <span>Higher factual accuracy with less SME dependence</span>, faster corrections, and stronger AEO/SEO — so the right answer surfaces first for existing customers and prospects.</p>
+    </div>
+
     <div class="prose reveal" style="margin-top:30px">
       <h3>How the AI documentation loop works</h3>
       <p>The thread connecting much of this is a shift from <strong>reactive</strong> to <strong>proactive</strong>
@@ -115,6 +123,14 @@
         <li>The agents <strong>detect documentation gaps</strong> behind repeated questions</li>
         <li>Content is <strong>auto-drafted</strong>, then <strong>reviewed and published</strong> by a human</li>
         <li>The result is <strong>fewer tickets and higher self-serve</strong> — which feeds the next cycle</li>
+      </ul>
+
+      <h3>How the Slack fact-check flow works</h3>
+      <ul>
+        <li>Someone spots a doubtful claim and posts a <strong>screenshot + note</strong> in a Slack channel</li>
+        <li>A bot running on the <strong>docs and feature repos</strong> fact-checks it against source code and docs</li>
+        <li>The agent <strong>opens a PR</strong> with the correction</li>
+        <li><strong>The team + SME review</strong>; once satisfied, it merges to production</li>
       </ul>
     </div>
 

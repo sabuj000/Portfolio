@@ -25,6 +25,7 @@
 - Migrated 1,800+ knowledge-base articles into docs — engagement +12%, page views more than doubled (58K+), copy-fix requests down 45%, 95% style compliance.
 - Automated release notes and changelogs — cut effort from ~8 hours to ~15 minutes and made API docs the single source of truth.
 - Established a PM-as-first-drafter publishing model — documentation SLA reduced by ~50%.
+- Grounded documentation in source code across all GitHub repos (not just SME input) to keep user docs, KB, and use-case content factually correct, and built a Slack screenshot → fact-check → PR automation — improving accuracy, reducing SME dependence, and strengthening AEO/SEO discoverability.
 
 ## Detailed pages
 - [Impact](https://sabuj000.github.io/Portfolio/impact.html): outcomes as problem → build → ROI, and the AI documentation loop.

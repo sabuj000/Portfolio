@@ -53,6 +53,7 @@ Each initiative below is framed as **problem → what I built → ROI**.
 | Fragmented KB hurt findability, drove support load | Migrated 1,800+ articles, standardized (95% style compliance) | **Engagement +12%, page views 2× (58K+), copy-fix requests −45%** |
 | Manual release notes (~8 hrs) + recurring broken links | Release-notes automation with API docs as single source of truth | **~8 hrs → ~15 min**; broken-link gap permanently closed |
 | Review bottleneck slowed launches | PM-as-first-drafter publishing model | **Documentation SLA ~50% lower** |
+| Docs drifted from the product and leaned on SME memory | Source code from all GitHub repos connected to validate docs against code, plus a Slack screenshot → fact-check → PR bot | **Higher factual accuracy, less SME dependence, and better AEO/SEO** discoverability |
 
 <details>
 <summary><b>📂 Expand the detail behind each number</b></summary>
@@ -81,7 +82,8 @@ Each initiative below is framed as **problem → what I built → ROI**.
 A builder’s view of the problems coming for every docs org, and the bets I’m making to get ahead of them:
 
 - **🧩 Docs as the backbone of AI** — AI assistants are becoming how developers consume docs. I structure
-  content to be AI-ready and LLM-friendly, so one source serves people, search, and in-product AI assistants.
+  content to be AI-ready and LLM-friendly, so one source serves people, search, and in-product AI assistants —
+  and ranks first in AI answers (AEO) and search when customers and prospects look for the solution.
 - **📡 Signal-driven, proactive docs** — documentation that fixes itself: tickets, search queries, and usage
   signals feeding autonomous agents that close gaps before they generate support cost.
 - **💹 Docs that prove their ROI** — connecting content to fewer support tickets, feature adoption, and sales
@@ -104,6 +106,10 @@ here’s the *approach* behind them.
 - **Strategy & governance** — own site structure and findability; maintain a defined style standard,
   ISO standards, and document control; run continuous audits of older docs so people, LLMs, and
   MCP-based tools stay accurate during onboarding.
+- **Source-grounded accuracy & discoverability** — keep docs factually correct by grounding them in
+  source code across all GitHub repos (not just SME memory), validating user docs, KB, and use-case
+  content against the product. A Slack bot fact-checks flagged content (screenshot → PR → SME review
+  → merge). Accurate, well-structured content is what ranks first in AI answers (AEO) and search.
 - **Data-informed** — a single analytics dashboard (Looker Studio) over GA4, Pendo, FullStory, and
   Splunk, plus analysis of how AI bots and LLMs read the docs — feeding insights back into the roadmap.
 - **Adoption & revenue** — in-app banners that move users from docs into demos and sign-ups, and
@@ -259,9 +265,10 @@ The full spectrum of documentation my team and I ship — each linked to the liv
 
 **AI & automation**
 - Prompt engineering, custom GPTs, and AI skills for the documentation lifecycle
-- AI agents for ticket-driven content improvement
+- AI agents for ticket-driven content improvement and Slack-based fact-check → PR automation
 - AI tools: Claude, GPT, Cursor
 - AI-ready content structuring for in-product assistants
+- Source-grounded docs (validated against code), AEO/SEO discoverability
 
 **Code & API tooling**
 - HTML, CSS, JavaScript (ES6+), TypeScript (working knowledge)

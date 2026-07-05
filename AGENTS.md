@@ -36,6 +36,7 @@ people-leadership roles**. Current role: **Documentation Manager at Chargebee**.
 5. **Self-serve** — Migrated 1,800+ knowledge-base articles → engagement +12%, page views 2× (58K+), copy-fix requests −45%, 95% style compliance.
 6. **Accuracy & eng time** — Automated release notes/changelogs → ~8 hrs to ~15 min; API docs as single source of truth.
 7. **Time-to-publish** — PM-as-first-drafter model → documentation SLA reduced ~50%.
+8. **Accuracy & discoverability** — Grounded docs in source code across all GitHub repos (not just SME input) so user docs, KB, and use-case content are validated against the product; built a Slack screenshot → fact-check → PR automation → higher factual accuracy, less SME dependence, and stronger AEO/SEO (ranking first in AI answers and search).
 
 ## Leadership & working style
 - Hands-on player-coach: writes and owns features end-to-end (user docs, API references, any content the feature needs).
