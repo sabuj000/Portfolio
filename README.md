@@ -134,6 +134,17 @@ flowchart LR
     E -.feedback loop.-> A
 ```
 
+**How the Slack fact-check flow works:**
+
+```mermaid
+flowchart LR
+    A[Screenshot + note<br/>in Slack] --> B[Bot on docs<br/>& feature repos]
+    B --> C[Fact-check vs<br/>source code & docs]
+    C --> D[Auto-opens PR]
+    D --> E[Team + SME<br/>review]
+    E --> F[Merge to<br/>production]
+```
+
 ---
 
 ## 🧠 My Developer-Experience Perspective
