@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fit Check — Sabuj Bandopadhyay</title>
+<meta name="description" content="Paste a job description to see how Sabuj Bandopadhyay's skills match, and download a tailored ATS-friendly resume as PDF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="alternate" type="text/markdown" href="llms.txt" title="llms.txt — profile for LLMs">
+<style>
+  .fit-input{width:100%; min-height:190px; background:var(--card); color:var(--text);
+    border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-family:inherit;
+    font-size:15px; line-height:1.5; resize:vertical}
+  .fit-input:focus{outline:none; border-color:var(--brand)}
+  .fit-actions{display:flex; flex-wrap:wrap; gap:12px; margin:16px 0 8px}
+  .muted-note{color:var(--muted); font-size:13px; margin-top:4px}
+  .results{margin-top:26px}
+  .score-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:24px 26px; box-shadow:var(--shadow); margin-bottom:18px}
+  .score-top{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .score-num{font-family:'Fraunces',serif; font-size:46px; font-weight:800; color:var(--text); line-height:1}
+  .score-label{font-weight:700; font-size:16px}
+  .meter{height:12px; border-radius:999px; background:var(--bg-soft); overflow:hidden; margin:14px 0 4px; border:1px solid var(--line)}
+  .meter > i{display:block; height:100%; border-radius:999px;
+    background:linear-gradient(90deg,var(--brand),var(--brand-2)); width:0; transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .grp{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 20px; box-shadow:var(--shadow); margin-bottom:14px}
+  .grp h3{margin:0 0 10px; font-size:15px}
+  .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{font-size:13px; padding:5px 11px; border-radius:8px; border:1px solid var(--line); color:var(--text); background:var(--bg-soft)}
+  .tag.match{border-color:color-mix(in srgb,var(--brand-2) 60%,var(--line)); color:var(--brand-2)}
+  .tag.partial{border-color:color-mix(in srgb,var(--accent) 60%,var(--line)); color:var(--accent)}
+  .tag.gap{border-style:dashed; color:var(--muted)}
+  .empty-hint{color:var(--muted); font-size:14px; margin:0}
+
+  /* print-only resume */
+  #print-area{display:none}
+  @media print{
+    #progress, nav, footer, .search-overlay, #fit-tool, .detail-hero{display:none !important}
+    #print-area{display:block !important}
+    @page{size:A4; margin:14mm 15mm}
+    body{background:#fff}
+  }
+  #print-area, #print-area *{color:#111 !important}
+  #print-area h1{font-size:20pt; margin:0 0 2pt}
+  #print-area .p-title{font-weight:bold; font-size:11pt; margin:0 0 3pt}
+  #print-area .p-contact{font-size:9.5pt; margin:0 0 10pt}
+  #print-area h2{font-size:10.5pt; text-transform:uppercase; letter-spacing:.6px;
+    border-bottom:1px solid #999; padding-bottom:2pt; margin:12pt 0 6pt}
+  #print-area .p-match{font-size:9.5pt; font-style:italic; margin:0 0 6pt}
+  #print-area .job{font-weight:bold; margin:8pt 0 3pt; font-size:10.5pt}
+  #print-area p{margin:0 0 6pt; font-size:10.5pt; line-height:1.34}
+  #print-area ul{margin:0 0 8pt; padding-left:15pt}
+  #print-area li{margin:0 0 3pt; font-size:10.5pt; line-height:1.34}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">Sabuj<span>.</span></a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="impact.html">Impact</a>
+        <a href="approach.html">What I Do</a>
+        <a href="work.html">Work</a>
+        <a href="vision.html">Vision</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="experience.html">Journey</a>
+        <a href="skills.html">Skills</a>
+        <a href="fit.html" class="active">Fit Check</a>
+        <a class="cta btn primary" href="index.html#contact" style="padding:8px 14px">Get in touch</a>
+      </div>
+      <button class="toggle" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="toggle hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div id="fit-tool">
+<header class="detail-hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <a class="back-link" href="index.html">← Back to overview</a>
+    <div class="kicker">Fit Check</div>
+    <h1 class="serif">Paste a job description — see the match &amp; get a resume</h1>
+    <p class="lead">Drop in a JD below. This runs entirely in your browser (nothing is uploaded) and shows
+      how my skills line up with the role — matched strengths, partial matches, and honest gaps — then lets
+      you download an ATS-friendly resume as PDF.</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap" style="max-width:900px">
+    <label for="jd" style="font-weight:600; display:block; margin-bottom:8px">Job description</label>
+    <textarea id="jd" class="fit-input" placeholder="Paste the full job description here…"></textarea>
+    <div class="fit-actions">
+      <button class="btn primary" id="analyzeBtn">Analyze match</button>
+      <button class="btn ghost" id="downloadBtn">⬇ Download resume (PDF)</button>
+      <button class="btn ghost" id="clearBtn">Clear</button>
+    </div>
+    <p class="muted-note">Tip: for the PDF, choose “Save as PDF” in the print dialog. Everything stays on your device.</p>
+
+    <div class="results" id="results" aria-live="polite"></div>
+  </div>
+</section>
+</div>
+
+<!-- Print-only resume (populated/reordered by JS) -->
+<div id="print-area">
+  <h1>Sabuj Bandopadhyay</h1>
+  <div class="p-title" id="pTitle">Documentation Manager — API &amp; Developer Documentation</div>
+  <div class="p-contact">Bengaluru, India | sbtechwriter@gmail.com | linkedin.com/in/sabujbandopadhyay | sabuj000.github.io/Portfolio</div>
+
+  <h2>Professional Summary</h2>
+  <p class="p-match" id="pMatch"></p>
+  <p>Documentation problem-solver and hands-on technical writer with 10+ years creating developer-facing
+  content and 3+ years leading documentation teams. Specialize in API reference and developer-portal
+  documentation — turning complex product APIs into clear, accurate, user-friendly content using
+  OpenAPI/Swagger, Markdown, HTML, and XML on a docs-as-code (GitHub) workflow. Proven at collaborating
+  with subject-matter experts, Product Managers, and Developers, managing documentation to SLAs, and
+  holding high standards of accuracy and quality — as an individual contributor and as a team lead.</p>
+
+  <h2>Core Skills</h2>
+  <ul id="rskills">
+    <li>API documentation, REST API concepts, developer-portal and API reference materials</li>
+    <li>OpenAPI/Swagger, Markdown, HTML, XML, JSON</li>
+    <li>Docs-as-code: Git and GitHub, version control, CI/CD, content previews</li>
+    <li>Tools: GitHub, Jira, Postman, MDX, documentation CLIs</li>
+    <li>AI-assisted documentation: source-grounded accuracy, AI skills/agents, AEO/SEO</li>
+    <li>Cross-functional collaboration with SMEs, Product Managers, and Developers</li>
+    <li>Content strategy, information structure, style standards, editorial quality</li>
+    <li>Analytics (GA4, Pendo, Looker Studio, Splunk); documentation SLAs &amp; project management</li>
+    <li>Team leadership, mentoring, and data-driven decisions</li>
+  </ul>
+
+  <h2>Professional Experience</h2>
+  <div class="job">Documentation Manager | Chargebee | Bengaluru, India (Remote) | Apr 2023 – Present</div>
+  <ul>
+    <li>Own API and product documentation across billing and payments products; personally author API reference, user, and use-case content while leading and growing the documentation team.</li>
+    <li>Built a documentation CLI (OpenAPI spec generation, scaffolding, validation, preview) that enabled 79% of API doc pull requests to come from engineers, nearly doubling the contributor base with no added headcount.</li>
+    <li>Grounded documentation in source code across GitHub repositories and run a Slack fact-check to pull-request workflow reviewed with SMEs — improving factual accuracy and AI/search discoverability (AEO/SEO).</li>
+    <li>Automated release notes and API changelogs with API docs as the single source of truth, cutting effort from ~8 hours to ~15 minutes.</li>
+    <li>Reduced documentation SLA by ~50% via a PM-as-first-drafter model; migrated 1,800+ knowledge-base articles at 95% style compliance (engagement +12%, page views 2×).</li>
+  </ul>
+  <div class="job">Senior Technical Writer | Chargebee | Bengaluru, India (Remote) | Jan 2022 – Apr 2023</div>
+  <ul><li>Led the team, delegated ownership, and reviewed performance with data-driven decisions while authoring API and product documentation.</li></ul>
+  <div class="job">Technical Writer | Chargebee | Bengaluru, India | Aug 2021 – Dec 2021</div>
+  <ul><li>Wrote API documentation and implemented OpenAPI for subscription and payments products.</li></ul>
+  <div class="job">Technical Writer | Capillary Technologies | Bengaluru, India | Aug 2020 – Aug 2021</div>
+  <ul><li>Authored user and API documentation (Markdown, Postman, OpenAPI) with payload and parameter references; created UML diagrams and video training.</li></ul>
+  <div class="job">Technical Writer | Netradyne | Bengaluru, India | Apr 2019 – Jul 2020</div>
+  <ul><li>Produced product guides, installation manuals, FAQs, and release notes for an intelligent driving-monitoring device.</li></ul>
+  <div class="job">Technical Writer | Alternative Minds | Bengaluru, India | May 2017 – Apr 2019</div>
+  <ul><li>Created instruction manuals, online help, and release notes across customer and developer audiences.</li></ul>
+  <div class="job">QA Tester | FreeBalance | Kolkata, India | Sep 2014 – Apr 2017</div>
+  <ul><li>Documentation and content management for government financial portals; system-specification testing.</li></ul>
+
+  <h2>Education</h2>
+  <ul>
+    <li>Master of Computer Applications (MCA), Information Technology — West Bengal University of Technology, Kolkata (2012)</li>
+    <li>Bachelor of Computer Application (BCA), Information Technology — West Bengal University of Technology, Kolkata (2009)</li>
+  </ul>
+
+  <h2>Selected Work</h2>
+  <ul><li>API docs, error-handling reference, SDK docs, tutorials, and video walkthroughs: sabuj000.github.io/Portfolio/work.html</li></ul>
+</div>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Sabuj Bandopadhyay · Documentation Problem-Solver · <a href="llms.txt">For AI · llms.txt</a></div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Requirement taxonomy: label, keyword variants, and whether Sabuj has it (yes/partial/no).
+const REQS = [
+  {l:'API documentation', has:'yes', kw:['api documentation','api docs','api reference','api technical writer','apis','api']},
+  {l:'REST APIs', has:'yes', kw:['rest api','restful','rest']},
+  {l:'OpenAPI / Swagger', has:'yes', kw:['openapi','open api','swagger']},
+  {l:'Developer portal / DX', has:'yes', kw:['developer portal','dev portal','developer experience','devrel','developer relations','developer community']},
+  {l:'SDK documentation', has:'yes', kw:['sdk','sdks']},
+  {l:'Docs-as-code', has:'yes', kw:['docs-as-code','docs as code','documentation as code']},
+  {l:'Git / GitHub / version control', has:'yes', kw:['github','git','version control']},
+  {l:'Markdown', has:'yes', kw:['markdown']},
+  {l:'MDX', has:'yes', kw:['mdx']},
+  {l:'HTML', has:'yes', kw:['html']},
+  {l:'CSS', has:'yes', kw:['css']},
+  {l:'XML', has:'yes', kw:['xml']},
+  {l:'JSON', has:'yes', kw:['json']},
+  {l:'JavaScript', has:'yes', kw:['javascript']},
+  {l:'TypeScript', has:'partial', kw:['typescript']},
+  {l:'Jira', has:'yes', kw:['jira']},
+  {l:'Postman', has:'yes', kw:['postman']},
+  {l:'CI/CD', has:'yes', kw:['ci/cd','cicd','continuous integration']},
+  {l:'Technical writing', has:'yes', kw:['technical writing','technical writer','tech writer']},
+  {l:'Content strategy', has:'yes', kw:['content strategy']},
+  {l:'Information architecture', has:'yes', kw:['information architecture','content structure','structure technical content','taxonomy']},
+  {l:'Style guide / editorial standards', has:'yes', kw:['style guide','style standard','editorial','industry standards','guidelines']},
+  {l:'Knowledge base / FAQ', has:'yes', kw:['knowledge base','help center','faq']},
+  {l:'SME collaboration', has:'yes', kw:['subject-matter expert','subject matter expert','sme','smes']},
+  {l:'Cross-functional collaboration', has:'yes', kw:['cross-functional','cross functional','stakeholder']},
+  {l:'Work with PMs & developers', has:'yes', kw:['product manager','product managers','developers','engineering teams']},
+  {l:'Agile / SDLC knowledge', has:'yes', kw:['agile','scrum','sdlc','software development process','development methodolog','software development']},
+  {l:'SLAs / project management', has:'yes', kw:['sla','slas','project management','deadlines']},
+  {l:'Analytics', has:'yes', kw:['analytics','ga4','google analytics','pendo','looker']},
+  {l:'AI / LLM in documentation', has:'yes', kw:['artificial intelligence','generative ai','genai','llm','machine learning','ai-driven','ai ']},
+  {l:'Prompt engineering', has:'yes', kw:['prompt engineering','prompts']},
+  {l:'SEO / AEO', has:'yes', kw:['seo','aeo','search engine optimization','discoverability']},
+  {l:'Video / multimedia', has:'yes', kw:['video','camtasia','screencast','multimedia']},
+  {l:'UX writing', has:'yes', kw:['ux writing','user experience writing','microcopy']},
+  {l:'Accessibility', has:'yes', kw:['accessibility','a11y','wcag']},
+  {l:'ISO standards / document control', has:'yes', kw:['iso ','document control']},
+  {l:'Team leadership / mentoring', has:'yes', kw:['manage a team','team lead','people management','lead a team','leadership','mentor','manager']},
+  {l:'Data-driven decisions', has:'yes', kw:['data-driven','data driven','metrics']},
+  {l:'Figma', has:'yes', kw:['figma']},
+  {l:'Diagramming (Mermaid/UML)', has:'yes', kw:['diagram','mermaid','uml','flowchart']},
+  {l:'CMS platforms', has:'partial', kw:['content management system','content management systems','cms']},
+  {l:'WordPress', has:'no', kw:['wordpress']},
+  {l:'ReadMe (readme.com)', has:'no', kw:['readme.com','readme.io']},
+  {l:'Confluence', has:'no', kw:['confluence']},
+  {l:'DITA', has:'no', kw:['dita']},
+  {l:'MadCap Flare', has:'no', kw:['madcap','flare']},
+  {l:'Localization', has:'no', kw:['localization','localisation','l10n','translation']},
+  {l:'Python', has:'no', kw:['python']},
+  {l:'SQL', has:'no', kw:['sql']}
+];
+
+function hit(text, kw){
+  const esc = kw.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return new RegExp('(^|[^a-z0-9])'+esc+'([^a-z0-9]|$)','i').test(text);
+}
+function analyze(jd){
+  const t = ' ' + jd.toLowerCase() + ' ';
+  const req = REQS.filter(r => r.kw.some(k => hit(t,k)));
+  const matched = req.filter(r=>r.has==='yes');
+  const partial = req.filter(r=>r.has==='partial');
+  const gaps    = req.filter(r=>r.has==='no');
+  const score = req.length ? Math.round((matched.length + partial.length*0.5)/req.length*100) : 0;
+  return {req, matched, partial, gaps, score};
+}
+function label(s){ return s>=90?'Excellent match':s>=75?'Strong match':s>=60?'Good match':s>=40?'Partial match':'Limited match'; }
+function tagList(arr, cls){ return arr.length ? arr.map(r=>`<span class="tag ${cls}">${r.l}</span>`).join('') : '<span class="empty-hint">None detected</span>'; }
+
+const $ = id => document.getElementById(id);
+let lastMatched = [];
+
+function render(a){
+  lastMatched = a.matched.map(r=>r.l);
+  if(!a.req.length){
+    $('results').innerHTML = '<p class="empty-hint">No recognizable requirements found — paste a fuller job description and try again.</p>';
+    return;
+  }
+  $('results').innerHTML = `
+    <div class="score-card">
+      <div class="score-top"><span class="score-num">${a.score}%</span><span class="score-label">${label(a.score)}</span></div>
+      <div class="meter"><i style="width:${a.score}%"></i></div>
+      <p class="empty-hint">Based on ${a.req.length} requirements detected in the JD — ${a.matched.length} matched, ${a.partial.length} partial, ${a.gaps.length} gap(s).</p>
+    </div>
+    <div class="grp"><h3>✅ Matched strengths</h3><div class="tags">${tagList(a.matched,'match')}</div></div>
+    ${a.partial.length?`<div class="grp"><h3>🟡 Partial</h3><div class="tags">${tagList(a.partial,'partial')}</div></div>`:''}
+    <div class="grp"><h3>⬜ Gaps (JD asks, not in profile)</h3><div class="tags">${tagList(a.gaps,'gap')}</div>
+      ${a.gaps.length?'<p class="empty-hint" style="margin-top:10px">These aren\\'t on the profile. If Sabuj actually has one, it just isn\\'t listed yet.</p>':''}</div>
+    <p class="muted-note">Rule-based keyword match (transparent, runs in your browser). For a fully rewritten, JD-tailored resume, use the Download button and reach out via <a href="index.html#contact">contact</a>.</p>`;
+  // tailor the print resume's "best-matched" line
+  const top = a.matched.slice(0,6).map(r=>r.l).join(', ');
+  $('pMatch').textContent = top ? ('Best-matched to this role: ' + top + '.') : '';
+}
+
+$('analyzeBtn').addEventListener('click', ()=>{
+  const jd = $('jd').value.trim();
+  if(!jd){ $('results').innerHTML='<p class="empty-hint">Paste a job description first.</p>'; return; }
+  render(analyze(jd));
+  $('results').scrollIntoView({behavior:'smooth', block:'start'});
+});
+$('downloadBtn').addEventListener('click', ()=>{
+  const jd = $('jd').value.trim();
+  if(jd && !lastMatched.length){ render(analyze(jd)); }
+  window.print();
+});
+$('clearBtn').addEventListener('click', ()=>{ $('jd').value=''; $('results').innerHTML=''; $('pMatch').textContent=''; lastMatched=[]; });
+</script>
+</body>
+</html>

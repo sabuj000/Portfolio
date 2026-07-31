@@ -10,6 +10,9 @@
 
 > 🌐 **Prefer an interactive view?** This portfolio is also a live, interactive site →
 > **[sabuj000.github.io/Portfolio](https://sabuj000.github.io/Portfolio/)**
+>
+> 🎯 **Hiring?** Paste a job description into the **[Fit Check](https://sabuj000.github.io/Portfolio/fit.html)**
+> page to see how my skills match the role and download an ATS-friendly resume as PDF — runs entirely in your browser.
 
 ---
 
