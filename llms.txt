@@ -35,6 +35,7 @@
 - [Leadership](https://sabuj000.github.io/Portfolio/leadership.html): hands-on leadership, data-driven decisions, coaching, growth paths, advocacy, fixing problems at the root.
 - [Experience](https://sabuj000.github.io/Portfolio/experience.html): full career timeline, education, and featured public work.
 - [Skills](https://sabuj000.github.io/Portfolio/skills.html): tools & stack with context.
+- [Fit Check](https://sabuj000.github.io/Portfolio/fit.html): paste a job description to see a skills-match score and download an ATS-friendly resume as PDF (runs client-side).
 
 ## Leadership & working style
 - Hands-on "player-coach": personally writes and owns features (user docs, API references, any content the feature needs) while leading a team.
