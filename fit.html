@@ -181,7 +181,13 @@ const REQS = [
   {l:'API documentation', has:'yes', kw:['api documentation','api docs','api reference','api technical writer','apis','api']},
   {l:'REST APIs', has:'yes', kw:['rest api','restful','rest']},
   {l:'OpenAPI / Swagger', has:'yes', kw:['openapi','open api','swagger']},
-  {l:'Developer portal / DX', has:'yes', kw:['developer portal','dev portal','developer experience','devrel','developer relations','developer community']},
+  {l:'Developer portal / DX', has:'yes', kw:['developer portal','dev portal','developer experience','developer documentation','developer docs','developer-facing','developer-centric','developer productivity','devrel','developer relations','developer community']},
+  {l:'Quickstarts & tutorials', has:'yes', kw:['quickstart','quick start','tutorial','getting started','how-to guide']},
+  {l:'Runbooks & troubleshooting', has:'yes', kw:['runbook','troubleshooting','troubleshoot']},
+  {l:'CLI documentation', has:'yes', kw:['cli reference','command-line','cli']},
+  {l:'YAML', has:'yes', kw:['yaml']},
+  {l:'User research / usability testing', has:'partial', kw:['usability testing','user research','developer interviews','task-based testing','user testing','surveys']},
+  {l:'Cloud / platform engineering concepts', has:'partial', kw:['terraform','kubernetes','ecs','eks','serverless','gitops','iam','observability','containers','cloud infrastructure']},
   {l:'SDK documentation', has:'yes', kw:['sdk','sdks']},
   {l:'Docs-as-code', has:'yes', kw:['docs-as-code','docs as code','documentation as code']},
   {l:'Git / GitHub / version control', has:'yes', kw:['github','git','version control']},
@@ -263,7 +269,7 @@ function render(a){
     <div class="grp"><h3>✅ Matched strengths</h3><div class="tags">${tagList(a.matched,'match')}</div></div>
     ${a.partial.length?`<div class="grp"><h3>🟡 Partial</h3><div class="tags">${tagList(a.partial,'partial')}</div></div>`:''}
     <div class="grp"><h3>⬜ Gaps (JD asks, not in profile)</h3><div class="tags">${tagList(a.gaps,'gap')}</div>
-      ${a.gaps.length?'<p class="empty-hint" style="margin-top:10px">These aren\\'t on the profile. If Sabuj actually has one, it just isn\\'t listed yet.</p>':''}</div>
+      ${a.gaps.length?'<p class="empty-hint" style="margin-top:10px">These are not listed on the profile. If Sabuj actually has one, it simply has not been added yet.</p>':''}</div>
     <p class="muted-note">Rule-based keyword match (transparent, runs in your browser). For a fully rewritten, JD-tailored resume, use the Download button and reach out via <a href="index.html#contact">contact</a>.</p>`;
   // tailor the print resume's "best-matched" line
   const top = a.matched.slice(0,6).map(r=>r.l).join(', ');
