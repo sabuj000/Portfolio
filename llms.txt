@@ -38,7 +38,7 @@
 - [Fit Check](https://sabuj000.github.io/Portfolio/fit.html): paste a job description to see a skills-match score and download an ATS-friendly resume as PDF (runs client-side).
 
 ## Open source
-- [Docs-as-Code Documentation Toolkit](https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit): reusable AI skills that create and review product documentation (user docs, KB, API, use-case, release notes) from any input (Word, PDF, Notion, Jira); self-serve orchestrator + shared modules, configurable to any product, no company-specific content.
+- [Docs-as-Code Documentation Toolkit](https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit): reusable AI skills that create and review product documentation (user docs, KB, API, use-case, release notes) from any input (Word, PDF, Notion, Jira); self-serve orchestrator + shared modules, configurable to any product, no company-specific content. Interactive site + config generator: https://sabuj000.github.io/Portfolio/docs-toolkit/
 
 ## Leadership & working style
 - Hands-on "player-coach": personally writes and owns features (user docs, API references, any content the feature needs) while leading a team.

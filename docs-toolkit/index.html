@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs-as-Code Toolkit</title>
+<meta name="description" content="A reusable, self-serve set of AI skills to create and review product documentation from any input. Generate your config and get started.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .tk-hero{padding:70px 0 30px; position:relative; overflow:hidden}
+  .flow{display:flex; flex-wrap:wrap; gap:10px; align-items:stretch; margin-top:10px}
+  .flow .node{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px;
+    font-size:13.5px; font-weight:600; color:var(--text); box-shadow:var(--shadow)}
+  .flow .node small{display:block; color:var(--muted); font-weight:500; margin-top:2px; font-size:12px}
+  .flow .arrow{align-self:center; color:var(--brand); font-weight:800}
+  .gen{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  @media(max-width:860px){ .gen{grid-template-columns:1fr} }
+  .field{margin-bottom:14px}
+  .field label{display:block; font-size:13px; font-weight:600; margin-bottom:5px}
+  .field input, .field select, .field textarea{width:100%; background:var(--card); color:var(--text);
+    border:1px solid var(--line); border-radius:9px; padding:9px 11px; font-family:inherit; font-size:14px}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none; border-color:var(--brand)}
+  .field .hint{color:var(--muted); font-size:12px; margin-top:3px}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  @media(max-width:560px){ .field-row{grid-template-columns:1fr} }
+  .out-wrap{position:sticky; top:78px}
+  .out{width:100%; min-height:420px; background:#0c1020; color:#d6deef; border:1px solid var(--line);
+    border-radius:12px; padding:14px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12.5px;
+    line-height:1.5; white-space:pre; overflow:auto}
+  [data-theme="light"] .out{background:#0d1224; color:#e7ecf5}
+  .grp-title{font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.6px;
+    color:var(--brand); margin:22px 0 10px}
+  .skill-list{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+  @media(max-width:760px){ .skill-list{grid-template-columns:1fr} }
+  .copyrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+  pre.code{background:#0c1020; color:#d6deef; border:1px solid var(--line); border-radius:10px;
+    padding:12px 14px; overflow:auto; font-size:12.5px}
+  .skill-list .card{display:flex; flex-direction:column}
+  .skill-list .card .view{margin-top:auto; padding-top:12px}
+  .view a{font-weight:600; font-size:13.5px; color:var(--brand); cursor:pointer}
+  .sv-overlay{position:fixed; inset:0; z-index:80; display:none; padding:5vh 16px;
+    background:color-mix(in srgb,#05070f 62%,transparent); backdrop-filter:blur(6px)}
+  .sv-overlay.open{display:block}
+  .sv-modal{max-width:820px; margin:0 auto; background:var(--card); border:1px solid var(--line);
+    border-radius:16px; box-shadow:var(--shadow); max-height:90vh; display:flex; flex-direction:column; overflow:hidden}
+  .sv-top{display:flex; align-items:center; gap:12px; padding:14px 18px; border-bottom:1px solid var(--line)}
+  .sv-top h3{margin:0; font-size:16px; flex:1}
+  .sv-body{overflow:auto; padding:0}
+  .sv-body pre{margin:0; padding:18px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px; line-height:1.5; white-space:pre-wrap; color:var(--text)}
+  .sv-esc{cursor:pointer; border:1px solid var(--line); background:var(--bg-soft); color:var(--text);
+    border-radius:8px; padding:5px 10px; font-size:12px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html">Sabuj<span>.</span></a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#what">What</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#generator">Config generator</a>
+        <a href="#install">Install</a>
+        <a class="cta btn primary" href="https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit" target="_blank" rel="noopener" style="padding:8px 14px">★ GitHub</a>
+      </div>
+      <button class="toggle" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="toggle hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="tk-hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <a class="back-link" href="../work.html">← Back to portfolio</a>
+    <span class="eyebrow"><span class="dot"></span> Open source · MIT-style community template</span>
+    <h1 class="name serif" style="font-size:clamp(30px,5vw,48px)">Docs-as-Code Documentation Toolkit</h1>
+    <p class="tagline" style="max-width:720px">A reusable set of AI skills that <b>create</b> and <b>review</b> product
+      documentation — user guides, KB, API, use-case, and release notes — from any input (Word, PDF, Notion, Jira,
+      Google Doc, or text). Configurable to any product, self-serve, with zero company-specific content.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#generator">🛠️ Generate your config</a>
+      <a class="btn ghost" href="https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+  </div>
+</header>
+
+<!-- WHAT -->
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker">What it is</div>
+      <h2 class="serif">Docs-as-code, run by skills</h2>
+      <p>Point the skills at your product, repo, and sources. They ingest any source, verify claims against your
+      code/spec/tickets, draft in your format, run a quality gate, and deliver — or review an existing doc/PR.</p>
+    </div>
+    <div class="grid g-3">
+      <div class="card reveal"><div class="ico">🧭</div><h3>Orchestrator</h3><p>One entry point: detect input → classify doc type → route to the right create skill → auto self-review → deliver.</p></div>
+      <div class="card reveal"><div class="ico">✍️</div><h3>Create skills</h3><p>User docs, KB articles, API reference, use-case/implementation guides, and release notes — each owns only its structure.</p></div>
+      <div class="card reveal"><div class="ico">🔍</div><h3>Review skill</h3><p>Reviews a draft or PR against the same quality gate — with apply-suggestions, verdicts, and must/should/nit findings.</p></div>
+      <div class="card reveal"><div class="ico">♻️</div><h3>Shared modules</h3><p>Ingest, verify (source of truth), quality checklist, style guide, terminology, deliver — written once, reused everywhere.</p></div>
+      <div class="card reveal"><div class="ico">⚙️</div><h3>Self-serve setup</h3><p>An interactive setup builds your <code>project-profile.md</code> — the single file that configures everything.</p></div>
+      <div class="card reveal"><div class="ico">🛡️</div><h3>Trustworthy by design</h3><p>No invention; unverifiable claims flagged <code>[unverified]</code>; retrieval-ready for humans and AI alike.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker">Architecture</div>
+      <h2 class="serif">One pipeline, shared logic</h2>
+      <p>Create skills are thin — they compose the same shared modules, so behavior stays consistent and it's easy to extend.</p>
+    </div>
+    <div class="flow reveal">
+      <div class="node">📥 ingest<small>any source</small></div><div class="arrow">→</div>
+      <div class="node">🔎 verify<small>source of truth</small></div><div class="arrow">→</div>
+      <div class="node">📝 draft<small>your template + style</small></div><div class="arrow">→</div>
+      <div class="node">✅ quality gate<small>self-review</small></div><div class="arrow">→</div>
+      <div class="node">📤 deliver<small>PR / files / inline</small></div>
+    </div>
+    <p class="hint" style="color:var(--muted); margin-top:14px; font-size:13.5px"><code>review-doc</code> reuses the same quality gate to review a draft or PR.</p>
+  </div>
+</section>
+
+<!-- GENERATOR -->
+<section id="generator">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="kicker">Config generator</div>
+      <h2 class="serif">Generate your <code>project-profile.md</code></h2>
+      <p>Fill in your product's details — it builds the single config file the skills read. Runs entirely in your browser.</p>
+    </div>
+    <div class="gen">
+      <div class="reveal">
+        <div class="grp-title">Product</div>
+        <div class="field"><label>Product name</label><input id="f_product" placeholder="Acme Cloud"></div>
+        <div class="field"><label>One-line description</label><input id="f_desc" placeholder="A platform for …"></div>
+        <div class="field-row">
+          <div class="field"><label>Primary reader</label><input id="f_reader" placeholder="developers"></div>
+          <div class="field"><label>Docs base URL</label><input id="f_docsurl" placeholder="https://docs.acme.com"></div>
+        </div>
+
+        <div class="grp-title">Docs repo</div>
+        <div class="field-row">
+          <div class="field"><label>Repo</label><input id="f_repo" placeholder="github.com/acme/docs"></div>
+          <div class="field"><label>Content path</label><input id="f_content" placeholder="content/"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Format</label><select id="f_format"><option>Markdown</option><option>MDX</option><option>AsciiDoc</option></select></div>
+          <div class="field"><label>PR base branch</label><input id="f_branch" placeholder="main"></div>
+        </div>
+
+        <div class="grp-title">Sources of truth</div>
+        <div class="field"><label>Code / implementation</label><input id="f_code" placeholder="repo(s) + how to search (UI labels in locale files; flags in backend config)"></div>
+        <div class="field"><label>API spec (for API docs)</label><input id="f_spec" placeholder="path/URL to OpenAPI/Swagger, or the code that defines it"></div>
+        <div class="field"><label>Product UI (labels/nav)</label><input id="f_ui" placeholder="repo or app to confirm exact labels"></div>
+
+        <div class="grp-title">Style & delivery</div>
+        <div class="field-row">
+          <div class="field"><label>English variant</label><select id="f_eng"><option>US</option><option>UK</option></select></div>
+          <div class="field"><label>Deliver by</label><select id="f_deliver"><option>Open a PR</option><option>Downloadable files</option><option>Inline in chat</option></select></div>
+        </div>
+        <div class="field"><label>Banned words</label><input id="f_banned" placeholder="seamless, streamline, effortless, powerful"></div>
+        <div class="copyrow">
+          <button class="btn primary" id="genBtn">Generate config</button>
+          <button class="btn ghost" id="copyBtn">Copy</button>
+          <button class="btn ghost" id="dlBtn">Download .md</button>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="out-wrap">
+          <div class="grp-title" style="margin-top:0">project-profile.md</div>
+          <textarea class="out" id="out" spellcheck="false" readonly>Fill the form and click “Generate config”…</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section id="install" style="background:var(--bg-soft)">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-head reveal"><div class="kicker">Install</div>
+      <h2 class="serif">Get started in three steps</h2>
+    </div>
+    <div class="reveal">
+      <p><b>1.</b> Get the toolkit and drop <code>skills/</code> where your AI assistant looks for skills.</p>
+      <pre class="code">git clone https://github.com/sabuj000/Portfolio.git
+cp -r Portfolio/docs-toolkit /path/to/your/docs-repo/docs-toolkit</pre>
+      <p><b>2.</b> Save your generated config as <code>docs-toolkit/project-profile.md</code>, and copy
+      <code>shared/terminology.example.md</code> → <code>shared/terminology.md</code> and add your brand terms.</p>
+      <p><b>3.</b> Ask your assistant to <i>“write a doc from this…”</i> or <i>“review this PR…”</i> — the
+      <code>docs</code> orchestrator takes it from there. Or run the <code>docs-setup</code> skill to build the config interactively.</p>
+    </div>
+    <div class="skill-list reveal" style="margin-top:24px">
+      <div class="card"><h3>docs</h3><p>Orchestrator — detect input, classify, route, self-review, deliver.</p><div class="view"><a data-file="skills/docs/SKILL.md" data-name="docs">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>docs-setup</h3><p>Interactive setup that builds your project-profile.md.</p><div class="view"><a data-file="setup/SKILL.md" data-name="docs-setup">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-user-doc</h3><p>Feature overviews, how-to & step-by-step guides.</p><div class="view"><a data-file="skills/write-user-doc/SKILL.md" data-name="write-user-doc">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-kb-article</h3><p>Question-based help/KB articles from resolved issues.</p><div class="view"><a data-file="skills/write-kb-article/SKILL.md" data-name="write-kb-article">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-api-doc</h3><p>API/CLI reference from a spec or code.</p><div class="view"><a data-file="skills/write-api-doc/SKILL.md" data-name="write-api-doc">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-usecase-doc</h3><p>End-to-end use-case / implementation guides.</p><div class="view"><a data-file="skills/write-usecase-doc/SKILL.md" data-name="write-usecase-doc">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-release-notes</h3><p>Release notes / changelog / "what's new".</p><div class="view"><a data-file="skills/write-release-notes/SKILL.md" data-name="write-release-notes">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>review-doc</h3><p>Review any draft or PR against the quality gate.</p><div class="view"><a data-file="skills/review-doc/SKILL.md" data-name="review-doc">View / copy SKILL.md →</a></div></div>
+    </div>
+    <div class="cta-row reveal" style="margin-top:22px">
+      <a class="btn primary" href="https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit" target="_blank" rel="noopener">Browse all files on GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Sabuj Bandopadhyay · Docs-as-Code Documentation Toolkit · <a href="../index.html">Portfolio</a></div>
+</footer>
+
+<div class="sv-overlay" id="svOverlay">
+  <div class="sv-modal" role="dialog" aria-label="Skill viewer">
+    <div class="sv-top">
+      <h3 id="svTitle">SKILL.md</h3>
+      <button class="btn ghost" id="svCopy" style="padding:6px 12px">Copy</button>
+      <a class="btn ghost" id="svGh" target="_blank" rel="noopener" style="padding:6px 12px">GitHub ↗</a>
+      <button class="sv-esc" id="svClose">Esc</button>
+    </div>
+    <div class="sv-body"><pre id="svBody">Loading…</pre></div>
+  </div>
+</div>
+
+<script>
+  // theme
+  const root=document.documentElement, tb=document.getElementById('themeBtn');
+  const saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);
+  const setIcon=()=>tb.textContent = root.getAttribute('data-theme')==='dark'?'🌙':'☀️'; setIcon();
+  tb.addEventListener('click',()=>{ const t=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',t); localStorage.setItem('theme',t); setIcon(); });
+  // mobile menu
+  const mb=document.getElementById('menuBtn'), nl=document.getElementById('navLinks');
+  mb.addEventListener('click',()=>{ const o=nl.classList.toggle('open'); mb.textContent=o?'✕':'☰'; });
+  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ nl.classList.remove('open'); mb.textContent='☰'; }));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // reveal
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // config generator
+  const val=id=>document.getElementById(id).value.trim();
+  const or=(v,d)=>v?v:d;
+  function build(){
+    const fmt=val('f_format');
+    const compBlock = fmt==='Markdown'
+      ? '- **Format:** plain Markdown (no components)\n'
+      : '- **Format:** '+fmt+' with components\n- **Frontmatter fields (exact names + format):** `<e.g. title; description; keywords (comma string); draft (bool)>`\n- **Component mapping:** `<Note/Warning/Table/Image/Tabs → your components; fallbacks for review copies>`\n- **Comment syntax:** `<e.g. {/* */}; never HTML comments>`\n';
+    return `# Project Profile
+
+## Product & audience
+- **Product name:** ${or(val('f_product'),'<Your Product>')}
+- **One-line description:** ${or(val('f_desc'),'<...>')}
+- **Primary reader:** ${or(val('f_reader'),'<developers | admins | non-technical users>')}
+- **Docs base URL:** ${or(val('f_docsurl'),'<https://docs.yourproduct.com>')}
+
+## Docs repository (docs-as-code)
+- **Repo:** ${or(val('f_repo'),'<git URL or path>')}  ·  **Content path:** ${or(val('f_content'),'<docs/ or content/>')}
+- **Format:** ${fmt}  ·  **PR base branch:** ${or(val('f_branch'),'main')}
+- **Link & asset rules:** <how internal links and image paths are written; any build link-allowlist>
+
+## Sources of truth ("second SME")
+- **Primary (originates the doc):** <the ticket/spec/SME text supplied per request>
+- **Code / implementation:** ${or(val('f_code'),'<repo(s) + how to search them>')}
+- **API spec (API docs):** ${or(val('f_spec'),'<OpenAPI/Swagger path or URL, or the code that defines it>')}
+- **Product UI (labels/nav):** ${or(val('f_ui'),'<repo or app to confirm exact labels>')}
+
+## Components & frontmatter
+${compBlock}
+## House style
+- **Base style guide:** shared/style-guide.md (Microsoft Writing Style Guide by default)
+- **English variant:** ${val('f_eng')}
+- **Terminology file:** shared/terminology.md
+- **Banned words:** ${or(val('f_banned'),'<seamless, streamline, effortless, powerful>')}
+
+## Delivery
+- **Deliver by:** ${val('f_deliver')}
+- **PR conventions:** <branch naming, commit format, PR description block>
+- **Review model:** <who reviews; what "done" means>
+
+## Guardrails
+- Never publish customer names, emails, phone numbers, or record IDs.
+- Never put internal ticket IDs, raw ticket quotes, or repo paths in the body.
+- Generalize ticket-specific amounts/dates unless they are product constants.
+`;
+  }
+  const out=document.getElementById('out');
+  document.getElementById('genBtn').addEventListener('click',()=>{ out.value=build(); out.scrollTop=0; });
+  document.getElementById('copyBtn').addEventListener('click',async()=>{
+    if(!out.value || out.value.startsWith('Fill the form')) out.value=build();
+    try{ await navigator.clipboard.writeText(out.value); const b=document.getElementById('copyBtn'); const t=b.textContent; b.textContent='Copied ✓'; setTimeout(()=>b.textContent=t,1400);}catch(e){}
+  });
+  document.getElementById('dlBtn').addEventListener('click',()=>{
+    if(!out.value || out.value.startsWith('Fill the form')) out.value=build();
+    const blob=new Blob([out.value],{type:'text/markdown'}); const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download='project-profile.md'; a.click(); URL.revokeObjectURL(a.href);
+  });
+
+  // skill viewer
+  const ov=document.getElementById('svOverlay'), svBody=document.getElementById('svBody'),
+        svTitle=document.getElementById('svTitle'), svGh=document.getElementById('svGh');
+  const GH='https://github.com/sabuj000/Portfolio/blob/main/docs-toolkit/';
+  const closeSv=()=>ov.classList.remove('open');
+  document.getElementById('svClose').addEventListener('click',closeSv);
+  ov.addEventListener('click',e=>{ if(e.target===ov) closeSv(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSv(); });
+  document.getElementById('svCopy').addEventListener('click',async()=>{
+    try{ await navigator.clipboard.writeText(svBody.textContent); const b=document.getElementById('svCopy');
+      const t=b.textContent; b.textContent='Copied ✓'; setTimeout(()=>b.textContent=t,1400);}catch(e){}
+  });
+  document.querySelectorAll('.view a[data-file]').forEach(a=>{
+    a.addEventListener('click',async()=>{
+      const file=a.dataset.file, name=a.dataset.name;
+      svTitle.textContent=name+' — SKILL.md';
+      svGh.href=GH+file;
+      svBody.textContent='Loading…';
+      ov.classList.add('open');
+      try{
+        const r=await fetch(file); if(!r.ok) throw 0;
+        svBody.textContent=await r.text();
+      }catch(e){
+        svBody.textContent='Preview can’t load local files here — open the file on GitHub (button above) '
+          +'to read and copy it. On the live site this loads inline.';
+      }
+    });
+  });
+</script>
+</body>
+</html>
