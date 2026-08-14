@@ -38,6 +38,21 @@
   .copyrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
   pre.code{background:#0c1020; color:#d6deef; border:1px solid var(--line); border-radius:10px;
     padding:12px 14px; overflow:auto; font-size:12.5px}
+  .skill-list .card{display:flex; flex-direction:column}
+  .skill-list .card .view{margin-top:auto; padding-top:12px}
+  .view a{font-weight:600; font-size:13.5px; color:var(--brand); cursor:pointer}
+  .sv-overlay{position:fixed; inset:0; z-index:80; display:none; padding:5vh 16px;
+    background:color-mix(in srgb,#05070f 62%,transparent); backdrop-filter:blur(6px)}
+  .sv-overlay.open{display:block}
+  .sv-modal{max-width:820px; margin:0 auto; background:var(--card); border:1px solid var(--line);
+    border-radius:16px; box-shadow:var(--shadow); max-height:90vh; display:flex; flex-direction:column; overflow:hidden}
+  .sv-top{display:flex; align-items:center; gap:12px; padding:14px 18px; border-bottom:1px solid var(--line)}
+  .sv-top h3{margin:0; font-size:16px; flex:1}
+  .sv-body{overflow:auto; padding:0}
+  .sv-body pre{margin:0; padding:18px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px; line-height:1.5; white-space:pre-wrap; color:var(--text)}
+  .sv-esc{cursor:pointer; border:1px solid var(--line); background:var(--bg-soft); color:var(--text);
+    border-radius:8px; padding:5px 10px; font-size:12px}
 </style>
 </head>
 <body>
@@ -182,12 +197,14 @@ cp -r Portfolio/docs-toolkit /path/to/your/docs-repo/docs-toolkit</pre>
       <code>docs</code> orchestrator takes it from there. Or run the <code>docs-setup</code> skill to build the config interactively.</p>
     </div>
     <div class="skill-list reveal" style="margin-top:24px">
-      <div class="card"><h3>write-user-doc</h3><p>Feature overviews, how-to & step-by-step guides.</p></div>
-      <div class="card"><h3>write-kb-article</h3><p>Question-based help/KB articles from resolved issues.</p></div>
-      <div class="card"><h3>write-api-doc</h3><p>API/CLI reference from a spec or code.</p></div>
-      <div class="card"><h3>write-usecase-doc</h3><p>End-to-end use-case / implementation guides.</p></div>
-      <div class="card"><h3>write-release-notes</h3><p>Release notes / changelog / "what's new".</p></div>
-      <div class="card"><h3>review-doc</h3><p>Review any draft or PR against the quality gate.</p></div>
+      <div class="card"><h3>docs</h3><p>Orchestrator — detect input, classify, route, self-review, deliver.</p><div class="view"><a data-file="skills/docs/SKILL.md" data-name="docs">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>docs-setup</h3><p>Interactive setup that builds your project-profile.md.</p><div class="view"><a data-file="setup/SKILL.md" data-name="docs-setup">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-user-doc</h3><p>Feature overviews, how-to & step-by-step guides.</p><div class="view"><a data-file="skills/write-user-doc/SKILL.md" data-name="write-user-doc">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-kb-article</h3><p>Question-based help/KB articles from resolved issues.</p><div class="view"><a data-file="skills/write-kb-article/SKILL.md" data-name="write-kb-article">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-api-doc</h3><p>API/CLI reference from a spec or code.</p><div class="view"><a data-file="skills/write-api-doc/SKILL.md" data-name="write-api-doc">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-usecase-doc</h3><p>End-to-end use-case / implementation guides.</p><div class="view"><a data-file="skills/write-usecase-doc/SKILL.md" data-name="write-usecase-doc">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>write-release-notes</h3><p>Release notes / changelog / "what's new".</p><div class="view"><a data-file="skills/write-release-notes/SKILL.md" data-name="write-release-notes">View / copy SKILL.md →</a></div></div>
+      <div class="card"><h3>review-doc</h3><p>Review any draft or PR against the quality gate.</p><div class="view"><a data-file="skills/review-doc/SKILL.md" data-name="review-doc">View / copy SKILL.md →</a></div></div>
     </div>
     <div class="cta-row reveal" style="margin-top:22px">
       <a class="btn primary" href="https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit" target="_blank" rel="noopener">Browse all files on GitHub →</a>
@@ -198,6 +215,18 @@ cp -r Portfolio/docs-toolkit /path/to/your/docs-repo/docs-toolkit</pre>
 <footer>
   <div class="wrap">© <span id="yr"></span> Sabuj Bandopadhyay · Docs-as-Code Documentation Toolkit · <a href="../index.html">Portfolio</a></div>
 </footer>
+
+<div class="sv-overlay" id="svOverlay">
+  <div class="sv-modal" role="dialog" aria-label="Skill viewer">
+    <div class="sv-top">
+      <h3 id="svTitle">SKILL.md</h3>
+      <button class="btn ghost" id="svCopy" style="padding:6px 12px">Copy</button>
+      <a class="btn ghost" id="svGh" target="_blank" rel="noopener" style="padding:6px 12px">GitHub ↗</a>
+      <button class="sv-esc" id="svClose">Esc</button>
+    </div>
+    <div class="sv-body"><pre id="svBody">Loading…</pre></div>
+  </div>
+</div>
 
 <script>
   // theme
@@ -271,6 +300,35 @@ ${compBlock}
     if(!out.value || out.value.startsWith('Fill the form')) out.value=build();
     const blob=new Blob([out.value],{type:'text/markdown'}); const a=document.createElement('a');
     a.href=URL.createObjectURL(blob); a.download='project-profile.md'; a.click(); URL.revokeObjectURL(a.href);
+  });
+
+  // skill viewer
+  const ov=document.getElementById('svOverlay'), svBody=document.getElementById('svBody'),
+        svTitle=document.getElementById('svTitle'), svGh=document.getElementById('svGh');
+  const GH='https://github.com/sabuj000/Portfolio/blob/main/docs-toolkit/';
+  const closeSv=()=>ov.classList.remove('open');
+  document.getElementById('svClose').addEventListener('click',closeSv);
+  ov.addEventListener('click',e=>{ if(e.target===ov) closeSv(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSv(); });
+  document.getElementById('svCopy').addEventListener('click',async()=>{
+    try{ await navigator.clipboard.writeText(svBody.textContent); const b=document.getElementById('svCopy');
+      const t=b.textContent; b.textContent='Copied ✓'; setTimeout(()=>b.textContent=t,1400);}catch(e){}
+  });
+  document.querySelectorAll('.view a[data-file]').forEach(a=>{
+    a.addEventListener('click',async()=>{
+      const file=a.dataset.file, name=a.dataset.name;
+      svTitle.textContent=name+' — SKILL.md';
+      svGh.href=GH+file;
+      svBody.textContent='Loading…';
+      ov.classList.add('open');
+      try{
+        const r=await fetch(file); if(!r.ok) throw 0;
+        svBody.textContent=await r.text();
+      }catch(e){
+        svBody.textContent='Preview can’t load local files here — open the file on GitHub (button above) '
+          +'to read and copy it. On the live site this loads inline.';
+      }
+    });
   });
 </script>
 </body>
