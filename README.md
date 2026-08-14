@@ -267,6 +267,9 @@ The full spectrum of documentation my team and I ship — each linked to the liv
 - **Writing:** [Building an MDX-enabled documentation platform](https://www.linkedin.com/pulse/build-your-own-mdx-enabled-product-documentation-sabuj-bandopadhyay-p11nc/) ·
   [Docs-as-Code and Developer Experience](https://www.linkedin.com/feed/update/urn:li:activity:7289904367044816897/) ·
   [Documentation in the Age of AI](https://www.linkedin.com/feed/update/urn:li:activity:7342773027962527744/)
+- **Open source:** [Docs-as-Code Documentation Toolkit](https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit) —
+  reusable AI skills to create & review product docs (user, KB, API, use-case, release notes) from any input,
+  with a self-serve orchestrator and shared modules; configurable to any product, no company-specific content.
 
 ---
 
