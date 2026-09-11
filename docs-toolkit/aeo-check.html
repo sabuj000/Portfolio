@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs AI-Readiness Checker</title>
+<meta name="description" content="Paste a documentation page and get a score plus fixes for how well it will surface and answer in AI assistants, search, and RAG (Answer Engine Optimization / retrieval-readiness).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .tk-hero{padding:62px 0 20px; position:relative; overflow:hidden}
+  .aeo-input{width:100%; min-height:240px; background:var(--card); color:var(--text);
+    border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px; line-height:1.55; resize:vertical}
+  .aeo-input:focus{outline:none; border-color:var(--brand)}
+  .row{display:flex; flex-wrap:wrap; gap:12px; margin:14px 0}
+  .score-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 24px; box-shadow:var(--shadow); margin-bottom:18px}
+  .score-top{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .score-num{font-family:'Fraunces',serif; font-size:46px; font-weight:800; line-height:1}
+  .score-label{font-weight:700; font-size:16px}
+  .meter{height:12px; border-radius:999px; background:var(--bg-soft); overflow:hidden; margin:14px 0 4px; border:1px solid var(--line)}
+  .meter>i{display:block; height:100%; border-radius:999px; background:linear-gradient(90deg,var(--brand),var(--brand-2)); width:0; transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .cat{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow); margin-bottom:12px}
+  .cat-h{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .cat-h h3{margin:0; font-size:15px; flex:1}
+  .pill{font-size:12px; font-weight:700; padding:3px 10px; border-radius:999px; border:1px solid var(--line)}
+  .pill.good{color:var(--brand-2); border-color:color-mix(in srgb,var(--brand-2) 55%,var(--line))}
+  .pill.warn{color:var(--accent); border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+  .pill.bad{color:#ff7b72; border-color:#ff7b7255}
+  .cat ul{margin:10px 0 0; padding-left:18px}
+  .cat li{font-size:13.5px; color:var(--muted); margin:4px 0}
+  .cat li code{background:var(--bg-soft); padding:1px 5px; border-radius:5px}
+  .empty-hint{color:var(--muted); font-size:14px}
+  .topfix{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--brand);
+    border-radius:12px; padding:16px 18px; box-shadow:var(--shadow); margin-bottom:18px}
+  .topfix h3{margin:0 0 8px; font-size:15px}
+  .topfix ol{margin:0; padding-left:18px} .topfix li{font-size:14px; margin:5px 0}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html">Sabuj<span>.</span></a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Toolkit</a>
+        <a href="index.html#generator">Config generator</a>
+        <a class="cta btn primary" href="https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit" target="_blank" rel="noopener" style="padding:8px 14px">★ GitHub</a>
+      </div>
+      <button class="toggle" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="toggle hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="tk-hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <a class="back-link" href="index.html">← Back to the toolkit</a>
+    <span class="eyebrow"><span class="dot"></span> Free · runs in your browser · nothing uploaded</span>
+    <h1 class="name serif" style="font-size:clamp(28px,5vw,44px)">Docs AI-Readiness Checker</h1>
+    <p class="tagline" style="max-width:720px">Paste a documentation page. Get a score and concrete fixes for how well it will
+      <b>surface and answer in AI assistants, search, and RAG</b> — Answer Engine Optimization (AEO) and retrieval-readiness.
+      A transparent, rule-based check (no AI, no keys).</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap" style="max-width:920px">
+    <label for="doc" style="font-weight:600; display:block; margin-bottom:8px">Documentation content (Markdown or text)</label>
+    <textarea id="doc" class="aeo-input" placeholder="# Paste your doc here&#10;&#10;Frontmatter, headings, prose, links, code blocks — all fine. The more complete the page, the better the read."></textarea>
+    <div class="row">
+      <button class="btn primary" id="run">Analyze</button>
+      <button class="btn ghost" id="sample">Load a sample</button>
+      <button class="btn ghost" id="clear">Clear</button>
+    </div>
+    <p class="empty-hint">Tip: paste the raw Markdown/MDX of one page for the most accurate read.</p>
+    <div id="results" style="margin-top:24px" aria-live="polite"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Sabuj Bandopadhyay · Docs AI-Readiness Checker · part of the <a href="index.html">Docs-as-Code Toolkit</a></div>
+</footer>
+
+<script>
+  // theme + nav
+  const root=document.documentElement, tb=document.getElementById('themeBtn');
+  const saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);
+  const setIcon=()=>tb.textContent=root.getAttribute('data-theme')==='dark'?'🌙':'☀️'; setIcon();
+  tb.addEventListener('click',()=>{const t=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',t);localStorage.setItem('theme',t);setIcon();});
+  const mb=document.getElementById('menuBtn'), nl=document.getElementById('navLinks');
+  mb.addEventListener('click',()=>{const o=nl.classList.toggle('open');mb.textContent=o?'✕':'☰';});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // ---------- analyzer ----------
+  const GENERIC = ['overview','introduction','intro','configuration','config','settings','usage','how to use',
+    'steps','procedure','notes','details','about','more','more information','summary','conclusion','getting started','description'];
+  const DEICTIC = ['as mentioned above','as mentioned earlier','as described above','as described below','as shown above',
+    'as shown below','see above','see below','the section above','the above section','the following section','in the previous section',
+    'as discussed earlier','as discussed above','mentioned previously','refer to the section above'];
+  const WEAKLINK = ['click here','here','read more','learn more','this','this article','this page','this link','link','see the documentation','documentation','more'];
+  const DATED = ['previously','recently','as of','in the recent update','we’ve now','we have now','we are now','newly added','just released','coming soon','last quarter','this quarter','in the last release','currently'];
+
+  function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+  function stripCode(text){ // remove fenced code so prose checks don't hit code
+    return text.replace(/```[\s\S]*?```/g,'\n').replace(/`[^`]*`/g,' ');
+  }
+  function analyze(raw){
+    const findings={}; const cats=[];
+    const hasFrontmatter=/^---\s*[\s\S]*?\n---/.test(raw.trim());
+    const fmBlock = hasFrontmatter ? raw.trim().match(/^---\s*[\s\S]*?\n---/)[0] : '';
+    const body = hasFrontmatter ? raw.trim().slice(fmBlock.length) : raw;
+    const prose = stripCode(body);
+    const lines = body.split('\n');
+
+    // headings (markdown + html)
+    const headings=[];
+    lines.forEach(l=>{
+      let m=l.match(/^\s{0,3}(#{1,4})\s+(.*)$/); if(m) headings.push({level:m[1].length, text:m[2].replace(/[#*`]/g,'').trim()});
+      let h=l.match(/<h([1-4])[^>]*>(.*?)<\/h\1>/i); if(h) headings.push({level:+h[1], text:h[2].replace(/<[^>]+>/g,'').trim()});
+    });
+    const h1=headings.filter(h=>h.level===1);
+    const subs=headings.filter(h=>h.level>=2);
+
+    // ---- 1. Structure & chunkability (20) ----
+    let s1=100; const f1=[];
+    if(!h1.length){ s1-=30; f1.push('No top-level title (H1) — add one so the page has a clear subject.'); }
+    if(!subs.length){ s1-=40; f1.push('No section headings (H2/H3) — retrieval chunks on headings; a wall of text can’t be chunked well.'); }
+    // section lengths
+    if(subs.length){
+      // measure words between headings
+      const idx=[]; lines.forEach((l,i)=>{ if(/^\s{0,3}#{1,4}\s+/.test(l)||/<h[1-4]/i.test(l)) idx.push(i); });
+      idx.push(lines.length);
+      let longCount=0;
+      for(let k=0;k<idx.length-1;k++){ const w=lines.slice(idx[k]+1,idx[k+1]).join(' ').split(/\s+/).filter(Boolean).length; if(w>350) longCount++; }
+      if(longCount){ s1-=Math.min(25,longCount*10); f1.push(longCount+' section(s) run long (>350 words) — split into one-intent chunks so each retrieves cleanly.'); }
+    }
+    if(!f1.length) f1.push('Good heading structure for chunking.');
+    cats.push({name:'Structure & chunkability', w:20, score:Math.max(0,s1), findings:f1});
+
+    // ---- 2. Self-locating headings (20) ----
+    let s2=100; const f2=[];
+    const generic=subs.filter(h=>GENERIC.includes(h.text.toLowerCase().replace(/[^a-z0-9 ]/g,'').trim()));
+    if(subs.length){
+      const ratio=generic.length/subs.length;
+      s2=Math.round(100-ratio*100);
+      if(generic.length) f2.push('Generic headings that collide at retrieval time: '+generic.slice(0,6).map(h=>'<code>'+esc(h.text)+'</code>').join(', ')+' — make them self-locating (e.g. “Configure X in Product”).');
+    }
+    // duplicate headings
+    const seen={}; const dups=new Set();
+    subs.forEach(h=>{const k=h.text.toLowerCase();if(seen[k])dups.add(h.text);seen[k]=1;});
+    if(dups.size){ s2-=15; f2.push('Duplicate headings: '+[...dups].slice(0,5).map(t=>'<code>'+esc(t)+'</code>').join(', ')+' — each heading should be unique.'); }
+    if(!f2.length) f2.push('Headings identify their subject well.');
+    cats.push({name:'Self-locating headings', w:20, score:Math.max(0,s2), findings:f2});
+
+    // ---- 3. Chunk independence (15) ----
+    let s3=100; const f3=[]; const lp=prose.toLowerCase();
+    const deHits=DEICTIC.filter(p=>lp.includes(p));
+    if(deHits.length){ s3-=Math.min(70,deHits.length*18); f3.push('Deictic references break standalone chunks: '+deHits.slice(0,5).map(p=>'“'+p+'”').join(', ')+' — restate the context instead.'); }
+    if(!f3.length) f3.push('Sections read as self-contained.');
+    cats.push({name:'Chunk independence', w:15, score:Math.max(0,s3), findings:f3});
+
+    // ---- 4. Answerability & metadata (15) ----
+    let s4=100; const f4=[];
+    if(!hasFrontmatter){ s4-=15; f4.push('No frontmatter — add title/description/keywords so search & AI have clean metadata.'); }
+    else{
+      if(!/description\s*[:=]/i.test(fmBlock)){ s4-=15; f4.push('Frontmatter has no <code>description</code> — a concise summary boosts snippet/answer quality.'); }
+    }
+    // lead summary before first H2
+    const firstSub = body.search(/^\s{0,3}#{2,4}\s+/m);
+    const lead = (firstSub>0? body.slice(0,firstSub): body).replace(/^---[\s\S]*?\n---/,'').replace(/^\s*#\s+.*$/m,'').trim();
+    if(lead.split(/\s+/).filter(Boolean).length<12){ s4-=20; f4.push('No lead summary — open with 1–2 sentences answering “what is this / what will I do” before the first section.'); }
+    // question or task headings help
+    const qh = subs.filter(h=>/^(how|why|what|when|where|can|do|does|is|should)\b/i.test(h.text) || /^[A-Z][a-z]+\b.*\b(a|an|the|your)\b/.test(h.text));
+    if(subs.length && qh.length/subs.length < 0.3) f4.push('Few task/question-style headings — phrasing like “How do I…” or “Create a…” matches how people (and AI) ask.');
+    if(!f4.length) f4.push('Strong metadata and an answer-first opening.');
+    cats.push({name:'Answerability & metadata', w:15, score:Math.max(0,s4), findings:f4});
+
+    // ---- 5. Links & references (15) ----
+    let s5=100; const f5=[];
+    const links=[...body.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)];
+    const weak=links.filter(m=>WEAKLINK.includes(m[1].trim().toLowerCase()));
+    if(weak.length){ s5-=Math.min(50,weak.length*15); f5.push(weak.length+' non-descriptive link text (e.g. '+weak.slice(0,3).map(m=>'<code>'+esc(m[1])+'</code>').join(', ')+') — use the destination’s name.'); }
+    // dead-end references
+    const dead=(prose.match(/see the documentation|refer to the docs|read the documentation/gi)||[]);
+    if(dead.length){ s5-=20; f5.push('Dead-end reference(s) like “see the documentation” with no link — link the actual page.'); }
+    if(!links.length) f5.push('No links found — link related concepts so answers can chain.');
+    if(!f5.length) f5.push('Links are descriptive and resolve to real destinations.');
+    cats.push({name:'Links & references', w:15, score:Math.max(0,s5), findings:f5});
+
+    // ---- 6. Freshness / tense (10) ----
+    let s6=100; const f6=[];
+    const dateHits=DATED.filter(p=>lp.includes(p));
+    if(dateHits.length){ s6-=Math.min(60,dateHits.length*15); f6.push('Time-relative phrasing that ages badly: '+dateHits.slice(0,5).map(p=>'“'+p+'”').join(', ')+' — describe current behavior in present tense.'); }
+    if(!f6.length) f6.push('Present-tense, dateless — good for retrieval.');
+    cats.push({name:'Freshness & tense', w:10, score:Math.max(0,s6), findings:f6});
+
+    // ---- 7. Media & code (5) ----
+    let s7=100; const f7=[];
+    const imgs=[...body.matchAll(/!\[([^\]]*)\]\(([^)]+)\)/g)];
+    const noAlt=imgs.filter(m=>!m[1].trim()).length;
+    if(noAlt){ s7-=Math.min(60,noAlt*20); f7.push(noAlt+' image(s) missing alt text — AI and search can’t read them.'); }
+    const fences=[...body.matchAll(/```([^\n`]*)\n/g)];
+    const noLang=fences.filter(m=>!m[1].trim()).length;
+    if(noLang){ s7-=Math.min(30,noLang*10); f7.push(noLang+' code block(s) with no language label — add one for correct rendering/parsing.'); }
+    if(!f7.length) f7.push('Media and code are well-labeled.');
+    cats.push({name:'Media & code', w:5, score:Math.max(0,s7), findings:f7});
+
+    const overall=Math.round(cats.reduce((a,c)=>a+c.score*c.w,0)/cats.reduce((a,c)=>a+c.w,0));
+    return {overall, cats};
+  }
+  const lbl=s=>s>=90?'Excellent — AI-ready':s>=75?'Strong':s>=60?'Good, with gaps':s>=40?'Needs work':'Not AI-ready yet';
+  const pill=s=>s>=80?'good':s>=55?'warn':'bad';
+  const pword=s=>s>=80?'Good':s>=55?'Fair':'Fix';
+
+  function render(a){
+    const worst=[...a.cats].filter(c=>c.score<80).sort((x,y)=>(x.score*x.w)-(y.score*y.w)).slice(0,3);
+    const top = worst.length ? '<div class="topfix"><h3>⚡ Top fixes</h3><ol>'+worst.map(c=>'<li><b>'+c.name+':</b> '+c.findings[0]+'</li>').join('')+'</ol></div>' : '';
+    document.getElementById('results').innerHTML =
+      '<div class="score-card"><div class="score-top"><span class="score-num">'+a.overall+'</span><span class="score-label">'+lbl(a.overall)+'</span></div>'
+      +'<div class="meter"><i style="width:'+a.overall+'%"></i></div>'
+      +'<p class="empty-hint">Weighted across '+a.cats.length+' retrieval-readiness dimensions. Higher = more likely to surface and answer well in AI/search.</p></div>'
+      + top
+      + a.cats.map(c=>'<div class="cat"><div class="cat-h"><h3>'+c.name+'</h3><span class="pill '+pill(c.score)+'">'+pword(c.score)+' · '+c.score+'</span></div><ul>'+c.findings.map(f=>'<li>'+f+'</li>').join('')+'</ul></div>').join('');
+    document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  document.getElementById('run').addEventListener('click',()=>{
+    const v=document.getElementById('doc').value.trim();
+    if(!v){ document.getElementById('results').innerHTML='<p class="empty-hint">Paste a documentation page first.</p>'; return; }
+    render(analyze(v));
+  });
+  document.getElementById('clear').addEventListener('click',()=>{document.getElementById('doc').value='';document.getElementById('results').innerHTML='';});
+  document.getElementById('sample').addEventListener('click',()=>{
+    document.getElementById('doc').value=`# Webhooks
+
+## Overview
+This page is about webhooks. As mentioned above, webhooks let you receive events. Previously you had to poll the API.
+
+## Configuration
+To set it up, click [here](https://example.com). See the documentation for more.
+
+## Steps
+1. Do the thing.
+2. Then do the other thing as shown above.
+
+![](/img/diagram.png)
+
+\`\`\`
+POST /webhooks
+\`\`\`
+`;
+    render(analyze(document.getElementById('doc').value));
+  });
+</script>
+</body>
+</html>
