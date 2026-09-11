@@ -75,6 +75,7 @@
     <textarea id="doc" class="aeo-input" placeholder="# Paste your doc here&#10;&#10;Frontmatter, headings, prose, links, code blocks — all fine. The more complete the page, the better the read."></textarea>
     <div class="row">
       <button class="btn primary" id="run">Analyze</button>
+      <button class="btn ghost" id="copyres">Copy result</button>
       <button class="btn ghost" id="sample">Load a sample</button>
       <button class="btn ghost" id="clear">Clear</button>
     </div>
@@ -218,7 +219,9 @@
   const pill=s=>s>=80?'good':s>=55?'warn':'bad';
   const pword=s=>s>=80?'Good':s>=55?'Fair':'Fix';
 
+  let last=null;
   function render(a){
+    last=a;
     const worst=[...a.cats].filter(c=>c.score<80).sort((x,y)=>(x.score*x.w)-(y.score*y.w)).slice(0,3);
     const top = worst.length ? '<div class="topfix"><h3>⚡ Top fixes</h3><ol>'+worst.map(c=>'<li><b>'+c.name+':</b> '+c.findings[0]+'</li>').join('')+'</ol></div>' : '';
     document.getElementById('results').innerHTML =
@@ -234,7 +237,21 @@
     if(!v){ document.getElementById('results').innerHTML='<p class="empty-hint">Paste a documentation page first.</p>'; return; }
     render(analyze(v));
   });
-  document.getElementById('clear').addEventListener('click',()=>{document.getElementById('doc').value='';document.getElementById('results').innerHTML='';});
+  document.getElementById('clear').addEventListener('click',()=>{document.getElementById('doc').value='';document.getElementById('results').innerHTML='';last=null;});
+  // copy result summary (plain text)
+  const stripHtml=s=>s.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ').trim();
+  function summary(a){
+    const worst=[...a.cats].filter(c=>c.score<80).sort((x,y)=>(x.score*x.w)-(y.score*y.w)).slice(0,3);
+    let t='Docs AI-Readiness: '+a.overall+'/100 — '+lbl(a.overall)+'\n\n';
+    a.cats.forEach(c=>{ t+='- '+c.name+': '+c.score+'\n'; });
+    if(worst.length){ t+='\nTop fixes:\n'; worst.forEach((c,i)=>{ t+=(i+1)+'. '+c.name+' — '+stripHtml(c.findings[0])+'\n'; }); }
+    t+='\nChecked with the Docs AI-Readiness Checker · https://sabuj000.github.io/Portfolio/docs-toolkit/aeo-check.html';
+    return t;
+  }
+  document.getElementById('copyres').addEventListener('click',async()=>{
+    if(!last){ const v=document.getElementById('doc').value.trim(); if(!v){ document.getElementById('results').innerHTML='<p class="empty-hint">Analyze a doc first, then copy the result.</p>'; return; } render(analyze(v)); }
+    try{ await navigator.clipboard.writeText(summary(last)); const b=document.getElementById('copyres'); const t=b.textContent; b.textContent='Copied ✓'; setTimeout(()=>b.textContent=t,1500);}catch(e){}
+  });
   document.getElementById('sample').addEventListener('click',()=>{
     document.getElementById('doc').value=`# Webhooks
 
