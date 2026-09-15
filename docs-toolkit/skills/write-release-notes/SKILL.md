@@ -37,6 +37,10 @@ em dashes; hyperlink feature/product names to the relevant docs with descriptive
 Offer **3–4 short heading options** (sentence case) that name the change; for API/developer changes,
 name the exact parameter/endpoint. Add the audience/type/maturity tags your profile defines.
 
+## Metadata for AI (`shared/metadata.md`)
+Set frontmatter: `description`, `type: release-note`, `product`, `version`, `audience`, and the
+audience/type/maturity tags your profile defines. Keep every value accurate and current.
+
 ## Finish
 Self-review with `shared/quality-checklist.md` (common + **Release notes** section), then
 `shared/deliver.md`. End with a "sources checked / open questions" note listing what you could and

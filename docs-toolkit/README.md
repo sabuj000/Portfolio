@@ -43,6 +43,7 @@ docs-toolkit/
     verify.md                     "second SME" — verify claims against your source of truth, by role
     quality-checklist.md          the single quality gate (create self-review AND review-doc use it)
     style-guide.md                generic house style + retrieval-readiness rules
+    metadata.md                   metadata for AI: frontmatter, schema/JSON-LD, personalization tags
     terminology.example.md        your brand/product terms that must not be misspelled
     deliver.md                    delivery options (open a PR / files / inline)
   skills/
@@ -64,9 +65,11 @@ docs-toolkit/
    tickets), not just written to read well.
 3. **Retrieval-ready.** Structured for humans *and* AI assistants (search, RAG, in-product AI):
    self-locating headings, one intent per section, prerequisites before steps.
-4. **Interactive & self-serve.** `setup` builds your profile; skills confirm type/product/audience and
+4. **Metadata for AI.** Content carries structured metadata, schema, and personalization tags
+   (`shared/metadata.md`) so retrieval is precise and answers can be tailored to the reader.
+5. **Interactive & self-serve.** `setup` builds your profile; skills confirm type/product/audience and
    ask when a fact is missing.
-5. **Review never rewrites.** The review skill only reports findings.
+6. **Review never rewrites.** The review skill only reports findings.
 
 ## Getting started
 

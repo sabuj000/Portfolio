@@ -10,6 +10,9 @@ against a draft or PR. Apply the common section always, plus the section for the
       `project-profile.md`; no HTML comments in MDX.
 - [ ] **Retrieval-readiness** (`shared/style-guide.md`) — self-locating headings; one intent per
       section; prerequisites before steps; no deictic "above/below"; present tense.
+- [ ] **Metadata for AI** (`shared/metadata.md`) — frontmatter carries description, doc-type, product,
+      version, audience, keywords; JSON-LD/schema present where supported; personalization tags
+      (audience/SDK/plan/region) where the page varies; all of it accurate and current.
 - [ ] **Style** — house voice, click/select verbs, imperative headings, chosen English variant, no
       marketing fluff, bias-free, descriptive link text.
 - [ ] **Links & assets** — internal links resolve per profile rules; new links flagged for any build

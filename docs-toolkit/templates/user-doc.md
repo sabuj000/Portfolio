@@ -1,4 +1,14 @@
-<!-- Template: user / product doc. Replace guidance; add your frontmatter per project-profile.md. -->
+<!-- Template: user / product doc. Use your real frontmatter field names (see project-profile.md + shared/metadata.md). -->
+---
+title: <Feature or task name>
+description: <one-line summary of what this page helps the reader do>
+type: how-to        # concept | how-to | reference | tutorial
+product: <Product>
+version: <e.g. 2.0>
+audience: <developer | admin | end-user>
+keywords: <term one, term two, term three>
+# personalization (where the page varies): sdk/language, plan/tier, region
+---
 
 # <Feature or task name>
 

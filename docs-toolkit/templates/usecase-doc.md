@@ -1,4 +1,14 @@
-<!-- Template: end-to-end use-case / implementation guide. -->
+<!-- Template: end-to-end use-case / implementation guide. Frontmatter per project-profile.md + shared/metadata.md. -->
+---
+title: <Achieve X with Product>
+description: <one-line summary of the end-to-end outcome>
+type: tutorial
+product: <Product>
+version: <e.g. 2.0>
+audience: <role>
+keywords: <use case, integration, workflow>
+# personalization: sdk/language, plan/tier, region where the flow varies
+---
 
 # <Achieve X with Product> — implementation guide
 

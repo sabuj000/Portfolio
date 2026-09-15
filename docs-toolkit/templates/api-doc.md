@@ -1,4 +1,15 @@
 <!-- Template: API / CLI reference for one operation. Fill only from the spec/code — never invent. -->
+<!-- Frontmatter fields per project-profile.md + shared/metadata.md. -->
+---
+title: <Operation name>
+description: <one-line summary of what the operation does>
+type: reference
+product: <Product>
+version: <API version — critical>
+audience: developer
+keywords: <resource, method, endpoint>
+# personalization: sdk/language variants of the samples
+---
 
 # <Operation name, e.g. Create a customer>
 

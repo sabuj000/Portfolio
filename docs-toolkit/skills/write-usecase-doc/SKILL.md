@@ -31,6 +31,11 @@ Follow `templates/usecase-doc.md` and `shared/style-guide.md`:
 - State **success criteria** (how the reader knows it worked) and cover **failure/rollback**.
 - One intent per section; each stage makes sense retrieved alone.
 
+## Metadata for AI (`shared/metadata.md`)
+Set frontmatter: `description`, `type: tutorial`, `product`, `version`, `audience`, `keywords`. Add
+JSON-LD/schema (HowTo) where supported, and personalization tags (audience/SDK/plan/region) where the
+flow varies. Keep every value accurate and current.
+
 ## Finish
 Self-review with `shared/quality-checklist.md` (common + **Use-case/implementation** section), then
 `shared/deliver.md` (confidence score; `[unverified]` list).

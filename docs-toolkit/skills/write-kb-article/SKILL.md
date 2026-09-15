@@ -32,6 +32,11 @@ Follow `templates/kb-article.md` and `shared/style-guide.md`:
 - Deterministic numbered steps; bold UI labels; nav as `A > B > C`; final step states the outcome.
 - **No "Related Articles" body section** and no invented links. Self-contained (no ticket references).
 
+## Metadata for AI (`shared/metadata.md`)
+Set frontmatter: `description`, `type` (how-to/concept), `product`, `version`, `audience`, `keywords`.
+Add JSON-LD/schema (FAQPage or HowTo) where supported, and personalization tags where the fix varies by
+plan/region. Keep every value accurate and current.
+
 ## Finish
 Self-review with `shared/quality-checklist.md` (common + **KB** section), then `shared/deliver.md`
 (production file + plain-Markdown review copy if MDX; confidence score; `[unverified]` list).
