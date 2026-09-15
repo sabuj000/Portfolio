@@ -274,6 +274,8 @@ The full spectrum of documentation my team and I ship — each linked to the liv
 - **Docs AI-Readiness Checker:** [try it](https://sabuj000.github.io/Portfolio/docs-toolkit/aeo-check.html) —
   paste a doc and get a score + fixes for how well it will surface in AI answers, search, and RAG (AEO /
   retrieval-readiness). Rule-based, runs in the browser.
+- **llms.txt Generator:** [try it](https://sabuj000.github.io/Portfolio/docs-toolkit/llms-generator.html) —
+  build a spec-compliant llms.txt from a page list or sitemap so AI tools index the right docs. Runs in the browser.
 
 ---
 

@@ -40,6 +40,7 @@
 ## Open source
 - [Docs-as-Code Documentation Toolkit](https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit): reusable AI skills that create and review product documentation (user docs, KB, API, use-case, release notes) from any input (Word, PDF, Notion, Jira); self-serve orchestrator + shared modules, configurable to any product, no company-specific content. Interactive site + config generator: https://sabuj000.github.io/Portfolio/docs-toolkit/
 - [Docs AI-Readiness Checker](https://sabuj000.github.io/Portfolio/docs-toolkit/aeo-check.html): paste a documentation page to score its retrieval-readiness / Answer Engine Optimization (AEO) — chunkability, self-locating headings, chunk-independence, answerability, metadata & schema (JSON-LD), personalization signals, links, tense, and media — with concrete fixes. Rule-based, client-side.
+- [llms.txt Generator](https://sabuj000.github.io/Portfolio/docs-toolkit/llms-generator.html): generate a spec-compliant llms.txt (with optional instructions section) from a page list or a sitemap, so AI tools and agents retrieve the right docs. Client-side.
 
 ## Leadership & working style
 - Hands-on "player-coach": personally writes and owns features (user docs, API references, any content the feature needs) while leading a team.
