@@ -166,21 +166,17 @@
     if(!f3.length) f3.push('Sections read as self-contained.');
     cats.push({name:'Chunk independence', w:15, score:Math.max(0,s3), findings:f3});
 
-    // ---- 4. Answerability & metadata (15) ----
+    // ---- 4. Answerability (12) ----
     let s4=100; const f4=[];
-    if(!hasFrontmatter){ s4-=15; f4.push('No frontmatter — add title/description/keywords so search & AI have clean metadata.'); }
-    else{
-      if(!/description\s*[:=]/i.test(fmBlock)){ s4-=15; f4.push('Frontmatter has no <code>description</code> — a concise summary boosts snippet/answer quality.'); }
-    }
     // lead summary before first H2
     const firstSub = body.search(/^\s{0,3}#{2,4}\s+/m);
     const lead = (firstSub>0? body.slice(0,firstSub): body).replace(/^---[\s\S]*?\n---/,'').replace(/^\s*#\s+.*$/m,'').trim();
-    if(lead.split(/\s+/).filter(Boolean).length<12){ s4-=20; f4.push('No lead summary — open with 1–2 sentences answering “what is this / what will I do” before the first section.'); }
+    if(lead.split(/\s+/).filter(Boolean).length<12){ s4-=45; f4.push('No lead summary — open with 1–2 sentences answering “what is this / what will I do” before the first section.'); }
     // question or task headings help
     const qh = subs.filter(h=>/^(how|why|what|when|where|can|do|does|is|should)\b/i.test(h.text) || /^[A-Z][a-z]+\b.*\b(a|an|the|your)\b/.test(h.text));
-    if(subs.length && qh.length/subs.length < 0.3) f4.push('Few task/question-style headings — phrasing like “How do I…” or “Create a…” matches how people (and AI) ask.');
-    if(!f4.length) f4.push('Strong metadata and an answer-first opening.');
-    cats.push({name:'Answerability & metadata', w:15, score:Math.max(0,s4), findings:f4});
+    if(subs.length && qh.length/subs.length < 0.3){ s4-=25; f4.push('Few task/question-style headings — phrasing like “How do I…” or “Create a…” matches how people (and AI) ask.'); }
+    if(!f4.length) f4.push('Answer-first opening and task-shaped headings.');
+    cats.push({name:'Answerability', w:12, score:Math.max(0,s4), findings:f4});
 
     // ---- 5. Links & references (15) ----
     let s5=100; const f5=[];
@@ -211,6 +207,27 @@
     if(noLang){ s7-=Math.min(30,noLang*10); f7.push(noLang+' code block(s) with no language label — add one for correct rendering/parsing.'); }
     if(!f7.length) f7.push('Media and code are well-labeled.');
     cats.push({name:'Media & code', w:5, score:Math.max(0,s7), findings:f7});
+
+    // ---- 8. Metadata, schema & personalization (16) ----
+    let s8=0; const f8=[]; const good=[];
+    const fm = hasFrontmatter ? fmBlock : '';
+    function pt(cond, points, presentLabel, missMsg){ if(cond){ s8+=points; good.push(presentLabel); } else { f8.push(missMsg); } }
+    pt(hasFrontmatter, 8, 'frontmatter', 'No frontmatter block. Add one so machines get clean, structured metadata.');
+    pt(/(^|\n)\s*description\s*[:=]/i.test(fm), 15, 'description', 'Add a <code>description</code> (one-line summary) for better snippets and AI answers.');
+    pt(/(^|\n)\s*(type|doctype|doc_type|category|kind)\s*[:=]/i.test(fm), 10, 'doc-type', 'Add a <code>type</code> (concept / how-to / reference) so retrieval knows what the page is for.');
+    pt(/(^|\n)\s*product\s*[:=]/i.test(fm), 10, 'product', 'Add a <code>product</code> field so answers are scoped to the right product.');
+    pt(/(^|\n)\s*(version|api_version)\s*[:=]/i.test(fm), 10, 'version', 'Add a <code>version</code> field so agents do not mix versions.');
+    pt(/(^|\n)\s*(audience|persona|role|reader)\s*[:=]/i.test(fm), 12, 'audience', 'Add an <code>audience</code>/<code>persona</code> tag so answers can be tailored to the reader.');
+    pt(/(^|\n)\s*(keywords|tags)\s*[:=]/i.test(fm), 8, 'keywords', 'Add <code>keywords</code>/<code>tags</code> for topical precision.');
+    const hasSchema = /application\/ld\+json|"@type"|schema\.org/i.test(body);
+    pt(hasSchema, 17, 'schema.org / JSON-LD', 'No structured data found. Add JSON-LD (TechArticle / HowTo / FAQPage / APIReference) so search and AI parse the page precisely.');
+    const langs = new Set([...body.matchAll(/```([a-z0-9+#.]+)/gi)].map(m=>m[1].toLowerCase()).filter(l=>!['text','txt','md','markdown','json','yaml','yml','bash','sh','shell'].includes(l)));
+    const personTags = /(^|\n)\s*(audience|persona|role|sdk|language|lang|plan|tier|region|locale)\s*[:=]/i.test(fm);
+    pt(personTags || langs.size>=2, 10, 'personalization', 'No personalization signals. Add <code>audience</code>/<code>sdk</code>/<code>plan</code>/<code>region</code> tags (or per-language variants) so agents return the right variant for each reader.');
+    s8=Math.min(100,s8);
+    if(good.length) f8.unshift('Present: '+good.join(', ')+'.');
+    if(!f8.length) f8.push('Rich, machine-readable metadata — retrieval and personalization ready.');
+    cats.push({name:'Metadata, schema & personalization', w:16, score:s8, findings:f8});
 
     const overall=Math.round(cats.reduce((a,c)=>a+c.score*c.w,0)/cats.reduce((a,c)=>a+c.w,0));
     return {overall, cats};
