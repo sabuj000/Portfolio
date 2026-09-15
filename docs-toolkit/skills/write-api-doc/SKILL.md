@@ -31,6 +31,11 @@ Follow `templates/api-doc.md` and `shared/style-guide.md`:
 - Object/array field descriptions where the schema needs them; wire types exact (e.g. string amounts as
   strings). Cross-links use the profile's URL conventions; removed/renamed items not left linked.
 
+## Metadata for AI (`shared/metadata.md`)
+Set frontmatter: `description`, `type: reference`, `product`, `version` (critical for APIs), `audience`,
+`keywords`. Add JSON-LD/schema (APIReference) where supported, and per-language/SDK personalization
+tags so agents return the right code variant. Keep every value accurate and current.
+
 ## Finish
 Self-review with `shared/quality-checklist.md` (common + **API reference** section), then
 `shared/deliver.md` (confidence score; `[unverified]` list; links to register).

@@ -1,4 +1,14 @@
-<!-- Template: KB / help article. Add your frontmatter (title, category, …) per project-profile.md. -->
+<!-- Template: KB / help article. Use your real frontmatter fields (see project-profile.md + shared/metadata.md). -->
+---
+title: How do I <do the task> in <Product/area>?
+description: <one-line summary of the problem this article solves>
+type: how-to
+product: <Product>
+version: <e.g. 2.0>
+audience: <who hits this problem>
+category: <KB category>
+keywords: <symptom, feature, error term>
+---
 
 # How do I <do the task / resolve the problem> in <Product/area>?
 

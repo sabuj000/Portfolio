@@ -35,6 +35,11 @@ Follow `templates/user-doc.md` and `shared/style-guide.md`:
 - Render to the profile's format (plain Markdown or your components/frontmatter). MDX: only configured
   components; valid frontmatter; no HTML comments.
 
+## Metadata for AI (`shared/metadata.md`)
+Set frontmatter: `description`, `type`, `product`, `version`, `audience`, `keywords`. Add JSON-LD/schema
+where the platform supports it, and personalization tags (audience/SDK/plan/region) where the page
+varies by reader. Keep every value accurate and current.
+
 ## Finish
 Self-review with `shared/quality-checklist.md` (common + **User/product doc** section), then
 `shared/deliver.md` (production file + a plain-Markdown review copy if MDX; confidence score;

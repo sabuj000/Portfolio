@@ -40,6 +40,14 @@ _Skip the table if you write plain Markdown._
 
 - **Comment syntax:** `<e.g. {/* */} for MDX; never HTML comments>`
 
+## Metadata for AI (precision + personalization)
+_See `shared/metadata.md`. These make docs precise and personalizable for search, RAG, and agents._
+- **Frontmatter metadata fields to require:** `description`, `type` (concept/how-to/reference/tutorial),
+  `product`, `version`, `audience`/`persona`, `keywords`. (Map to your real field names above.)
+- **Structured data (schema):** `<JSON-LD supported? which types — TechArticle / HowTo / FAQPage / APIReference>`
+- **Personalization tags:** `<audience/persona, sdk/language, plan/tier, region/locale — which apply to you>`
+- **AI outputs (optional):** `<do you publish llms.txt and/or .md versions of pages? if so, note where>`
+
 ## House style
 - **Base style guide:** `shared/style-guide.md` (Microsoft Writing Style Guide by default) — or your own.
 - **English variant:** `<US | UK>`  ·  **UI verbs:** `<default click/select, or your own>`
