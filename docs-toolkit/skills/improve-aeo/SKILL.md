@@ -1,18 +1,18 @@
 ---
 name: improve-aeo
 description: >-
-  Audit and improve a page (or a whole site) for AEO/GEO — how well answer engines, RAG systems, and AI
+  Audit and improve a page (or a whole site) for GEO/AEO — how well answer engines, RAG systems, and AI
   agents can find, retrieve, and correctly cite it. Harnesses crawl4ai's crawl-to-clean-Markdown logic to
   see the page the way a machine does, scores it across nine retrieval-readiness dimensions, returns
   prioritized fixes, and can emit a starter llms.txt. Works on any docs, marketing, or KB site — no
-  company-specific content. Use whenever someone asks to make content "AI-ready", improve AEO/GEO, or get
+  company-specific content. Use whenever someone asks to make content "AI-ready", improve GEO/AEO, or get
   cited by ChatGPT/Perplexity/Claude/AI Overviews.
 ---
 
 # improve-aeo
 
-Make content answer-engine- and generative-engine-ready. AEO (Answer Engine Optimization) and GEO
-(Generative Engine Optimization) are the same core problem: a machine has to **find** your page,
+Make content generative-engine- and answer-engine-ready. GEO (Generative Engine Optimization) and AEO
+(Answer Engine Optimization) are the same core problem: a machine has to **find** your page,
 **retrieve the right chunk**, and **cite it correctly**. This skill audits a page the way a machine sees
 it and returns concrete fixes — it never rewrites silently and never invents facts.
 
@@ -125,7 +125,7 @@ plainly — that's the finding, not a footnote.
 
 ## Rules
 - Audit the **extracted/crawled text**, not the rendered page alone — that's what the machine ingests.
-- **AEO and GEO share this checklist**; don't treat them as separate work.
+- **GEO and AEO share this checklist**; don't treat them as separate work.
 - Recommend only; never edit, commit, or publish unless explicitly asked.
 - Never invent metrics, versions, audiences, or links — missing → `[unverified]` / `TODO`.
 - crawl4ai is optional and runs locally; the skill degrades gracefully to pasted content without it.

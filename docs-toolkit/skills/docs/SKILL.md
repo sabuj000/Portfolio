@@ -17,7 +17,7 @@ Read `project-profile.md`. If it doesn't exist, run **docs-setup** first (or ask
 
 ## 1) Classify the request
 - **Create, review, or AI-readiness?** If the user points at an existing draft or a PR to check → route to
-  **review-doc**. If they want a page or site audited/improved for AEO/GEO (retrieval-readiness, "get cited
+  **review-doc**. If they want a page or site audited/improved for GEO/AEO (retrieval-readiness, "get cited
   by AI", llms.txt) → route to **improve-aeo**. If they supply source material and want a document → create.
 - **Which doc type?** Decide from the request and source, and confirm with the user (offer a default):
 

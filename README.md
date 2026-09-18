@@ -271,7 +271,7 @@ The full spectrum of documentation my team and I ship — each linked to the liv
   ([interactive site + config generator](https://sabuj000.github.io/Portfolio/docs-toolkit/)) —
   reusable AI skills to create & review product docs (user, KB, API, use-case, release notes) from any input,
   with a self-serve orchestrator and shared modules; configurable to any product, no company-specific content.
-  Includes an **improve-aeo** skill that audits any page or whole site for AEO/GEO (harnessing crawl4ai's
+  Includes an **improve-aeo** skill that audits any page or whole site for GEO/AEO (harnessing crawl4ai's
   crawl-to-Markdown logic) and returns prioritized, apply-ready fixes plus a starter llms.txt.
 - **Docs AI-Readiness Checker:** [try it](https://sabuj000.github.io/Portfolio/docs-toolkit/aeo-check.html) —
   paste a doc and get a score + fixes for how well it will surface in AI answers, search, and RAG (AEO /
