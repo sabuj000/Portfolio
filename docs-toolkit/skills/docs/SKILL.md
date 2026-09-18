@@ -16,8 +16,9 @@ and the reusable logic in `shared/`.
 Read `project-profile.md`. If it doesn't exist, run **docs-setup** first (or ask for the essentials).
 
 ## 1) Classify the request
-- **Create vs. review?** If the user points at an existing draft or a PR to check → route to
-  **review-doc**. If they supply source material and want a document → create.
+- **Create, review, or AI-readiness?** If the user points at an existing draft or a PR to check → route to
+  **review-doc**. If they want a page or site audited/improved for AEO/GEO (retrieval-readiness, "get cited
+  by AI", llms.txt) → route to **improve-aeo**. If they supply source material and want a document → create.
 - **Which doc type?** Decide from the request and source, and confirm with the user (offer a default):
 
   | Signal | Route to |
