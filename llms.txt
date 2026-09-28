@@ -28,7 +28,7 @@
 - Grounded documentation in source code across all GitHub repos (not just SME input) to keep user docs, KB, and use-case content factually correct, and built a Slack screenshot → fact-check → PR automation — improving accuracy, reducing SME dependence, and strengthening AEO/SEO discoverability.
 
 ## Detailed pages
-- [Impact](https://sabuj000.github.io/Portfolio/impact.html): outcomes as problem → build → ROI, and the AI documentation loop.
+- [Impact](https://sabuj000.github.io/Portfolio/impact.html): outcomes as problem → build → ROI, and the AI documentation loop — each outcome links to the supporting artifact on the Work page as proof.
 - [Work &amp; Artifacts](https://sabuj000.github.io/Portfolio/work.html): real published documentation he and his team ship at Chargebee, plus video walkthroughs.
 - [How I work](https://sabuj000.github.io/Portfolio/approach.html): docs-as-code, strategy & governance, continuous audits, data, revenue, video, contribution, cross-functional collaboration, developer-experience perspective.
 - [Vision](https://sabuj000.github.io/Portfolio/vision.html): docs as the backbone of AI; signal-driven proactive docs; docs that prove their ROI.

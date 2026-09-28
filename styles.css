@@ -187,6 +187,13 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:13.
 .detail-block .kv b{color:var(--muted); text-transform:uppercase; font-size:11px;
   letter-spacing:.3px; display:inline-block; min-width:62px}
 .detail-block .kv.roi span{color:var(--brand-2); font-weight:600}
+.detail-block .proof{margin:14px 0 0; padding-top:12px; border-top:1px dashed var(--line); font-size:13.5px; color:var(--muted)}
+.detail-block .proof b{color:var(--muted); text-transform:uppercase; font-size:11px; letter-spacing:.3px; margin-right:6px}
+.detail-block .proof a{color:var(--brand); font-weight:600}
+.detail-block .proof a:hover{text-decoration:underline}
+.sec-head .proves{margin-top:8px; font-size:13px; color:var(--muted)}
+.sec-head .proves a{color:var(--brand); font-weight:600}
+section[id], .work .card[id]{scroll-margin-top:90px}
 .page-nav{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
   border-top:1px solid var(--line); margin-top:40px; padding-top:24px}
 

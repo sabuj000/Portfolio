@@ -47,16 +47,16 @@ Data-Informed Decisions
 I don’t measure documentation by page counts — I measure it by the business problems it solves.
 Each initiative below is framed as **problem → what I built → ROI**.
 
-| 🎯 Problem | 🔧 What I built | 📈 ROI |
-|---|---|---|
-| Reactive doc fixes let support tickets pile up (high L1 cost) | AI agents analyzing new & existing support tickets in bulk to detect & fix gaps | **Lower ticket volume & support cost** — reactive → proactive |
-| Docs team bottlenecked engineering velocity | A docs CLI (OpenAPI gen, scaffolding, sync, validation, preview) | **79% of API doc PRs now authored by engineers**; contributors ~2× — no added headcount |
-| Manual drafting capped team throughput | Multiple AI skills that draft & update feature docs from any source (Notion, Google Docs, PDF, Jira…) | **Publishing time cut >50%** — faster contribution & easier collaboration |
-| Text-only docs slow onboarding & evaluation | A sustained pipeline publishing 30+ videos/month | **Faster feature adoption & self-serve onboarding**; stronger prospect evaluation |
-| Fragmented KB hurt findability, drove support load | Migrated 1,800+ articles, standardized (95% style compliance) | **Engagement +12%, page views 2× (58K+), copy-fix requests −45%** |
-| Manual release notes (~8 hrs) + recurring broken links | Release-notes automation with API docs as single source of truth | **~8 hrs → ~15 min**; broken-link gap permanently closed |
-| Review bottleneck slowed launches | PM-as-first-drafter publishing model | **Documentation SLA ~50% lower** |
-| Docs drifted from the product and leaned on SME memory | Source code from all GitHub repos connected to validate docs against code, plus a Slack screenshot → fact-check → PR bot | **Higher factual accuracy, less SME dependence, and better AEO/SEO** discoverability |
+| 🎯 Problem | 🔧 What I built | 📈 ROI | 🔗 Proof |
+|---|---|---|---|
+| Reactive doc fixes let support tickets pile up (high L1 cost) | AI agents analyzing new & existing support tickets in bulk to detect & fix gaps | **Lower ticket volume & support cost** — reactive → proactive | [User docs](https://www.chargebee.com/docs) |
+| Docs team bottlenecked engineering velocity | A docs CLI (OpenAPI gen, scaffolding, sync, validation, preview) | **79% of API doc PRs now authored by engineers**; contributors ~2× — no added headcount | [API docs](https://apidocs.chargebee.com/docs/api) |
+| Manual drafting capped team throughput | Multiple AI skills that draft & update feature docs from any source (Notion, Google Docs, PDF, Jira…) | **Publishing time cut >50%** — faster contribution & easier collaboration | [Toolkit](https://github.com/sabuj000/Portfolio/tree/main/docs-toolkit) |
+| Text-only docs slow onboarding & evaluation | A sustained pipeline publishing 30+ videos/month | **Faster feature adoption & self-serve onboarding**; stronger prospect evaluation | [Videos](https://sabuj000.github.io/Portfolio/work.html#videos) |
+| Fragmented KB hurt findability, drove support load | Migrated 1,800+ articles, standardized (95% style compliance) | **Engagement +12%, page views 2× (58K+), copy-fix requests −45%** | [KB & FAQ](https://www.chargebee.com/docs/billing/2.0/subscriptions/articles-and-faq) |
+| Manual release notes (~8 hrs) + recurring broken links | Release-notes automation with API docs as single source of truth | **~8 hrs → ~15 min**; broken-link gap permanently closed | [Release notes](https://release-notes.chargebee.com/) |
+| Review bottleneck slowed launches | PM-as-first-drafter publishing model | **Documentation SLA ~50% lower** | [Samples](https://sabuj000.github.io/Portfolio/work.html#authored) |
+| Docs drifted from the product and leaned on SME memory | Source code from all GitHub repos connected to validate docs against code, plus a Slack screenshot → fact-check → PR bot | **Higher factual accuracy, less SME dependence, and better AEO/SEO** discoverability | [AEO checker](https://sabuj000.github.io/Portfolio/docs-toolkit/aeo-check.html) |
 
 <details>
 <summary><b>📂 Expand the detail behind each number</b></summary>
