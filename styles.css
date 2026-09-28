@@ -202,7 +202,7 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:13.
 .detail-block .proof a:hover{text-decoration:underline}
 .sec-head .proves{margin-top:8px; font-size:13px; color:var(--muted)}
 .sec-head .proves a{color:var(--brand); font-weight:600}
-section[id], .work .card[id]{scroll-margin-top:90px}
+section[id], .work .card[id], h3[id], .detail-block[id]{scroll-margin-top:90px}
 .page-nav{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;
   border-top:1px solid var(--line); margin-top:40px; padding-top:24px}
 
