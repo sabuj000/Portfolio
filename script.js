@@ -1,3 +1,6 @@
+// inline search icon (dependency-free, works on every page)
+const SEARCH_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>';
+
 // theme
 const root=document.documentElement, btn=document.getElementById('themeBtn');
 const saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);
@@ -100,14 +103,14 @@ const SEARCH_INDEX=[
   if(!navRight) return;
   // trigger button
   const sBtn=document.createElement('button');
-  sBtn.className='toggle'; sBtn.id='searchBtn'; sBtn.setAttribute('aria-label','Search'); sBtn.textContent='🔍';
+  sBtn.className='toggle'; sBtn.id='searchBtn'; sBtn.setAttribute('aria-label','Search'); sBtn.innerHTML=SEARCH_SVG;
   navRight.insertBefore(sBtn, navRight.firstChild);
   // overlay
   const ov=document.createElement('div');
   ov.className='search-overlay'; ov.id='searchOverlay';
   ov.innerHTML=
     '<div class="search-modal" role="dialog" aria-label="Search">'
-    +'<div class="search-top"><span class="si">🔍</span>'
+    +'<div class="search-top"><span class="si">'+SEARCH_SVG+'</span>'
     +'<input class="search-input" id="searchInput" type="text" placeholder="Search by topic or question — e.g. “how do you cut support cost?”" autocomplete="off">'
     +'<span class="search-esc">Esc</span></div>'
     +'<div class="search-results" id="searchResults"></div>'
@@ -184,4 +187,9 @@ if(navLinks){
       const el=document.getElementById(id); if(el) secObs.observe(el);
     });
   }
+}
+
+// render Lucide icons where the library is present (pages that load it)
+if(window.lucide && typeof window.lucide.createIcons==='function'){
+  try{ window.lucide.createIcons(); }catch(e){}
 }
