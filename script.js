@@ -193,9 +193,13 @@ if(navLinks){
 // while real links inside the card keep working (no nested <a>), keyboard-accessible.
 document.querySelectorAll('section .card').forEach(card=>{
   if(card.tagName==='A' || card.closest('a')) return;      // already a link
-  const sec=card.closest('section'); if(!sec) return;
-  const more=[...sec.querySelectorAll('a.more')].filter(a=>!a.closest('.card'))[0]; if(!more) return;
-  const href=more.getAttribute('href'); if(!href) return;
+  let href=card.dataset.href;                              // deep-link to the specific block
+  if(!href){                                               // fallback: the section's detail page
+    const sec=card.closest('section');
+    const more=sec ? [...sec.querySelectorAll('a.more')].filter(a=>!a.closest('.card'))[0] : null;
+    href=more ? more.getAttribute('href') : null;
+  }
+  if(!href) return;
   card.classList.add('clickable');
   card.setAttribute('role','link');
   card.setAttribute('tabindex','0');
