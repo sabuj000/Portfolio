@@ -189,6 +189,38 @@ if(navLinks){
   }
 }
 
+// make preview tiles clickable — whole card navigates to its section's detail page,
+// while real links inside the card keep working (no nested <a>), keyboard-accessible.
+document.querySelectorAll('section .card').forEach(card=>{
+  if(card.tagName==='A' || card.closest('a')) return;      // already a link
+  const sec=card.closest('section'); if(!sec) return;
+  const more=[...sec.querySelectorAll('a.more')].filter(a=>!a.closest('.card'))[0]; if(!more) return;
+  const href=more.getAttribute('href'); if(!href) return;
+  card.classList.add('clickable');
+  card.setAttribute('role','link');
+  card.setAttribute('tabindex','0');
+  const go=()=>{ window.location.href=href; };
+  card.addEventListener('click',e=>{ if(e.target.closest('a')) return; go(); });
+  card.addEventListener('keydown',e=>{ if(e.key==='Enter' && !e.target.closest('a')){ e.preventDefault(); go(); } });
+});
+
+// smart "back": the top back-link returns the user to the exact page/section
+// they came from (preserving scroll) when they navigated here from within the
+// site; otherwise it falls back to its href (the homepage). The bottom
+// page-nav back-link is left as an explicit link home.
+(function smartBack(){
+  let internal=false;
+  try{
+    const ref=document.referrer;
+    internal = !!ref && new URL(ref).origin===location.origin && new URL(ref).href!==location.href;
+  }catch(e){}
+  if(!(internal && history.length>1)) return;
+  document.querySelectorAll('.back-link').forEach(a=>{
+    if(a.closest('.page-nav')) return;             // keep the footer link as an explicit "home"
+    a.addEventListener('click',e=>{ e.preventDefault(); history.back(); });
+  });
+})();
+
 // render Lucide icons where the library is present (pages that load it)
 if(window.lucide && typeof window.lucide.createIcons==='function'){
   try{ window.lucide.createIcons(); }catch(e){}

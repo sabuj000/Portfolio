@@ -110,6 +110,8 @@ section{padding:64px 0}
 .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
   padding:22px; box-shadow:var(--shadow); transition:border-color .18s, background .18s}
 .card:hover{border-color:color-mix(in srgb,var(--brand) 38%,var(--line)); background:var(--card-2)}
+.card.clickable{cursor:pointer}
+.card.clickable:focus-visible{outline:2px solid var(--brand); outline-offset:2px}
 .card .ico{font-size:22px; margin-bottom:12px; line-height:1}
 .card .ico:has(svg){width:40px; height:40px; border-radius:11px; display:inline-flex;
   align-items:center; justify-content:center; margin-bottom:14px; color:var(--brand);
