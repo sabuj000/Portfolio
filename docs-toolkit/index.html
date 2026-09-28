@@ -54,6 +54,9 @@
   .sv-esc{cursor:pointer; border:1px solid var(--line); background:var(--bg-soft); color:var(--text);
     border-radius:8px; padding:5px 10px; font-size:12px}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://sabuj000.github.io/Portfolio/"}, {"@type": "ListItem", "position": 2, "name": "Docs Toolkit", "item": "https://sabuj000.github.io/Portfolio/docs-toolkit/"}]}
+</script>
 </head>
 <body>
 
@@ -79,7 +82,7 @@
 <header class="tk-hero">
   <div class="hero-glow"></div>
   <div class="wrap hero-inner">
-    <a class="back-link" href="../index.html">← Back to portfolio</a>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Portfolio</a><span class="sep">›</span><span class="here" aria-current="page">Docs Toolkit</span></nav>
     <span class="eyebrow"><span class="dot"></span> Open source · MIT-style community template</span>
     <h1 class="name serif" style="font-size:clamp(30px,5vw,48px)">Docs-as-Code Documentation Toolkit</h1>
     <p class="tagline" style="max-width:720px">A reusable set of AI skills that <b>create</b> and <b>review</b> product
