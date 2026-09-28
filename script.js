@@ -225,6 +225,37 @@ document.querySelectorAll('section .card').forEach(card=>{
   });
 })();
 
+// nav dropdowns: hover/focus opens on desktop (CSS); click/tap toggles for
+// touch and keyboard, with click-outside to close. On mobile it's an accordion.
+document.querySelectorAll('.nav-parent').forEach(p=>{
+  p.addEventListener('click',e=>{
+    e.preventDefault(); e.stopPropagation();
+    const item=p.closest('.nav-item');
+    const open=item.classList.toggle('open');
+    p.setAttribute('aria-expanded', open?'true':'false');
+    document.querySelectorAll('.nav-item.open').forEach(o=>{
+      if(o!==item){ o.classList.remove('open'); const b=o.querySelector('.nav-parent'); if(b) b.setAttribute('aria-expanded','false'); }
+    });
+  });
+});
+document.addEventListener('click',e=>{
+  if(e.target.closest('.nav-item')) return;
+  document.querySelectorAll('.nav-item.open').forEach(o=>{ o.classList.remove('open'); const b=o.querySelector('.nav-parent'); if(b) b.setAttribute('aria-expanded','false'); });
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.querySelectorAll('.nav-item.open').forEach(o=>{ o.classList.remove('open'); const b=o.querySelector('.nav-parent'); if(b) b.setAttribute('aria-expanded','false'); }); });
+
+// highlight the current page in the nav (top-level link and its dropdown parent)
+(function markActiveNav(){
+  const file=(location.pathname.split('/').pop()||'index.html');
+  if(file==='index.html'||file==='') return;
+  document.querySelectorAll('#navLinks a').forEach(a=>{
+    if((a.getAttribute('href')||'').split('#')[0]===file){
+      a.classList.add('active');
+      const item=a.closest('.nav-item'); if(item){ const b=item.querySelector('.nav-parent'); if(b) b.classList.add('active'); }
+    }
+  });
+})();
+
 // render Lucide icons where the library is present (pages that load it)
 if(window.lucide && typeof window.lucide.createIcons==='function'){
   try{ window.lucide.createIcons(); }catch(e){}
