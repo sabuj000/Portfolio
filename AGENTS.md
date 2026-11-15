@@ -38,6 +38,10 @@ people-leadership roles**. Current role: **Documentation Manager at Chargebee**.
 7. **Time-to-publish** — PM-as-first-drafter model → documentation SLA reduced ~50%.
 8. **Accuracy & discoverability** — Grounded docs in source code across all GitHub repos (not just SME input) so user docs, KB, and use-case content are validated against the product; built a Slack screenshot → fact-check → PR automation → higher factual accuracy, less SME dependence, and stronger AEO/SEO (ranking first in AI answers and search).
 
+## Public demo: Arena API
+- A fictional gaming API he built to demonstrate a docs-as-code workflow end to end: OpenAPI spec as source of truth, MDX docs site with CI checks (https://arena-docs.vercel.app), a TypeScript SDK generated from the spec, five playable games, and an in-browser sandbox of all 28 operations checked against the spec by contract tests.
+- Try it: https://sabuj000.github.io/Portfolio/arena-api.html. There is no hosted Arena service, and the demo contains no employer content.
+
 ## Leadership & working style
 - Hands-on player-coach: writes and owns features end-to-end (user docs, API references, any content the feature needs).
 - Data-driven: tracks performance monthly; compares month-over-month and quarter-over-quarter to decide next actions.
