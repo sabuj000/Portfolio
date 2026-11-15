@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try the Arena API — Sabuj Bandopadhyay</title>
+<meta name="description" content="Send real requests to the fictional Arena API. A sandbox that implements all 28 operations runs in your browser, with no server and no account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- For AI/LLM crawlers: a structured profile is available at llms.txt and AGENTS.md -->
+<link rel="alternate" type="text/markdown" href="llms.txt" title="llms.txt — profile for LLMs">
+<style>
+.try{display:grid; gap:14px; grid-template-columns:1fr 1fr}
+@media(max-width:800px){.try{grid-template-columns:1fr}}
+.try label{display:block; font-size:12px; font-weight:700; letter-spacing:.3px; text-transform:uppercase; color:var(--muted); margin:12px 0 5px}
+.try select,.try input,.try textarea{width:100%; box-sizing:border-box; background:var(--card); color:var(--text); border:1px solid var(--line); border-radius:9px; padding:9px 11px; font:13.5px ui-monospace,SFMono-Regular,Menlo,monospace}
+.try textarea{min-height:130px; resize:vertical}
+.try pre{margin:0; background:var(--card); border:1px solid var(--line); border-radius:9px; padding:12px; min-height:200px; max-height:520px; overflow:auto; font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre-wrap; word-break:break-word}
+.try .status{font-weight:700; margin:12px 0 5px}
+.try .ok{color:#2e9e5b} .try .bad{color:#d9534f}
+.try .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+.try .hint{color:var(--muted); font-size:13px; margin:6px 0 0}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">Sabuj<span>.</span></a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="impact.html">Impact</a>
+        <div class="nav-item has-drop">
+          <button type="button" class="nav-parent" aria-expanded="false" aria-haspopup="true">How I Work <span class="caret" aria-hidden="true">▾</span></button>
+          <div class="dropdown">
+            <a href="approach.html">What I Do</a>
+            <a href="skills.html">Skills</a>
+            <a href="work.html">Work &amp; Artifacts</a>
+            <a href="docs-toolkit/">Docs Toolkit <span class="nav-note">· open source</span></a>
+            <a href="arena-api.html">Try the Arena API <span class="nav-note">· demo</span></a>
+          </div>
+        </div>
+        <div class="nav-item has-drop">
+          <button type="button" class="nav-parent" aria-expanded="false" aria-haspopup="true">About Me <span class="caret" aria-hidden="true">▾</span></button>
+          <div class="dropdown">
+            <a href="vision.html">Vision</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="experience.html">Journey</a>
+          </div>
+        </div>
+        <a href="fit.html">Fit Check</a>
+        <a class="cta btn primary" href="index.html#contact" style="padding:8px 14px">Get in touch</a>
+      </div>
+      <button class="toggle" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <button class="toggle hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span class="here" aria-current="page">Try the Arena API</span></nav>
+    <div class="kicker">Docs-as-code demo</div>
+    <h1 class="serif">Try the Arena API</h1>
+    <p class="lead">Arena is a fictional API I made to demonstrate a docs-as-code workflow. It has no hosted server,
+      so the requests below go to a sandbox that runs in your browser. It implements all 28 operations in the
+      <a href="https://arena-docs.vercel.app/docs/api">API reference</a>, and contract tests check it against the OpenAPI spec.</p>
+  </div>
+</header>
+
+<section class="detail-section">
+  <div class="wrap" style="max-width:1000px">
+    <div class="try">
+      <div>
+        <label for="op">Operation</label>
+        <select id="op"></select>
+        <label for="key">API key</label>
+        <input id="key" value="sk_test_demo" spellcheck="false" autocomplete="off">
+        <p class="hint">Any <code>sk_test_…</code> key works. A <code>pk_test_…</code> key is read-only.</p>
+        <label for="path">Path</label>
+        <input id="path" spellcheck="false" autocomplete="off">
+        <label for="query">Query string</label>
+        <input id="query" placeholder="limit=5" spellcheck="false" autocomplete="off">
+        <label for="idem">Idempotency-Key</label>
+        <input id="idem" spellcheck="false" autocomplete="off">
+        <label for="body">JSON body</label>
+        <textarea id="body" spellcheck="false"></textarea>
+        <div class="row">
+          <button class="btn primary" id="send" type="button">Send request</button>
+          <button class="btn ghost" id="reset" type="button">Reset sandbox data</button>
+        </div>
+      </div>
+      <div>
+        <div class="status" id="status">Response</div>
+        <pre id="out">Pick an operation and send it. Example IDs are replaced with ones that exist in the sandbox.</pre>
+        <p class="hint" id="curl"></p>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:22px">Data stays in this browser. The sandbox has no webhooks or rate limits.
+      Source: <a href="https://github.com/sabuj000/arena-game">arena-game</a> ·
+      <a href="https://arena-docs.vercel.app/docs/sdks">SDKs and sandbox</a> ·
+      <a href="https://arena-game-sooty.vercel.app">Play the demo games</a></p>
+    <div class="page-nav">
+      <a class="back-link" href="work.html">← Work &amp; Artifacts</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Sabuj Bandopadhyay · Documentation Problem-Solver · <a href="llms.txt">For AI · llms.txt</a></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+<script type="module" src="arena-api.js"></script>
+</body>
+</html>

@@ -278,6 +278,11 @@ The full spectrum of documentation my team and I ship — each linked to the liv
   retrieval-readiness). Rule-based, runs in the browser.
 - **llms.txt Generator:** [try it](https://sabuj000.github.io/Portfolio/docs-toolkit/llms-generator.html) —
   build a spec-compliant llms.txt from a page list or sitemap so AI tools index the right docs. Runs in the browser.
+- **Arena API demo (docs-as-code):** [try the API](https://sabuj000.github.io/Portfolio/arena-api.html) —
+  a fictional gaming API with an OpenAPI spec as the source of truth, an MDX
+  [docs site](https://arena-docs.vercel.app) ([repo](https://github.com/sabuj000/arena-docs)), a generated TypeScript SDK,
+  and five [playable games](https://arena-game-sooty.vercel.app) ([repo](https://github.com/sabuj000/arena-game)).
+  A sandbox that implements all 28 operations runs in the browser and is contract-tested against the spec. No hosted service.
 
 ---
 
