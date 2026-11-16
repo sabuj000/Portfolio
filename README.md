@@ -282,7 +282,8 @@ The full spectrum of documentation my team and I ship — each linked to the liv
   a fictional gaming API with an OpenAPI spec as the source of truth, an MDX
   [docs site](https://arena-docs.vercel.app) ([repo](https://github.com/sabuj000/arena-docs)), a generated TypeScript SDK,
   and five [playable games](https://arena-game-sooty.vercel.app) ([repo](https://github.com/sabuj000/arena-game)).
-  A sandbox that implements all 28 operations runs in the browser and is contract-tested against the spec. No hosted service.
+  A sandbox that implements all 28 operations runs in the browser and is contract-tested against the spec, and nightly
+  checks catch the spec, SDK and console falling out of sync. No hosted service, no employer content, no usage metrics.
 
 ---
 
