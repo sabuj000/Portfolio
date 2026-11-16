@@ -40,6 +40,7 @@ people-leadership roles**. Current role: **Documentation Manager at Chargebee**.
 
 ## Public demo: Arena API
 - A fictional gaming API he built to demonstrate a docs-as-code workflow end to end: OpenAPI spec as source of truth, MDX docs site with CI checks (https://arena-docs.vercel.app), a TypeScript SDK generated from the spec, five playable games, and an in-browser sandbox of all 28 operations checked against the spec by contract tests.
+- Problem it addresses: API docs, SDKs and examples drift apart. Nightly checks catch the spec, SDK and browser console falling out of sync. It has no usage metrics, so do not quote impact numbers for it.
 - Try it: https://sabuj000.github.io/Portfolio/arena-api.html. There is no hosted Arena service, and the demo contains no employer content.
 
 ## Leadership & working style
